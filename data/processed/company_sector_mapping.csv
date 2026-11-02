@@ -1,0 +1,16 @@
+ticker,name,isin,sector,industry,aliases
+RELIANCE,Reliance Industries Limited,INE002A01018,Energy,Oil & Gas / Retail / Telecom,Reliance Industries; Reliance; RIL; Mukesh Ambani; Jio; Reliance Retail; Reliance Jio
+TCS,Tata Consultancy Services Limited,INE467B01029,Information Technology,IT Services & Consulting,Tata Consultancy Services; TCS; Tata Consultancy
+INFY,Infosys Limited,INE009A01021,Information Technology,IT Services & Consulting,Infosys; Infy; Salil Parekh
+HDFCBANK,HDFC Bank Limited,INE040A01034,Financial Services,Private Banking,HDFC Bank; HDFC Bk; Sashidhar Jagdishan
+ICICIBANK,ICICI Bank Limited,INE090A01021,Financial Services,Private Banking,ICICI Bank; ICICI Bk; Sandeep Bakhshi
+SBIN,State Bank of India,INE062A01020,Financial Services,Public Sector Banking,State Bank of India; SBI; State Bank
+HINDUNILVR,Hindustan Unilever Limited,INE030A01027,Fast Moving Consumer Goods,Diversified FMCG,Hindustan Unilever; HUL; Unilever India
+ITC,ITC Limited,INE154A01025,Fast Moving Consumer Goods,FMCG / Cigarettes / Hotels / Paper,ITC Limited; ITC Ltd; ITC; Sanjiv Puri
+LT,Larsen & Toubro Limited,INE018A01030,Construction & Infrastructure,Engineering & Construction,Larsen & Toubro; L&T; Larsen and Toubro
+BHARTIARTL,Bharti Airtel Limited,INE397D01024,Telecommunications,Telecom Services,Bharti Airtel; Airtel; Sunil Mittal
+SUNPHARMA,Sun Pharmaceutical Industries Limited,INE044A01036,Healthcare & Pharmaceuticals,Pharmaceuticals,Sun Pharma; Sun Pharmaceutical; Dilip Shanghvi
+CIPLA,Cipla Limited,INE059A01026,Healthcare & Pharmaceuticals,Pharmaceuticals,Cipla Limited; Cipla
+MARUTI,Maruti Suzuki India Limited,INE585B01010,Automobile,Passenger Vehicles,Maruti Suzuki; Maruti; RC Bhargava
+M&M,Mahindra & Mahindra Limited,INE101A01026,Automobile,Automotive & Farm Equipment,Mahindra & Mahindra; Mahindra and Mahindra; M&M; Anand Mahindra; Mahindra
+TATASTEEL,Tata Steel Limited,INE081A01020,Metals & Mining,Steel Manufacturing,Tata Steel; Tisco

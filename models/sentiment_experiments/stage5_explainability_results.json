@@ -1,0 +1,1489 @@
+{
+  "model_explainability": {
+    "Exp_B4_FinBERT_LR": {
+      "output_scale": "Log-Odds Margin Space (logit)",
+      "frozen_threshold": 0.475,
+      "total_abs_shap": 0.8683871858244777,
+      "group_attribution": [
+        {
+          "group": "Temporal Sentiment",
+          "aggregated_abs_shap": 0.3573781426714065,
+          "percentage_contribution": 41.15423954950452
+        },
+        {
+          "group": "Core Market",
+          "aggregated_abs_shap": 0.131563233827538,
+          "percentage_contribution": 15.150296546882736
+        },
+        {
+          "group": "News Volume",
+          "aggregated_abs_shap": 0.125963533993246,
+          "percentage_contribution": 14.505457479045102
+        },
+        {
+          "group": "Direct Sentiment",
+          "aggregated_abs_shap": 0.09763912479346655,
+          "percentage_contribution": 11.24373164267325
+        },
+        {
+          "group": "Sector Sentiment",
+          "aggregated_abs_shap": 0.05944004705124894,
+          "percentage_contribution": 6.844878416165762
+        },
+        {
+          "group": "Opening Gap",
+          "aggregated_abs_shap": 0.05354581038417242,
+          "percentage_contribution": 6.166121663038374
+        },
+        {
+          "group": "Global Sentiment",
+          "aggregated_abs_shap": 0.04285729310339938,
+          "percentage_contribution": 4.9352747026902675
+        }
+      ],
+      "top_15_features": [
+        {
+          "feature": "finbert_market_polarity_roll3",
+          "raw_feature": "num__finbert_market_polarity_roll3",
+          "group": "Temporal Sentiment",
+          "mean_abs_shap": 0.08807660855219643
+        },
+        {
+          "feature": "finbert_sector_polarity_roll3",
+          "raw_feature": "num__finbert_sector_polarity_roll3",
+          "group": "Temporal Sentiment",
+          "mean_abs_shap": 0.06945969720558794
+        },
+        {
+          "feature": "finbert_sector_polarity_lag1",
+          "raw_feature": "num__finbert_sector_polarity_lag1",
+          "group": "Temporal Sentiment",
+          "mean_abs_shap": 0.06698855066438672
+        },
+        {
+          "feature": "finbert_market_polarity_lag1",
+          "raw_feature": "num__finbert_market_polarity_lag1",
+          "group": "Temporal Sentiment",
+          "mean_abs_shap": 0.05672670968911787
+        },
+        {
+          "feature": "open_gap_pct",
+          "raw_feature": "num__open_gap_pct",
+          "group": "Opening Gap",
+          "mean_abs_shap": 0.05354581038417242
+        },
+        {
+          "feature": "finbert_direct_polarity_lag1",
+          "raw_feature": "num__finbert_direct_polarity_lag1",
+          "group": "Temporal Sentiment",
+          "mean_abs_shap": 0.037628500685875005
+        },
+        {
+          "feature": "ret_1d_lag1",
+          "raw_feature": "num__ret_1d_lag1",
+          "group": "Core Market",
+          "mean_abs_shap": 0.0339463732515523
+        },
+        {
+          "feature": "direct_news_count",
+          "raw_feature": "num__direct_news_count",
+          "group": "News Volume",
+          "mean_abs_shap": 0.032539509756139846
+        },
+        {
+          "feature": "finbert_sector_neu",
+          "raw_feature": "num__finbert_sector_neu",
+          "group": "Sector Sentiment",
+          "mean_abs_shap": 0.0314593611581369
+        },
+        {
+          "feature": "finbert_direct_confidence",
+          "raw_feature": "num__finbert_direct_confidence",
+          "group": "Direct Sentiment",
+          "mean_abs_shap": 0.031160324019966858
+        },
+        {
+          "feature": "market_regime_lag1_LOW_VOL",
+          "raw_feature": "cat__market_regime_lag1_LOW_VOL",
+          "group": "Core Market",
+          "mean_abs_shap": 0.029492186354691335
+        },
+        {
+          "feature": "finbert_direct_neg",
+          "raw_feature": "num__finbert_direct_neg",
+          "group": "Direct Sentiment",
+          "mean_abs_shap": 0.02634768961572652
+        },
+        {
+          "feature": "finbert_market_neg",
+          "raw_feature": "num__finbert_market_neg",
+          "group": "Global Sentiment",
+          "mean_abs_shap": 0.02507668079707424
+        },
+        {
+          "feature": "direct_news_count_lag1",
+          "raw_feature": "num__direct_news_count_lag1",
+          "group": "News Volume",
+          "mean_abs_shap": 0.02431788417069788
+        },
+        {
+          "feature": "finbert_direct_neu",
+          "raw_feature": "num__finbert_direct_neu",
+          "group": "Direct Sentiment",
+          "mean_abs_shap": 0.021945988522256876
+        }
+      ]
+    },
+    "Exp_B3_LM_XGB": {
+      "output_scale": "Log-Odds Margin Space (raw margin)",
+      "frozen_threshold": 0.48,
+      "total_abs_shap": 0.24048694968223572,
+      "group_attribution": [
+        {
+          "group": "Opening Gap",
+          "aggregated_abs_shap": 0.07882625609636307,
+          "percentage_contribution": 32.777767181396484
+        },
+        {
+          "group": "Temporal Sentiment",
+          "aggregated_abs_shap": 0.046880047768354416,
+          "percentage_contribution": 19.49380111694336
+        },
+        {
+          "group": "Core Market",
+          "aggregated_abs_shap": 0.04237210378050804,
+          "percentage_contribution": 17.619293212890625
+        },
+        {
+          "group": "Global Sentiment",
+          "aggregated_abs_shap": 0.03712758049368858,
+          "percentage_contribution": 15.438501358032227
+        },
+        {
+          "group": "News Volume",
+          "aggregated_abs_shap": 0.018054693937301636,
+          "percentage_contribution": 7.507556915283203
+        },
+        {
+          "group": "Sector Sentiment",
+          "aggregated_abs_shap": 0.009226509369909763,
+          "percentage_contribution": 3.836594581604004
+        },
+        {
+          "group": "Direct Sentiment",
+          "aggregated_abs_shap": 0.007999744266271591,
+          "percentage_contribution": 3.326477527618408
+        }
+      ],
+      "top_15_features": [
+        {
+          "feature": "open_gap_pct",
+          "raw_feature": "num__open_gap_pct",
+          "group": "Opening Gap",
+          "mean_abs_shap": 0.07882625609636307
+        },
+        {
+          "feature": "lm_market_polarity",
+          "raw_feature": "num__lm_market_polarity",
+          "group": "Global Sentiment",
+          "mean_abs_shap": 0.03712758049368858
+        },
+        {
+          "feature": "lm_market_polarity_lag1",
+          "raw_feature": "num__lm_market_polarity_lag1",
+          "group": "Temporal Sentiment",
+          "mean_abs_shap": 0.011989484541118145
+        },
+        {
+          "feature": "lm_market_polarity_roll7",
+          "raw_feature": "num__lm_market_polarity_roll7",
+          "group": "Temporal Sentiment",
+          "mean_abs_shap": 0.010187618434429169
+        },
+        {
+          "feature": "lm_market_polarity_roll3",
+          "raw_feature": "num__lm_market_polarity_roll3",
+          "group": "Temporal Sentiment",
+          "mean_abs_shap": 0.008770778775215149
+        },
+        {
+          "feature": "market_news_count",
+          "raw_feature": "num__market_news_count",
+          "group": "News Volume",
+          "mean_abs_shap": 0.008643217384815216
+        },
+        {
+          "feature": "macd_signal_lag1",
+          "raw_feature": "num__macd_signal_lag1",
+          "group": "Core Market",
+          "mean_abs_shap": 0.008390426635742188
+        },
+        {
+          "feature": "macd_diff_lag1",
+          "raw_feature": "num__macd_diff_lag1",
+          "group": "Core Market",
+          "mean_abs_shap": 0.007782107684761286
+        },
+        {
+          "feature": "ret_1d_lag1",
+          "raw_feature": "num__ret_1d_lag1",
+          "group": "Core Market",
+          "mean_abs_shap": 0.006591586396098137
+        },
+        {
+          "feature": "lm_sector_neg_count",
+          "raw_feature": "num__lm_sector_neg_count",
+          "group": "Sector Sentiment",
+          "mean_abs_shap": 0.00550727779045701
+        },
+        {
+          "feature": "lm_direct_polarity_roll7",
+          "raw_feature": "num__lm_direct_polarity_roll7",
+          "group": "Temporal Sentiment",
+          "mean_abs_shap": 0.005347723141312599
+        },
+        {
+          "feature": "macd_lag1",
+          "raw_feature": "num__macd_lag1",
+          "group": "Core Market",
+          "mean_abs_shap": 0.004699861165136099
+        },
+        {
+          "feature": "adj_close_sma_ratio_20_lag1",
+          "raw_feature": "num__adj_close_sma_ratio_20_lag1",
+          "group": "Core Market",
+          "mean_abs_shap": 0.004668308887630701
+        },
+        {
+          "feature": "rsi_14_lag1",
+          "raw_feature": "num__rsi_14_lag1",
+          "group": "Core Market",
+          "mean_abs_shap": 0.0041975355707108974
+        },
+        {
+          "feature": "sector_news_count",
+          "raw_feature": "num__sector_news_count",
+          "group": "News Volume",
+          "mean_abs_shap": 0.004020612686872482
+        }
+      ]
+    },
+    "Exp_B1_MktOnly_LR": {
+      "output_scale": "Log-Odds Margin Space (logit)",
+      "frozen_threshold": 0.475,
+      "total_abs_shap": 0.15750159600249244,
+      "group_attribution": [
+        {
+          "group": "Core Market",
+          "aggregated_abs_shap": 0.10671551285538632,
+          "percentage_contribution": 67.75519459097897
+        },
+        {
+          "group": "Opening Gap",
+          "aggregated_abs_shap": 0.050786083147106115,
+          "percentage_contribution": 32.24480540902101
+        }
+      ],
+      "top_15_features": [
+        {
+          "feature": "open_gap_pct",
+          "raw_feature": "num__open_gap_pct",
+          "group": "Opening Gap",
+          "mean_abs_shap": 0.050786083147106115
+        },
+        {
+          "feature": "market_regime_lag1_LOW_VOL",
+          "raw_feature": "cat__market_regime_lag1_LOW_VOL",
+          "group": "Core Market",
+          "mean_abs_shap": 0.025073981147324703
+        },
+        {
+          "feature": "ret_1d_lag1",
+          "raw_feature": "num__ret_1d_lag1",
+          "group": "Core Market",
+          "mean_abs_shap": 0.01759674098709045
+        },
+        {
+          "feature": "rolling_vol_21d_lag1",
+          "raw_feature": "num__rolling_vol_21d_lag1",
+          "group": "Core Market",
+          "mean_abs_shap": 0.013619881006718022
+        },
+        {
+          "feature": "adj_close_sma_ratio_20_lag1",
+          "raw_feature": "num__adj_close_sma_ratio_20_lag1",
+          "group": "Core Market",
+          "mean_abs_shap": 0.011199008196739645
+        },
+        {
+          "feature": "macd_lag1",
+          "raw_feature": "num__macd_lag1",
+          "group": "Core Market",
+          "mean_abs_shap": 0.010887773926963232
+        },
+        {
+          "feature": "macd_signal_lag1",
+          "raw_feature": "num__macd_signal_lag1",
+          "group": "Core Market",
+          "mean_abs_shap": 0.00922704591209378
+        },
+        {
+          "feature": "macd_diff_lag1",
+          "raw_feature": "num__macd_diff_lag1",
+          "group": "Core Market",
+          "mean_abs_shap": 0.006517379217861019
+        },
+        {
+          "feature": "rolling_vol_5d_lag1",
+          "raw_feature": "num__rolling_vol_5d_lag1",
+          "group": "Core Market",
+          "mean_abs_shap": 0.006435761213376729
+        },
+        {
+          "feature": "rsi_14_lag1",
+          "raw_feature": "num__rsi_14_lag1",
+          "group": "Core Market",
+          "mean_abs_shap": 0.006065160590351784
+        },
+        {
+          "feature": "intraday_range_pct_lag1",
+          "raw_feature": "num__intraday_range_pct_lag1",
+          "group": "Core Market",
+          "mean_abs_shap": 9.278065686695123e-05
+        }
+      ]
+    },
+    "Exp_B1_MktOnly_XGB": {
+      "output_scale": "Log-Odds Margin Space (raw margin)",
+      "frozen_threshold": 0.475,
+      "total_abs_shap": 0.22484131157398224,
+      "group_attribution": [
+        {
+          "group": "Core Market",
+          "aggregated_abs_shap": 0.13821211457252502,
+          "percentage_contribution": 61.47096252441406
+        },
+        {
+          "group": "Opening Gap",
+          "aggregated_abs_shap": 0.08662920445203781,
+          "percentage_contribution": 38.5290412902832
+        }
+      ],
+      "top_15_features": [
+        {
+          "feature": "open_gap_pct",
+          "raw_feature": "num__open_gap_pct",
+          "group": "Opening Gap",
+          "mean_abs_shap": 0.08662920445203781
+        },
+        {
+          "feature": "macd_diff_lag1",
+          "raw_feature": "num__macd_diff_lag1",
+          "group": "Core Market",
+          "mean_abs_shap": 0.024656590074300766
+        },
+        {
+          "feature": "intraday_range_pct_lag1",
+          "raw_feature": "num__intraday_range_pct_lag1",
+          "group": "Core Market",
+          "mean_abs_shap": 0.021496107801795006
+        },
+        {
+          "feature": "adj_close_sma_ratio_20_lag1",
+          "raw_feature": "num__adj_close_sma_ratio_20_lag1",
+          "group": "Core Market",
+          "mean_abs_shap": 0.018241506069898605
+        },
+        {
+          "feature": "rsi_14_lag1",
+          "raw_feature": "num__rsi_14_lag1",
+          "group": "Core Market",
+          "mean_abs_shap": 0.014531182125210762
+        },
+        {
+          "feature": "macd_signal_lag1",
+          "raw_feature": "num__macd_signal_lag1",
+          "group": "Core Market",
+          "mean_abs_shap": 0.014286701567471027
+        },
+        {
+          "feature": "ret_1d_lag1",
+          "raw_feature": "num__ret_1d_lag1",
+          "group": "Core Market",
+          "mean_abs_shap": 0.013863175176084042
+        },
+        {
+          "feature": "rolling_vol_21d_lag1",
+          "raw_feature": "num__rolling_vol_21d_lag1",
+          "group": "Core Market",
+          "mean_abs_shap": 0.012808600440621376
+        },
+        {
+          "feature": "rolling_vol_5d_lag1",
+          "raw_feature": "num__rolling_vol_5d_lag1",
+          "group": "Core Market",
+          "mean_abs_shap": 0.010015130043029785
+        },
+        {
+          "feature": "macd_lag1",
+          "raw_feature": "num__macd_lag1",
+          "group": "Core Market",
+          "mean_abs_shap": 0.008127683773636818
+        },
+        {
+          "feature": "market_regime_lag1_LOW_VOL",
+          "raw_feature": "cat__market_regime_lag1_LOW_VOL",
+          "group": "Core Market",
+          "mean_abs_shap": 0.00018544030899647623
+        }
+      ]
+    },
+    "Exp_B4_FinBERT_RF": {
+      "output_scale": "Probability Space (class 1 probability)",
+      "frozen_threshold": 0.475,
+      "total_abs_shap": 0.0633245489816992,
+      "group_attribution": [
+        {
+          "group": "Opening Gap",
+          "aggregated_abs_shap": 0.01631427298647467,
+          "percentage_contribution": 25.762951728546057
+        },
+        {
+          "group": "Core Market",
+          "aggregated_abs_shap": 0.015511853566977618,
+          "percentage_contribution": 24.49579794316505
+        },
+        {
+          "group": "Global Sentiment",
+          "aggregated_abs_shap": 0.012990666058411983,
+          "percentage_contribution": 20.514423343411867
+        },
+        {
+          "group": "Temporal Sentiment",
+          "aggregated_abs_shap": 0.009292359864286727,
+          "percentage_contribution": 14.67418246748543
+        },
+        {
+          "group": "Sector Sentiment",
+          "aggregated_abs_shap": 0.0036307560868891744,
+          "percentage_contribution": 5.733568016313015
+        },
+        {
+          "group": "News Volume",
+          "aggregated_abs_shap": 0.0028276796577888764,
+          "percentage_contribution": 4.465376703442572
+        },
+        {
+          "group": "Direct Sentiment",
+          "aggregated_abs_shap": 0.0027569607608701548,
+          "percentage_contribution": 4.353699797636011
+        }
+      ],
+      "top_15_features": [
+        {
+          "feature": "open_gap_pct",
+          "raw_feature": "num__open_gap_pct",
+          "group": "Opening Gap",
+          "mean_abs_shap": 0.01631427298647467
+        },
+        {
+          "feature": "finbert_market_polarity",
+          "raw_feature": "num__finbert_market_polarity",
+          "group": "Global Sentiment",
+          "mean_abs_shap": 0.006389694971028174
+        },
+        {
+          "feature": "intraday_range_pct_lag1",
+          "raw_feature": "num__intraday_range_pct_lag1",
+          "group": "Core Market",
+          "mean_abs_shap": 0.003110843703085241
+        },
+        {
+          "feature": "finbert_market_neg",
+          "raw_feature": "num__finbert_market_neg",
+          "group": "Global Sentiment",
+          "mean_abs_shap": 0.0030025660116489938
+        },
+        {
+          "feature": "macd_signal_lag1",
+          "raw_feature": "num__macd_signal_lag1",
+          "group": "Core Market",
+          "mean_abs_shap": 0.002968990551124609
+        },
+        {
+          "feature": "finbert_market_neu",
+          "raw_feature": "num__finbert_market_neu",
+          "group": "Global Sentiment",
+          "mean_abs_shap": 0.0026026645244235846
+        },
+        {
+          "feature": "rsi_14_lag1",
+          "raw_feature": "num__rsi_14_lag1",
+          "group": "Core Market",
+          "mean_abs_shap": 0.0016904768730878973
+        },
+        {
+          "feature": "ret_1d_lag1",
+          "raw_feature": "num__ret_1d_lag1",
+          "group": "Core Market",
+          "mean_abs_shap": 0.0016683484615519072
+        },
+        {
+          "feature": "finbert_sector_polarity_roll7",
+          "raw_feature": "num__finbert_sector_polarity_roll7",
+          "group": "Temporal Sentiment",
+          "mean_abs_shap": 0.0016300538009734616
+        },
+        {
+          "feature": "finbert_market_polarity_roll3",
+          "raw_feature": "num__finbert_market_polarity_roll3",
+          "group": "Temporal Sentiment",
+          "mean_abs_shap": 0.001510409997990051
+        },
+        {
+          "feature": "adj_close_sma_ratio_20_lag1",
+          "raw_feature": "num__adj_close_sma_ratio_20_lag1",
+          "group": "Core Market",
+          "mean_abs_shap": 0.0014894820356449515
+        },
+        {
+          "feature": "finbert_market_polarity_lag1",
+          "raw_feature": "num__finbert_market_polarity_lag1",
+          "group": "Temporal Sentiment",
+          "mean_abs_shap": 0.0013598456060611062
+        },
+        {
+          "feature": "rolling_vol_21d_lag1",
+          "raw_feature": "num__rolling_vol_21d_lag1",
+          "group": "Core Market",
+          "mean_abs_shap": 0.001302392220688853
+        },
+        {
+          "feature": "macd_diff_lag1",
+          "raw_feature": "num__macd_diff_lag1",
+          "group": "Core Market",
+          "mean_abs_shap": 0.0012862613899410585
+        },
+        {
+          "feature": "macd_lag1",
+          "raw_feature": "num__macd_lag1",
+          "group": "Core Market",
+          "mean_abs_shap": 0.001223067109120961
+        }
+      ]
+    },
+    "Exp_A4_FinBERT_XGB": {
+      "output_scale": "Log-Odds Margin Space (raw margin)",
+      "frozen_threshold": 0.47000000000000003,
+      "total_abs_shap": 0.010805644094944,
+      "group_attribution": [
+        {
+          "group": "Core Market",
+          "aggregated_abs_shap": 0.0033838413655757904,
+          "percentage_contribution": 31.315500259399414
+        },
+        {
+          "group": "Temporal Sentiment",
+          "aggregated_abs_shap": 0.0024817807134240866,
+          "percentage_contribution": 22.967449188232422
+        },
+        {
+          "group": "Global Sentiment",
+          "aggregated_abs_shap": 0.002479607705026865,
+          "percentage_contribution": 22.947338104248047
+        },
+        {
+          "group": "Sector Sentiment",
+          "aggregated_abs_shap": 0.000978537485934794,
+          "percentage_contribution": 9.055800437927246
+        },
+        {
+          "group": "News Volume",
+          "aggregated_abs_shap": 0.0007458952604793012,
+          "percentage_contribution": 6.902830123901367
+        },
+        {
+          "group": "Direct Sentiment",
+          "aggregated_abs_shap": 0.0007359815062955022,
+          "percentage_contribution": 6.811083793640137
+        }
+      ],
+      "top_15_features": [
+        {
+          "feature": "finbert_market_polarity",
+          "raw_feature": "num__finbert_market_polarity",
+          "group": "Global Sentiment",
+          "mean_abs_shap": 0.002479607705026865
+        },
+        {
+          "feature": "finbert_sector_polarity_lag1",
+          "raw_feature": "num__finbert_sector_polarity_lag1",
+          "group": "Temporal Sentiment",
+          "mean_abs_shap": 0.002061733976006508
+        },
+        {
+          "feature": "rsi_14_lag1",
+          "raw_feature": "num__rsi_14_lag1",
+          "group": "Core Market",
+          "mean_abs_shap": 0.0018098446307703853
+        },
+        {
+          "feature": "intraday_range_pct_lag1",
+          "raw_feature": "num__intraday_range_pct_lag1",
+          "group": "Core Market",
+          "mean_abs_shap": 0.001573996851220727
+        },
+        {
+          "feature": "finbert_sector_polarity",
+          "raw_feature": "num__finbert_sector_polarity",
+          "group": "Sector Sentiment",
+          "mean_abs_shap": 0.0009333689231425524
+        },
+        {
+          "feature": "market_news_count",
+          "raw_feature": "num__market_news_count",
+          "group": "News Volume",
+          "mean_abs_shap": 0.0007458952604793012
+        },
+        {
+          "feature": "finbert_direct_neu",
+          "raw_feature": "num__finbert_direct_neu",
+          "group": "Direct Sentiment",
+          "mean_abs_shap": 0.0007359815062955022
+        },
+        {
+          "feature": "finbert_market_polarity_lag1",
+          "raw_feature": "num__finbert_market_polarity_lag1",
+          "group": "Temporal Sentiment",
+          "mean_abs_shap": 0.0003067154611926526
+        },
+        {
+          "feature": "finbert_market_polarity_roll7",
+          "raw_feature": "num__finbert_market_polarity_roll7",
+          "group": "Temporal Sentiment",
+          "mean_abs_shap": 0.00011333119618939236
+        },
+        {
+          "feature": "finbert_sector_pos",
+          "raw_feature": "num__finbert_sector_pos",
+          "group": "Sector Sentiment",
+          "mean_abs_shap": 2.633649819472339e-05
+        },
+        {
+          "feature": "finbert_sector_neg",
+          "raw_feature": "num__finbert_sector_neg",
+          "group": "Sector Sentiment",
+          "mean_abs_shap": 1.8832111891242675e-05
+        },
+        {
+          "feature": "rolling_vol_5d_lag1",
+          "raw_feature": "num__rolling_vol_5d_lag1",
+          "group": "Core Market",
+          "mean_abs_shap": 0.0
+        },
+        {
+          "feature": "macd_signal_lag1",
+          "raw_feature": "num__macd_signal_lag1",
+          "group": "Core Market",
+          "mean_abs_shap": 0.0
+        },
+        {
+          "feature": "macd_lag1",
+          "raw_feature": "num__macd_lag1",
+          "group": "Core Market",
+          "mean_abs_shap": 0.0
+        },
+        {
+          "feature": "ret_1d_lag1",
+          "raw_feature": "num__ret_1d_lag1",
+          "group": "Core Market",
+          "mean_abs_shap": 0.0
+        }
+      ]
+    }
+  },
+  "company_attribution": {
+    "Exp_B4_FinBERT_LR": [
+      {
+        "symbol": "BHARTIARTL",
+        "n_obs": 306,
+        "accuracy": 56.5359477124183,
+        "mean_predicted_prob": 0.4691771994962149,
+        "total_abs_shap": 0.862589717315676,
+        "opening_gap_share_%": 5.960232823685601,
+        "core_market_share_%": 13.063616778462631,
+        "news_volume_share_%": 11.265508355636895,
+        "direct_sentiment_share_%": 10.882655755682938,
+        "all_sentiment_share_%": 69.71064204221487
+      },
+      {
+        "symbol": "SBIN",
+        "n_obs": 306,
+        "accuracy": 56.5359477124183,
+        "mean_predicted_prob": 0.46592272293592746,
+        "total_abs_shap": 0.7072941276102089,
+        "opening_gap_share_%": 6.402452392364055,
+        "core_market_share_%": 16.318479894632347,
+        "news_volume_share_%": 15.745047459838386,
+        "direct_sentiment_share_%": 7.871230804734031,
+        "all_sentiment_share_%": 61.534020253165195
+      },
+      {
+        "symbol": "M&M",
+        "n_obs": 306,
+        "accuracy": 56.5359477124183,
+        "mean_predicted_prob": 0.4635380556708901,
+        "total_abs_shap": 0.8108772699341598,
+        "opening_gap_share_%": 7.95189587596475,
+        "core_market_share_%": 17.990804947253327,
+        "news_volume_share_%": 16.83450511022392,
+        "direct_sentiment_share_%": 7.188123284003583,
+        "all_sentiment_share_%": 57.22279406655799
+      },
+      {
+        "symbol": "HDFCBANK",
+        "n_obs": 306,
+        "accuracy": 56.209150326797385,
+        "mean_predicted_prob": 0.47738238526907095,
+        "total_abs_shap": 0.7564797417755806,
+        "opening_gap_share_%": 8.229992913007228,
+        "core_market_share_%": 15.104942824994911,
+        "news_volume_share_%": 12.589074505995557,
+        "direct_sentiment_share_%": 10.444042294313082,
+        "all_sentiment_share_%": 64.0759897560023
+      },
+      {
+        "symbol": "SUNPHARMA",
+        "n_obs": 306,
+        "accuracy": 56.209150326797385,
+        "mean_predicted_prob": 0.47856305031019775,
+        "total_abs_shap": 1.0112865695644484,
+        "opening_gap_share_%": 5.075598974650196,
+        "core_market_share_%": 11.276734190675432,
+        "news_volume_share_%": 15.745384723933922,
+        "direct_sentiment_share_%": 14.721481960059277,
+        "all_sentiment_share_%": 67.90228211074044
+      },
+      {
+        "symbol": "ICICIBANK",
+        "n_obs": 306,
+        "accuracy": 56.209150326797385,
+        "mean_predicted_prob": 0.4757216758676919,
+        "total_abs_shap": 0.7563688908286915,
+        "opening_gap_share_%": 7.2128158291784095,
+        "core_market_share_%": 15.052019110042394,
+        "news_volume_share_%": 12.258181320033982,
+        "direct_sentiment_share_%": 11.491875064698625,
+        "all_sentiment_share_%": 65.47698374074521
+      },
+      {
+        "symbol": "ITC",
+        "n_obs": 306,
+        "accuracy": 53.26797385620915,
+        "mean_predicted_prob": 0.47883781954625815,
+        "total_abs_shap": 0.8651270362216218,
+        "opening_gap_share_%": 4.945343616767875,
+        "core_market_share_%": 13.540420483985255,
+        "news_volume_share_%": 14.94417537300915,
+        "direct_sentiment_share_%": 13.306527343044635,
+        "all_sentiment_share_%": 66.57006052623774
+      },
+      {
+        "symbol": "TCS",
+        "n_obs": 306,
+        "accuracy": 52.614379084967325,
+        "mean_predicted_prob": 0.47749383608465595,
+        "total_abs_shap": 0.8685277664306216,
+        "opening_gap_share_%": 6.579537451485481,
+        "core_market_share_%": 16.09328976359456,
+        "news_volume_share_%": 11.742312449540385,
+        "direct_sentiment_share_%": 9.987125250736657,
+        "all_sentiment_share_%": 65.58486033537957
+      },
+      {
+        "symbol": "RELIANCE",
+        "n_obs": 306,
+        "accuracy": 52.614379084967325,
+        "mean_predicted_prob": 0.4604671819016009,
+        "total_abs_shap": 0.7759096518761315,
+        "opening_gap_share_%": 6.645980380201312,
+        "core_market_share_%": 14.83240591271542,
+        "news_volume_share_%": 25.478783716448334,
+        "direct_sentiment_share_%": 6.168169656934334,
+        "all_sentiment_share_%": 53.04282999063495
+      },
+      {
+        "symbol": "HINDUNILVR",
+        "n_obs": 306,
+        "accuracy": 52.614379084967325,
+        "mean_predicted_prob": 0.47412484041854086,
+        "total_abs_shap": 0.8845360793088384,
+        "opening_gap_share_%": 4.865499853061585,
+        "core_market_share_%": 13.432286400930806,
+        "news_volume_share_%": 13.74132105712482,
+        "direct_sentiment_share_%": 12.823370048677562,
+        "all_sentiment_share_%": 67.96089268888278
+      },
+      {
+        "symbol": "TATASTEEL",
+        "n_obs": 306,
+        "accuracy": 52.28758169934641,
+        "mean_predicted_prob": 0.471938464520896,
+        "total_abs_shap": 0.9598526676463901,
+        "opening_gap_share_%": 6.162989430759202,
+        "core_market_share_%": 12.652580103268757,
+        "news_volume_share_%": 12.326249922922708,
+        "direct_sentiment_share_%": 11.803984531586256,
+        "all_sentiment_share_%": 68.85818054304933
+      },
+      {
+        "symbol": "CIPLA",
+        "n_obs": 306,
+        "accuracy": 50.98039215686274,
+        "mean_predicted_prob": 0.49254217523379656,
+        "total_abs_shap": 1.0549823506495721,
+        "opening_gap_share_%": 4.7502131180241065,
+        "core_market_share_%": 10.626809782272353,
+        "news_volume_share_%": 20.532443143644254,
+        "direct_sentiment_share_%": 17.524560472474107,
+        "all_sentiment_share_%": 64.0905339560593
+      },
+      {
+        "symbol": "MARUTI",
+        "n_obs": 306,
+        "accuracy": 50.326797385620914,
+        "mean_predicted_prob": 0.46595022836769956,
+        "total_abs_shap": 0.9662385862107346,
+        "opening_gap_share_%": 5.249961734380728,
+        "core_market_share_%": 27.11508649423398,
+        "news_volume_share_%": 11.885937897548242,
+        "direct_sentiment_share_%": 11.10211135174755,
+        "all_sentiment_share_%": 55.74901387383705
+      },
+      {
+        "symbol": "INFY",
+        "n_obs": 306,
+        "accuracy": 50.0,
+        "mean_predicted_prob": 0.47221208327424374,
+        "total_abs_shap": 0.8685348990242581,
+        "opening_gap_share_%": 8.328834822028181,
+        "core_market_share_%": 14.453538638348848,
+        "news_volume_share_%": 11.668598505705734,
+        "direct_sentiment_share_%": 9.800895547050438,
+        "all_sentiment_share_%": 65.54902803391724
+      },
+      {
+        "symbol": "LT",
+        "n_obs": 306,
+        "accuracy": 50.0,
+        "mean_predicted_prob": 0.4666027337818873,
+        "total_abs_shap": 0.8772024329702326,
+        "opening_gap_share_%": 5.357930706631404,
+        "core_market_share_%": 16.57562725008413,
+        "news_volume_share_%": 10.897667401937221,
+        "direct_sentiment_share_%": 10.057558394166138,
+        "all_sentiment_share_%": 67.16877464134726
+      }
+    ],
+    "Exp_B3_LM_XGB": [
+      {
+        "symbol": "M&M",
+        "n_obs": 306,
+        "accuracy": 56.5359477124183,
+        "mean_predicted_prob": 0.4689730305492488,
+        "total_abs_shap": 0.2718188166618347,
+        "opening_gap_share_%": 33.197547912597656,
+        "core_market_share_%": 18.615339279174805,
+        "news_volume_share_%": 7.205707550048828,
+        "direct_sentiment_share_%": 4.501710414886475,
+        "all_sentiment_share_%": 40.98140859603882
+      },
+      {
+        "symbol": "SUNPHARMA",
+        "n_obs": 306,
+        "accuracy": 56.5359477124183,
+        "mean_predicted_prob": 0.47935590206408035,
+        "total_abs_shap": 0.22720079123973846,
+        "opening_gap_share_%": 36.05033874511719,
+        "core_market_share_%": 17.84160804748535,
+        "news_volume_share_%": 6.97552490234375,
+        "direct_sentiment_share_%": 2.786863327026367,
+        "all_sentiment_share_%": 39.13252592086792
+      },
+      {
+        "symbol": "HDFCBANK",
+        "n_obs": 306,
+        "accuracy": 55.88235294117647,
+        "mean_predicted_prob": 0.47925109518509285,
+        "total_abs_shap": 0.2448779046535492,
+        "opening_gap_share_%": 30.569494247436523,
+        "core_market_share_%": 15.451675415039062,
+        "news_volume_share_%": 8.285394668579102,
+        "direct_sentiment_share_%": 3.1355392932891846,
+        "all_sentiment_share_%": 45.69343638420105
+      },
+      {
+        "symbol": "ICICIBANK",
+        "n_obs": 306,
+        "accuracy": 55.22875816993464,
+        "mean_predicted_prob": 0.48183094208536587,
+        "total_abs_shap": 0.24120353162288666,
+        "opening_gap_share_%": 30.128902435302734,
+        "core_market_share_%": 15.59573745727539,
+        "news_volume_share_%": 7.993300437927246,
+        "direct_sentiment_share_%": 2.7741572856903076,
+        "all_sentiment_share_%": 46.28205943107605
+      },
+      {
+        "symbol": "CIPLA",
+        "n_obs": 306,
+        "accuracy": 54.90196078431373,
+        "mean_predicted_prob": 0.4847792625622033,
+        "total_abs_shap": 0.20777331292629242,
+        "opening_gap_share_%": 38.360042572021484,
+        "core_market_share_%": 18.662822723388672,
+        "news_volume_share_%": 7.5863728523254395,
+        "direct_sentiment_share_%": 2.9788806438446045,
+        "all_sentiment_share_%": 35.39076375961304
+      },
+      {
+        "symbol": "LT",
+        "n_obs": 306,
+        "accuracy": 53.92156862745098,
+        "mean_predicted_prob": 0.47131547886951297,
+        "total_abs_shap": 0.24674896895885468,
+        "opening_gap_share_%": 33.96663284301758,
+        "core_market_share_%": 19.382326126098633,
+        "news_volume_share_%": 6.638484954833984,
+        "direct_sentiment_share_%": 2.5586442947387695,
+        "all_sentiment_share_%": 40.01256227493286
+      },
+      {
+        "symbol": "TATASTEEL",
+        "n_obs": 306,
+        "accuracy": 52.614379084967325,
+        "mean_predicted_prob": 0.4761347395727058,
+        "total_abs_shap": 0.23038949072360992,
+        "opening_gap_share_%": 34.81538009643555,
+        "core_market_share_%": 17.787092208862305,
+        "news_volume_share_%": 6.855437278747559,
+        "direct_sentiment_share_%": 2.898169755935669,
+        "all_sentiment_share_%": 40.54208254814148
+      },
+      {
+        "symbol": "MARUTI",
+        "n_obs": 306,
+        "accuracy": 52.28758169934641,
+        "mean_predicted_prob": 0.47519785097611494,
+        "total_abs_shap": 0.2534105181694031,
+        "opening_gap_share_%": 34.258209228515625,
+        "core_market_share_%": 20.304685592651367,
+        "news_volume_share_%": 6.90687370300293,
+        "direct_sentiment_share_%": 2.173851728439331,
+        "all_sentiment_share_%": 38.530229806900024
+      },
+      {
+        "symbol": "SBIN",
+        "n_obs": 306,
+        "accuracy": 51.633986928104584,
+        "mean_predicted_prob": 0.47197699011151306,
+        "total_abs_shap": 0.24476337432861328,
+        "opening_gap_share_%": 29.765378952026367,
+        "core_market_share_%": 16.740869522094727,
+        "news_volume_share_%": 8.377864837646484,
+        "direct_sentiment_share_%": 3.557199716567993,
+        "all_sentiment_share_%": 45.115888357162476
+      },
+      {
+        "symbol": "BHARTIARTL",
+        "n_obs": 306,
+        "accuracy": 51.307189542483655,
+        "mean_predicted_prob": 0.47374682732267315,
+        "total_abs_shap": 0.2389277219772339,
+        "opening_gap_share_%": 34.30841827392578,
+        "core_market_share_%": 17.480806350708008,
+        "news_volume_share_%": 6.880830764770508,
+        "direct_sentiment_share_%": 2.4991166591644287,
+        "all_sentiment_share_%": 41.32994198799133
+      },
+      {
+        "symbol": "HINDUNILVR",
+        "n_obs": 306,
+        "accuracy": 50.65359477124183,
+        "mean_predicted_prob": 0.4786584787314234,
+        "total_abs_shap": 0.2293137013912201,
+        "opening_gap_share_%": 33.38759231567383,
+        "core_market_share_%": 17.68199348449707,
+        "news_volume_share_%": 7.204792499542236,
+        "direct_sentiment_share_%": 2.391737937927246,
+        "all_sentiment_share_%": 41.725627183914185
+      },
+      {
+        "symbol": "ITC",
+        "n_obs": 306,
+        "accuracy": 50.326797385620914,
+        "mean_predicted_prob": 0.47981538462872597,
+        "total_abs_shap": 0.21379882097244263,
+        "opening_gap_share_%": 31.312170028686523,
+        "core_market_share_%": 17.616058349609375,
+        "news_volume_share_%": 7.424966335296631,
+        "direct_sentiment_share_%": 2.7462055683135986,
+        "all_sentiment_share_%": 43.64680361747742
+      },
+      {
+        "symbol": "TCS",
+        "n_obs": 306,
+        "accuracy": 49.673202614379086,
+        "mean_predicted_prob": 0.4816447071779787,
+        "total_abs_shap": 0.24629341065883636,
+        "opening_gap_share_%": 30.54419708251953,
+        "core_market_share_%": 18.191511154174805,
+        "news_volume_share_%": 7.205409526824951,
+        "direct_sentiment_share_%": 3.643327474594116,
+        "all_sentiment_share_%": 44.05888509750366
+      },
+      {
+        "symbol": "INFY",
+        "n_obs": 306,
+        "accuracy": 49.01960784313725,
+        "mean_predicted_prob": 0.47837482344091325,
+        "total_abs_shap": 0.2537195086479187,
+        "opening_gap_share_%": 32.75695037841797,
+        "core_market_share_%": 17.205034255981445,
+        "news_volume_share_%": 7.362215995788574,
+        "direct_sentiment_share_%": 3.9508771896362305,
+        "all_sentiment_share_%": 42.675798416137695
+      },
+      {
+        "symbol": "RELIANCE",
+        "n_obs": 306,
+        "accuracy": 47.05882352941176,
+        "mean_predicted_prob": 0.4709741533581727,
+        "total_abs_shap": 0.25706467032432556,
+        "opening_gap_share_%": 29.373451232910156,
+        "core_market_share_%": 15.772406578063965,
+        "news_volume_share_%": 9.57286548614502,
+        "direct_sentiment_share_%": 6.744816303253174,
+        "all_sentiment_share_%": 45.281283378601074
+      }
+    ]
+  },
+  "error_analysis": {
+    "Exp_B4_FinBERT_LR": {
+      "True_Positive": {
+        "count": 1134,
+        "pct_of_test": 24.705882352941178,
+        "mean_predicted_prob": 0.5017270377313598,
+        "mean_open_gap_pct": -0.0032253873172053697,
+        "mean_direct_news_count": 4.886243386243386,
+        "has_direct_news_pct": 83.9506172839506,
+        "opening_gap_share_%": 7.6620658350748165,
+        "core_market_share_%": 14.187162533349158,
+        "direct_sentiment_share_%": 12.646457853563511,
+        "news_volume_share_%": 14.660727788144134
+      },
+      "True_Negative": {
+        "count": 1323,
+        "pct_of_test": 28.823529411764703,
+        "mean_predicted_prob": 0.44639078560719364,
+        "mean_open_gap_pct": 0.003370220877519141,
+        "mean_direct_news_count": 7.604686318972033,
+        "has_direct_news_pct": 98.94179894179894,
+        "opening_gap_share_%": 5.592818459260134,
+        "core_market_share_%": 16.063751593637814,
+        "direct_sentiment_share_%": 9.678468578567472,
+        "news_volume_share_%": 14.384766650864773
+      },
+      "False_Positive_Bull_Trap": {
+        "count": 1081,
+        "pct_of_test": 23.55119825708061,
+        "mean_predicted_prob": 0.4998620293630799,
+        "mean_open_gap_pct": -0.0016021539413150446,
+        "mean_direct_news_count": 4.62349676225717,
+        "has_direct_news_pct": 81.6836262719704,
+        "opening_gap_share_%": 6.104170324440927,
+        "core_market_share_%": 14.332229991643706,
+        "direct_sentiment_share_%": 12.898850009397385,
+        "news_volume_share_%": 15.138762325052005
+      },
+      "False_Negative_Missed_Up": {
+        "count": 1052,
+        "pct_of_test": 22.91938997821351,
+        "mean_predicted_prob": 0.44657876295891685,
+        "mean_open_gap_pct": 0.002342537243462991,
+        "mean_direct_news_count": 7.511406844106464,
+        "has_direct_news_pct": 99.04942965779468,
+        "opening_gap_share_%": 5.209041681972977,
+        "core_market_share_%": 16.05040003568764,
+        "direct_sentiment_share_%": 9.706639359369994,
+        "news_volume_share_%": 13.77160811240933
+      },
+      "High_Confidence_FP": {
+        "count": 28,
+        "pct_of_test": 0.6100217864923747,
+        "mean_predicted_prob": 0.5735128056650673,
+        "mean_open_gap_pct": -0.014565609773183214,
+        "mean_direct_news_count": 6.035714285714286,
+        "has_direct_news_pct": 82.14285714285714,
+        "opening_gap_share_%": 14.559994515829308,
+        "core_market_share_%": 23.874355690007565,
+        "direct_sentiment_share_%": 9.042624932763598,
+        "news_volume_share_%": 11.743133214498599
+      },
+      "High_Confidence_FN": {
+        "count": 57,
+        "pct_of_test": 1.2418300653594772,
+        "mean_predicted_prob": 0.3769634102555132,
+        "mean_open_gap_pct": 0.011885084128223517,
+        "mean_direct_news_count": 9.31578947368421,
+        "has_direct_news_pct": 100.0,
+        "opening_gap_share_%": 9.895911701766801,
+        "core_market_share_%": 23.771794191054806,
+        "direct_sentiment_share_%": 6.638885911435452,
+        "news_volume_share_%": 11.514424914598033
+      },
+      "Top_10_Volatile_Sessions": {
+        "dates": [
+          "2025-04-08",
+          "2026-02-04",
+          "2025-02-03",
+          "2025-04-07",
+          "2025-03-03",
+          "2026-03-05",
+          "2025-05-13",
+          "2026-03-20",
+          "2025-01-07",
+          "2026-03-16"
+        ],
+        "obs_count": 150,
+        "accuracy": 62.0,
+        "opening_gap_share_%": 9.71346713546369,
+        "core_market_share_%": 18.577541727540073,
+        "direct_sentiment_share_%": 9.706207145057352,
+        "news_volume_share_%": 10.89636579195687
+      }
+    },
+    "Exp_B3_LM_XGB": {
+      "True_Positive": {
+        "count": 1151,
+        "pct_of_test": 25.076252723311548,
+        "mean_predicted_prob": 0.5004377671421144,
+        "mean_open_gap_pct": -0.003101797358268515,
+        "mean_direct_news_count": 5.249348392701998,
+        "has_direct_news_pct": 87.48913987836664,
+        "opening_gap_share_%": 35.30641174316406,
+        "core_market_share_%": 17.086652755737305,
+        "direct_sentiment_share_%": 2.547574758529663,
+        "news_volume_share_%": 7.0401763916015625
+      },
+      "True_Negative": {
+        "count": 1259,
+        "pct_of_test": 27.429193899782135,
+        "mean_predicted_prob": 0.45305144992776103,
+        "mean_open_gap_pct": 0.003883631509169286,
+        "mean_direct_news_count": 7.057982525814138,
+        "has_direct_news_pct": 94.2811755361398,
+        "opening_gap_share_%": 31.44703483581543,
+        "core_market_share_%": 18.30960464477539,
+        "direct_sentiment_share_%": 4.140408039093018,
+        "news_volume_share_%": 8.086159706115723
+      },
+      "False_Positive_Bull_Trap": {
+        "count": 1145,
+        "pct_of_test": 24.94553376906318,
+        "mean_predicted_prob": 0.49955813096079765,
+        "mean_open_gap_pct": -0.0018887495717448666,
+        "mean_direct_news_count": 5.391266375545851,
+        "has_direct_news_pct": 87.77292576419214,
+        "opening_gap_share_%": 34.85714340209961,
+        "core_market_share_%": 16.89443016052246,
+        "direct_sentiment_share_%": 2.444815158843994,
+        "news_volume_share_%": 6.676494121551514
+      },
+      "False_Negative_Missed_Up": {
+        "count": 1035,
+        "pct_of_test": 22.54901960784314,
+        "mean_predicted_prob": 0.4542332102423129,
+        "mean_open_gap_pct": 0.0022965494896417774,
+        "mean_direct_news_count": 7.15072463768116,
+        "has_direct_news_pct": 95.3623188405797,
+        "opening_gap_share_%": 29.52556610107422,
+        "core_market_share_%": 18.107933044433594,
+        "direct_sentiment_share_%": 4.091334819793701,
+        "news_volume_share_%": 8.172825813293457
+      },
+      "High_Confidence_FP": {
+        "count": 4,
+        "pct_of_test": 0.08714596949891067,
+        "mean_predicted_prob": 0.5690123587846756,
+        "mean_open_gap_pct": -0.013763018517252836,
+        "mean_direct_news_count": 13.0,
+        "has_direct_news_pct": 100.0,
+        "opening_gap_share_%": 28.68320655822754,
+        "core_market_share_%": 39.99878692626953,
+        "direct_sentiment_share_%": 9.101828575134277,
+        "news_volume_share_%": 4.481658935546875
+      },
+      "High_Confidence_FN": {
+        "count": 21,
+        "pct_of_test": 0.4575163398692811,
+        "mean_predicted_prob": 0.3848336906660171,
+        "mean_open_gap_pct": 0.015100705278539829,
+        "mean_direct_news_count": 12.761904761904763,
+        "has_direct_news_pct": 100.0,
+        "opening_gap_share_%": 36.35541915893555,
+        "core_market_share_%": 19.043684005737305,
+        "direct_sentiment_share_%": 6.528343200683594,
+        "news_volume_share_%": 5.329056262969971
+      },
+      "Top_10_Volatile_Sessions": {
+        "dates": [
+          "2025-04-08",
+          "2026-02-04",
+          "2025-02-03",
+          "2025-04-07",
+          "2025-03-03",
+          "2026-03-05",
+          "2025-05-13",
+          "2026-03-20",
+          "2025-01-07",
+          "2026-03-16"
+        ],
+        "obs_count": 150,
+        "accuracy": 50.66666666666667,
+        "opening_gap_share_%": 23.58725357055664,
+        "core_market_share_%": 22.270151138305664,
+        "direct_sentiment_share_%": 5.4308857917785645,
+        "news_volume_share_%": 7.094034671783447
+      }
+    }
+  },
+  "regime_analysis": {
+    "Exp_B4_FinBERT_LR": {
+      "Bull_Trend": {
+        "count": 1715,
+        "pct_of_test": 37.36383442265795,
+        "accuracy": 56.093294460641395,
+        "opening_gap_share_%": 5.836330106026397,
+        "core_market_share_%": 16.14669399242877,
+        "direct_sentiment_share_%": 11.05907483426739,
+        "all_sentiment_share_%": 62.79928065504411,
+        "news_volume_share_%": 15.217695246500737
+      },
+      "Bear_Trend": {
+        "count": 1591,
+        "pct_of_test": 34.66230936819172,
+        "accuracy": 51.728472658705215,
+        "opening_gap_share_%": 6.774330147946422,
+        "core_market_share_%": 15.434270242885981,
+        "direct_sentiment_share_%": 10.490214899646686,
+        "all_sentiment_share_%": 64.57796260439959,
+        "news_volume_share_%": 13.213437004768009
+      },
+      "Neutral_Trend": {
+        "count": 1284,
+        "pct_of_test": 27.973856209150327,
+        "accuracy": 52.336448598130836,
+        "opening_gap_share_%": 5.708811429775356,
+        "core_market_share_%": 13.441637296352955,
+        "direct_sentiment_share_%": 12.581329168064196,
+        "all_sentiment_share_%": 65.38778149519135,
+        "news_volume_share_%": 15.461769778680335
+      },
+      "Low_Volatility": {
+        "count": 3088,
+        "pct_of_test": 67.27668845315904,
+        "accuracy": 53.56217616580311,
+        "opening_gap_share_%": 5.720588580232775,
+        "core_market_share_%": 14.668989458426832,
+        "direct_sentiment_share_%": 11.830515717825119,
+        "all_sentiment_share_%": 64.541754333701,
+        "news_volume_share_%": 15.068667627639412
+      },
+      "High_Volatility": {
+        "count": 1502,
+        "pct_of_test": 32.72331154684096,
+        "accuracy": 53.46205059920106,
+        "opening_gap_share_%": 7.000879850040781,
+        "core_market_share_%": 16.052081505298805,
+        "direct_sentiment_share_%": 10.1443232493589,
+        "all_sentiment_share_%": 63.496821058422405,
+        "news_volume_share_%": 13.450217586238017
+      }
+    },
+    "Exp_B3_LM_XGB": {
+      "Bull_Trend": {
+        "count": 1715,
+        "pct_of_test": 37.36383442265795,
+        "accuracy": 51.54518950437318,
+        "opening_gap_share_%": 36.2437744140625,
+        "core_market_share_%": 18.30356788635254,
+        "direct_sentiment_share_%": 3.0619192123413086,
+        "all_sentiment_share_%": 38.62542963027954,
+        "news_volume_share_%": 6.827227592468262
+      },
+      "Bear_Trend": {
+        "count": 1591,
+        "pct_of_test": 34.66230936819172,
+        "accuracy": 53.73978629792583,
+        "opening_gap_share_%": 27.383148193359375,
+        "core_market_share_%": 18.50825309753418,
+        "direct_sentiment_share_%": 3.8756303787231445,
+        "all_sentiment_share_%": 45.90723419189453,
+        "news_volume_share_%": 8.20136547088623
+      },
+      "Neutral_Trend": {
+        "count": 1284,
+        "pct_of_test": 27.973856209150327,
+        "accuracy": 52.258566978193144,
+        "opening_gap_share_%": 35.33012008666992,
+        "core_market_share_%": 15.31218147277832,
+        "direct_sentiment_share_%": 2.9340269565582275,
+        "all_sentiment_share_%": 41.825889348983765,
+        "news_volume_share_%": 7.531801700592041
+      },
+      "Low_Volatility": {
+        "count": 3088,
+        "pct_of_test": 67.27668845315904,
+        "accuracy": 52.299222797927456,
+        "opening_gap_share_%": 33.371700286865234,
+        "core_market_share_%": 16.997556686401367,
+        "direct_sentiment_share_%": 2.8595592975616455,
+        "all_sentiment_share_%": 42.02956533432007,
+        "news_volume_share_%": 7.60117769241333
+      },
+      "High_Volatility": {
+        "count": 1502,
+        "pct_of_test": 32.72331154684096,
+        "accuracy": 52.92942743009321,
+        "opening_gap_share_%": 31.693002700805664,
+        "core_market_share_%": 18.75494956970215,
+        "direct_sentiment_share_%": 4.179324150085449,
+        "all_sentiment_share_%": 42.21548938751221,
+        "news_volume_share_%": 7.3365559577941895
+      }
+    }
+  },
+  "feature_correlations": {
+    "finbert_direct_pos": {
+      "finbert_direct_pos": 1.0,
+      "finbert_direct_neu": -0.1529,
+      "finbert_direct_neg": -0.36,
+      "finbert_direct_polarity": 0.8163,
+      "finbert_direct_polarity_lag1": 0.0524,
+      "finbert_direct_polarity_roll3": 0.4822,
+      "finbert_sector_polarity": 0.7074,
+      "finbert_market_polarity": 0.4649,
+      "direct_news_count": 0.0982,
+      "open_gap_pct": 0.0747
+    },
+    "finbert_direct_neu": {
+      "finbert_direct_pos": -0.1529,
+      "finbert_direct_neu": 1.0,
+      "finbert_direct_neg": -0.294,
+      "finbert_direct_polarity": 0.0913,
+      "finbert_direct_polarity_lag1": 0.0523,
+      "finbert_direct_polarity_roll3": 0.0883,
+      "finbert_sector_polarity": 0.0913,
+      "finbert_market_polarity": 0.1291,
+      "direct_news_count": 0.1982,
+      "open_gap_pct": 0.0268
+    },
+    "finbert_direct_neg": {
+      "finbert_direct_pos": -0.36,
+      "finbert_direct_neu": -0.294,
+      "finbert_direct_neg": 1.0,
+      "finbert_direct_polarity": -0.8328,
+      "finbert_direct_polarity_lag1": -0.0895,
+      "finbert_direct_polarity_roll3": -0.5106,
+      "finbert_sector_polarity": -0.7217,
+      "finbert_market_polarity": -0.4064,
+      "direct_news_count": 0.0905,
+      "open_gap_pct": -0.0936
+    },
+    "finbert_direct_polarity": {
+      "finbert_direct_pos": 0.8163,
+      "finbert_direct_neu": 0.0913,
+      "finbert_direct_neg": -0.8328,
+      "finbert_direct_polarity": 1.0,
+      "finbert_direct_polarity_lag1": 0.0865,
+      "finbert_direct_polarity_roll3": 0.6023,
+      "finbert_sector_polarity": 0.8666,
+      "finbert_market_polarity": 0.5275,
+      "direct_news_count": 0.0023,
+      "open_gap_pct": 0.1023
+    },
+    "finbert_direct_polarity_lag1": {
+      "finbert_direct_pos": 0.0524,
+      "finbert_direct_neu": 0.0523,
+      "finbert_direct_neg": -0.0895,
+      "finbert_direct_polarity": 0.0865,
+      "finbert_direct_polarity_lag1": 1.0,
+      "finbert_direct_polarity_roll3": 0.6364,
+      "finbert_sector_polarity": 0.0791,
+      "finbert_market_polarity": 0.1075,
+      "direct_news_count": 0.0272,
+      "open_gap_pct": -0.0166
+    },
+    "finbert_direct_polarity_roll3": {
+      "finbert_direct_pos": 0.4822,
+      "finbert_direct_neu": 0.0883,
+      "finbert_direct_neg": -0.5106,
+      "finbert_direct_polarity": 0.6023,
+      "finbert_direct_polarity_lag1": 0.6364,
+      "finbert_direct_polarity_roll3": 1.0,
+      "finbert_sector_polarity": 0.5313,
+      "finbert_market_polarity": 0.3746,
+      "direct_news_count": 0.0372,
+      "open_gap_pct": 0.0637
+    },
+    "finbert_sector_polarity": {
+      "finbert_direct_pos": 0.7074,
+      "finbert_direct_neu": 0.0913,
+      "finbert_direct_neg": -0.7217,
+      "finbert_direct_polarity": 0.8666,
+      "finbert_direct_polarity_lag1": 0.0791,
+      "finbert_direct_polarity_roll3": 0.5313,
+      "finbert_sector_polarity": 1.0,
+      "finbert_market_polarity": 0.6074,
+      "direct_news_count": 0.0061,
+      "open_gap_pct": 0.1011
+    },
+    "finbert_market_polarity": {
+      "finbert_direct_pos": 0.4649,
+      "finbert_direct_neu": 0.1291,
+      "finbert_direct_neg": -0.4064,
+      "finbert_direct_polarity": 0.5275,
+      "finbert_direct_polarity_lag1": 0.1075,
+      "finbert_direct_polarity_roll3": 0.3746,
+      "finbert_sector_polarity": 0.6074,
+      "finbert_market_polarity": 1.0,
+      "direct_news_count": 0.0323,
+      "open_gap_pct": 0.0657
+    },
+    "direct_news_count": {
+      "finbert_direct_pos": 0.0982,
+      "finbert_direct_neu": 0.1982,
+      "finbert_direct_neg": 0.0905,
+      "finbert_direct_polarity": 0.0023,
+      "finbert_direct_polarity_lag1": 0.0272,
+      "finbert_direct_polarity_roll3": 0.0372,
+      "finbert_sector_polarity": 0.0061,
+      "finbert_market_polarity": 0.0323,
+      "direct_news_count": 1.0,
+      "open_gap_pct": -0.0021
+    },
+    "open_gap_pct": {
+      "finbert_direct_pos": 0.0747,
+      "finbert_direct_neu": 0.0268,
+      "finbert_direct_neg": -0.0936,
+      "finbert_direct_polarity": 0.1023,
+      "finbert_direct_polarity_lag1": -0.0166,
+      "finbert_direct_polarity_roll3": 0.0637,
+      "finbert_sector_polarity": 0.1011,
+      "finbert_market_polarity": 0.0657,
+      "direct_news_count": -0.0021,
+      "open_gap_pct": 1.0
+    }
+  }
+}

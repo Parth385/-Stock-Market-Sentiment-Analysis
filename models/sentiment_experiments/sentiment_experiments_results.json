@@ -1,0 +1,5496 @@
+{
+  "Exp_A1_MktOnly": {
+    "feature_count": 10,
+    "continuous_features": [
+      "ret_1d_lag1",
+      "rsi_14_lag1",
+      "macd_lag1",
+      "macd_signal_lag1",
+      "macd_diff_lag1",
+      "rolling_vol_5d_lag1",
+      "rolling_vol_21d_lag1",
+      "adj_close_sma_ratio_20_lag1",
+      "intraday_range_pct_lag1"
+    ],
+    "Logistic Regression": {
+      "best_hyperparameters": {
+        "C": 10.0,
+        "penalty": "l2",
+        "solver": "lbfgs"
+      },
+      "threshold": 0.475,
+      "train_time_sec": 0.0073719024658203125,
+      "infer_time_ms": 0.8254051208496094,
+      "train": {
+        "threshold": 0.475,
+        "accuracy": 0.5203909673070441,
+        "precision": 0.4853342428376535,
+        "recall": 0.40990926112631426,
+        "f1_positive": 0.4444444444444444,
+        "f1_macro": 0.5112573879697166,
+        "roc_auc": 0.5188889304180542,
+        "brier_score": 0.24866151287559893,
+        "confusion_matrix": {
+          "tn": 4874,
+          "fp": 3018,
+          "fn": 4097,
+          "tp": 2846
+        }
+      },
+      "val": {
+        "threshold": 0.475,
+        "accuracy": 0.5222222222222223,
+        "precision": 0.4933753943217666,
+        "recall": 0.4489092996555683,
+        "f1_positive": 0.4700931770363691,
+        "f1_macro": 0.5175533736156432,
+        "roc_auc": 0.5123268116847448,
+        "brier_score": 0.24917381955861387,
+        "confusion_matrix": {
+          "tn": 1145,
+          "fp": 803,
+          "fn": 960,
+          "tp": 782
+        }
+      },
+      "test": {
+        "threshold": 0.475,
+        "accuracy": 0.5037037037037037,
+        "precision": 0.48339350180505414,
+        "recall": 0.6125343092406221,
+        "f1_positive": 0.5403551251008878,
+        "f1_macro": 0.5005279413383227,
+        "roc_auc": 0.5132399797227251,
+        "brier_score": 0.24952275713120262,
+        "confusion_matrix": {
+          "tn": 973,
+          "fp": 1431,
+          "fn": 847,
+          "tp": 1339
+        }
+      }
+    },
+    "Random Forest": {
+      "best_hyperparameters": {
+        "n_estimators": 300,
+        "max_depth": 6,
+        "min_samples_split": 20,
+        "min_samples_leaf": 10,
+        "max_features": "sqrt",
+        "random_state": 42
+      },
+      "threshold": 0.47000000000000003,
+      "train_time_sec": 0.7017002105712891,
+      "infer_time_ms": 227.99444198608398,
+      "train": {
+        "threshold": 0.47000000000000003,
+        "accuracy": 0.6159083249073137,
+        "precision": 0.59404743919021,
+        "recall": 0.5663257957655192,
+        "f1_positive": 0.5798554785429878,
+        "f1_macro": 0.6130591025692341,
+        "roc_auc": 0.6613477448215463,
+        "brier_score": 0.24238928450305425,
+        "confusion_matrix": {
+          "tn": 5205,
+          "fp": 2687,
+          "fn": 3011,
+          "tp": 3932
+        }
+      },
+      "val": {
+        "threshold": 0.47000000000000003,
+        "accuracy": 0.5021680216802168,
+        "precision": 0.47122955784373105,
+        "recall": 0.44661308840413316,
+        "f1_positive": 0.4585912172119069,
+        "f1_macro": 0.49892189403359327,
+        "roc_auc": 0.5057641031927709,
+        "brier_score": 0.24934653485115202,
+        "confusion_matrix": {
+          "tn": 1075,
+          "fp": 873,
+          "fn": 964,
+          "tp": 778
+        }
+      },
+      "test": {
+        "threshold": 0.47000000000000003,
+        "accuracy": 0.4854030501089325,
+        "precision": 0.46888260254596886,
+        "recall": 0.6065873741994511,
+        "f1_positive": 0.5289190267251695,
+        "f1_macro": 0.4809741557053596,
+        "roc_auc": 0.49092051521328434,
+        "brier_score": 0.2500165948247618,
+        "confusion_matrix": {
+          "tn": 902,
+          "fp": 1502,
+          "fn": 860,
+          "tp": 1326
+        }
+      }
+    },
+    "XGBoost": {
+      "best_hyperparameters": {
+        "n_estimators": 300,
+        "best_iteration": 24,
+        "learning_rate": 0.03,
+        "max_depth": 4,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_alpha": 0.1,
+        "reg_lambda": 1.0,
+        "random_state": 42
+      },
+      "threshold": 0.47000000000000003,
+      "train_time_sec": 0.14349699020385742,
+      "infer_time_ms": 4.081487655639648,
+      "train": {
+        "threshold": 0.47000000000000003,
+        "accuracy": 0.57458712504213,
+        "precision": 0.5498894853173351,
+        "recall": 0.5016563445196601,
+        "f1_positive": 0.5246667168788129,
+        "f1_macro": 0.5698426611905807,
+        "roc_auc": 0.6011201632524461,
+        "brier_score": 0.2467115819454193,
+        "confusion_matrix": {
+          "tn": 5041,
+          "fp": 2851,
+          "fn": 3460,
+          "tp": 3483
+        }
+      },
+      "val": {
+        "threshold": 0.47000000000000003,
+        "accuracy": 0.5062330623306233,
+        "precision": 0.47496871088861076,
+        "recall": 0.4357060849598163,
+        "f1_positive": 0.4544910179640719,
+        "f1_macro": 0.5017504594770854,
+        "roc_auc": 0.5109904002338647,
+        "brier_score": 0.24897536635398865,
+        "confusion_matrix": {
+          "tn": 1109,
+          "fp": 839,
+          "fn": 983,
+          "tp": 759
+        }
+      },
+      "test": {
+        "threshold": 0.47000000000000003,
+        "accuracy": 0.48562091503267973,
+        "precision": 0.46676794530953286,
+        "recall": 0.5622140896614821,
+        "f1_positive": 0.5100643286989002,
+        "f1_macro": 0.48433736957760876,
+        "roc_auc": 0.4882180202864089,
+        "brier_score": 0.24976274371147156,
+        "confusion_matrix": {
+          "tn": 1000,
+          "fp": 1404,
+          "fn": 957,
+          "tp": 1229
+        }
+      }
+    },
+    "per_company_test": {
+      "Logistic Regression": {
+        "RELIANCE": {
+          "accuracy": 0.5163398692810458,
+          "roc_auc": 0.500106869576369,
+          "n_obs": 306
+        },
+        "TCS": {
+          "accuracy": 0.49673202614379086,
+          "roc_auc": 0.5501686156002277,
+          "n_obs": 306
+        },
+        "INFY": {
+          "accuracy": 0.48366013071895425,
+          "roc_auc": 0.5256106492051867,
+          "n_obs": 306
+        },
+        "HDFCBANK": {
+          "accuracy": 0.5065359477124183,
+          "roc_auc": 0.48896681491618205,
+          "n_obs": 306
+        },
+        "ICICIBANK": {
+          "accuracy": 0.48366013071895425,
+          "roc_auc": 0.5181748203900103,
+          "n_obs": 306
+        },
+        "SBIN": {
+          "accuracy": 0.5032679738562091,
+          "roc_auc": 0.4601221752317485,
+          "n_obs": 306
+        },
+        "HINDUNILVR": {
+          "accuracy": 0.5261437908496732,
+          "roc_auc": 0.536429794520548,
+          "n_obs": 306
+        },
+        "ITC": {
+          "accuracy": 0.4869281045751634,
+          "roc_auc": 0.5204861878453039,
+          "n_obs": 306
+        },
+        "LT": {
+          "accuracy": 0.4542483660130719,
+          "roc_auc": 0.48093119682114627,
+          "n_obs": 306
+        },
+        "BHARTIARTL": {
+          "accuracy": 0.49673202614379086,
+          "roc_auc": 0.5288461538461537,
+          "n_obs": 306
+        },
+        "SUNPHARMA": {
+          "accuracy": 0.5294117647058824,
+          "roc_auc": 0.5233065343824838,
+          "n_obs": 306
+        },
+        "CIPLA": {
+          "accuracy": 0.5130718954248366,
+          "roc_auc": 0.5281350138859218,
+          "n_obs": 306
+        },
+        "MARUTI": {
+          "accuracy": 0.5032679738562091,
+          "roc_auc": 0.49119055764625386,
+          "n_obs": 306
+        },
+        "M&M": {
+          "accuracy": 0.5686274509803921,
+          "roc_auc": 0.5911521841440979,
+          "n_obs": 306
+        },
+        "TATASTEEL": {
+          "accuracy": 0.4869281045751634,
+          "roc_auc": 0.4833390293916609,
+          "n_obs": 306
+        }
+      },
+      "Random Forest": {
+        "RELIANCE": {
+          "accuracy": 0.49019607843137253,
+          "roc_auc": 0.44402171589791817,
+          "n_obs": 306
+        },
+        "TCS": {
+          "accuracy": 0.46405228758169936,
+          "roc_auc": 0.5259930801909517,
+          "n_obs": 306
+        },
+        "INFY": {
+          "accuracy": 0.4477124183006536,
+          "roc_auc": 0.44492310343342095,
+          "n_obs": 306
+        },
+        "HDFCBANK": {
+          "accuracy": 0.5359477124183006,
+          "roc_auc": 0.5245466985973315,
+          "n_obs": 306
+        },
+        "ICICIBANK": {
+          "accuracy": 0.48366013071895425,
+          "roc_auc": 0.46258125213821416,
+          "n_obs": 306
+        },
+        "SBIN": {
+          "accuracy": 0.4934640522875817,
+          "roc_auc": 0.4891708317313853,
+          "n_obs": 306
+        },
+        "HINDUNILVR": {
+          "accuracy": 0.4869281045751634,
+          "roc_auc": 0.5249571917808219,
+          "n_obs": 306
+        },
+        "ITC": {
+          "accuracy": 0.42483660130718953,
+          "roc_auc": 0.46192265193370163,
+          "n_obs": 306
+        },
+        "LT": {
+          "accuracy": 0.5228758169934641,
+          "roc_auc": 0.5368634734159721,
+          "n_obs": 306
+        },
+        "BHARTIARTL": {
+          "accuracy": 0.49019607843137253,
+          "roc_auc": 0.5002991452991453,
+          "n_obs": 306
+        },
+        "SUNPHARMA": {
+          "accuracy": 0.5261437908496732,
+          "roc_auc": 0.5652155319876839,
+          "n_obs": 306
+        },
+        "CIPLA": {
+          "accuracy": 0.4934640522875817,
+          "roc_auc": 0.4763939329203162,
+          "n_obs": 306
+        },
+        "MARUTI": {
+          "accuracy": 0.45751633986928103,
+          "roc_auc": 0.4532158741019501,
+          "n_obs": 306
+        },
+        "M&M": {
+          "accuracy": 0.5098039215686274,
+          "roc_auc": 0.5237667394001626,
+          "n_obs": 306
+        },
+        "TATASTEEL": {
+          "accuracy": 0.4542483660130719,
+          "roc_auc": 0.47650375939849626,
+          "n_obs": 306
+        }
+      },
+      "XGBoost": {
+        "RELIANCE": {
+          "accuracy": 0.4738562091503268,
+          "roc_auc": 0.45956055230197074,
+          "n_obs": 306
+        },
+        "TCS": {
+          "accuracy": 0.46078431372549017,
+          "roc_auc": 0.5103359173126615,
+          "n_obs": 306
+        },
+        "INFY": {
+          "accuracy": 0.43137254901960786,
+          "roc_auc": 0.4439538189807435,
+          "n_obs": 306
+        },
+        "HDFCBANK": {
+          "accuracy": 0.5326797385620915,
+          "roc_auc": 0.5230285665412249,
+          "n_obs": 306
+        },
+        "ICICIBANK": {
+          "accuracy": 0.47058823529411764,
+          "roc_auc": 0.4745552514539856,
+          "n_obs": 306
+        },
+        "SBIN": {
+          "accuracy": 0.47058823529411764,
+          "roc_auc": 0.4975223204750309,
+          "n_obs": 306
+        },
+        "HINDUNILVR": {
+          "accuracy": 0.4934640522875817,
+          "roc_auc": 0.5126498287671233,
+          "n_obs": 306
+        },
+        "ITC": {
+          "accuracy": 0.43137254901960786,
+          "roc_auc": 0.4418563535911602,
+          "n_obs": 306
+        },
+        "LT": {
+          "accuracy": 0.5359477124183006,
+          "roc_auc": 0.5135835528873148,
+          "n_obs": 306
+        },
+        "BHARTIARTL": {
+          "accuracy": 0.5196078431372549,
+          "roc_auc": 0.5181623931623931,
+          "n_obs": 306
+        },
+        "SUNPHARMA": {
+          "accuracy": 0.5555555555555556,
+          "roc_auc": 0.5613239822100582,
+          "n_obs": 306
+        },
+        "CIPLA": {
+          "accuracy": 0.48366013071895425,
+          "roc_auc": 0.4789574877162999,
+          "n_obs": 306
+        },
+        "MARUTI": {
+          "accuracy": 0.4673202614379085,
+          "roc_auc": 0.45349384194320896,
+          "n_obs": 306
+        },
+        "M&M": {
+          "accuracy": 0.49673202614379086,
+          "roc_auc": 0.4954434604030291,
+          "n_obs": 306
+        },
+        "TATASTEEL": {
+          "accuracy": 0.46078431372549017,
+          "roc_auc": 0.4867993848257006,
+          "n_obs": 306
+        }
+      }
+    }
+  },
+  "Exp_A2_MktVol": {
+    "feature_count": 18,
+    "continuous_features": [
+      "ret_1d_lag1",
+      "rsi_14_lag1",
+      "macd_lag1",
+      "macd_signal_lag1",
+      "macd_diff_lag1",
+      "rolling_vol_5d_lag1",
+      "rolling_vol_21d_lag1",
+      "adj_close_sma_ratio_20_lag1",
+      "intraday_range_pct_lag1",
+      "direct_news_count",
+      "direct_news_count_lag1",
+      "direct_news_count_roll3",
+      "direct_news_count_roll7",
+      "sector_news_count",
+      "market_news_count",
+      "has_direct_news",
+      "has_sector_news"
+    ],
+    "Logistic Regression": {
+      "best_hyperparameters": {
+        "C": 5.0,
+        "penalty": "l2",
+        "solver": "lbfgs"
+      },
+      "threshold": 0.475,
+      "train_time_sec": 0.01459813117980957,
+      "infer_time_ms": 0.9860992431640625,
+      "train": {
+        "threshold": 0.475,
+        "accuracy": 0.523963599595551,
+        "precision": 0.48957055214723927,
+        "recall": 0.4022756733400547,
+        "f1_positive": 0.4416508538899431,
+        "f1_macro": 0.5133879930359126,
+        "roc_auc": 0.5217599482689358,
+        "brier_score": 0.2485667484261167,
+        "confusion_matrix": {
+          "tn": 4980,
+          "fp": 2912,
+          "fn": 4150,
+          "tp": 2793
+        }
+      },
+      "val": {
+        "threshold": 0.475,
+        "accuracy": 0.5113821138211382,
+        "precision": 0.4809731752963194,
+        "recall": 0.4425947187141217,
+        "f1_positive": 0.4609865470852018,
+        "f1_macro": 0.5070731991931585,
+        "roc_auc": 0.5135577247234056,
+        "brier_score": 0.24908831512374555,
+        "confusion_matrix": {
+          "tn": 1116,
+          "fp": 832,
+          "fn": 971,
+          "tp": 771
+        }
+      },
+      "test": {
+        "threshold": 0.475,
+        "accuracy": 0.5108932461873639,
+        "precision": 0.4883537307540466,
+        "recall": 0.5658737419945106,
+        "f1_positive": 0.524263615172706,
+        "f1_macro": 0.5105066114419907,
+        "roc_auc": 0.517693711152349,
+        "brier_score": 0.24949776991150693,
+        "confusion_matrix": {
+          "tn": 1108,
+          "fp": 1296,
+          "fn": 949,
+          "tp": 1237
+        }
+      }
+    },
+    "Random Forest": {
+      "best_hyperparameters": {
+        "n_estimators": 300,
+        "max_depth": 6,
+        "min_samples_split": 20,
+        "min_samples_leaf": 10,
+        "max_features": "sqrt",
+        "random_state": 42
+      },
+      "threshold": 0.47000000000000003,
+      "train_time_sec": 0.7762734889984131,
+      "infer_time_ms": 250.7152557373047,
+      "train": {
+        "threshold": 0.47000000000000003,
+        "accuracy": 0.6198179979777553,
+        "precision": 0.5919029482296516,
+        "recall": 0.6043497047385856,
+        "f1_positive": 0.5980615735461802,
+        "f1_macro": 0.6187008213043601,
+        "roc_auc": 0.6718713944603872,
+        "brier_score": 0.24240925997390855,
+        "confusion_matrix": {
+          "tn": 4999,
+          "fp": 2893,
+          "fn": 2747,
+          "tp": 4196
+        }
+      },
+      "val": {
+        "threshold": 0.47000000000000003,
+        "accuracy": 0.5056910569105691,
+        "precision": 0.4769403824521935,
+        "recall": 0.48679678530424797,
+        "f1_positive": 0.4818181818181818,
+        "f1_macro": 0.5046396608572774,
+        "roc_auc": 0.5104522993938851,
+        "brier_score": 0.24922927938389414,
+        "confusion_matrix": {
+          "tn": 1018,
+          "fp": 930,
+          "fn": 894,
+          "tp": 848
+        }
+      },
+      "test": {
+        "threshold": 0.47000000000000003,
+        "accuracy": 0.48518518518518516,
+        "precision": 0.47054908485856906,
+        "recall": 0.646843549862763,
+        "f1_positive": 0.544789057984974,
+        "f1_macro": 0.476205007809233,
+        "roc_auc": 0.49313073057560364,
+        "brier_score": 0.24987566338647932,
+        "confusion_matrix": {
+          "tn": 813,
+          "fp": 1591,
+          "fn": 772,
+          "tp": 1414
+        }
+      }
+    },
+    "XGBoost": {
+      "best_hyperparameters": {
+        "n_estimators": 300,
+        "best_iteration": 34,
+        "learning_rate": 0.03,
+        "max_depth": 4,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_alpha": 0.1,
+        "reg_lambda": 1.0,
+        "random_state": 42
+      },
+      "threshold": 0.47000000000000003,
+      "train_time_sec": 0.06446242332458496,
+      "infer_time_ms": 3.48663330078125,
+      "train": {
+        "threshold": 0.47000000000000003,
+        "accuracy": 0.5853724300640377,
+        "precision": 0.5547566371681416,
+        "recall": 0.5778481924240242,
+        "f1_positive": 0.5660670194003528,
+        "f1_macro": 0.5845501279641325,
+        "roc_auc": 0.623048797393649,
+        "brier_score": 0.24561873078346252,
+        "confusion_matrix": {
+          "tn": 4672,
+          "fp": 3220,
+          "fn": 2931,
+          "tp": 4012
+        }
+      },
+      "val": {
+        "threshold": 0.47000000000000003,
+        "accuracy": 0.5116531165311653,
+        "precision": 0.482837528604119,
+        "recall": 0.4845005740528129,
+        "f1_positive": 0.4836676217765043,
+        "f1_macro": 0.5102142736131878,
+        "roc_auc": 0.5160008380935317,
+        "brier_score": 0.24897457659244537,
+        "confusion_matrix": {
+          "tn": 1044,
+          "fp": 904,
+          "fn": 898,
+          "tp": 844
+        }
+      },
+      "test": {
+        "threshold": 0.47000000000000003,
+        "accuracy": 0.48104575163398694,
+        "precision": 0.4669142471303174,
+        "recall": 0.6326623970722781,
+        "f1_positive": 0.5372960372960373,
+        "f1_macro": 0.47326111388611386,
+        "roc_auc": 0.49243455555166515,
+        "brier_score": 0.24970465898513794,
+        "confusion_matrix": {
+          "tn": 825,
+          "fp": 1579,
+          "fn": 803,
+          "tp": 1383
+        }
+      }
+    },
+    "per_company_test": {
+      "Logistic Regression": {
+        "RELIANCE": {
+          "accuracy": 0.5163398692810458,
+          "roc_auc": 0.5057068353781046,
+          "n_obs": 306
+        },
+        "TCS": {
+          "accuracy": 0.4934640522875817,
+          "roc_auc": 0.5410151973021504,
+          "n_obs": 306
+        },
+        "INFY": {
+          "accuracy": 0.5065359477124183,
+          "roc_auc": 0.5089820359281436,
+          "n_obs": 306
+        },
+        "HDFCBANK": {
+          "accuracy": 0.5261437908496732,
+          "roc_auc": 0.5443037974683544,
+          "n_obs": 306
+        },
+        "ICICIBANK": {
+          "accuracy": 0.4803921568627451,
+          "roc_auc": 0.5175761204242217,
+          "n_obs": 306
+        },
+        "SBIN": {
+          "accuracy": 0.5196078431372549,
+          "roc_auc": 0.5076252723311547,
+          "n_obs": 306
+        },
+        "HINDUNILVR": {
+          "accuracy": 0.49673202614379086,
+          "roc_auc": 0.5322773972602739,
+          "n_obs": 306
+        },
+        "ITC": {
+          "accuracy": 0.5130718954248366,
+          "roc_auc": 0.5199116022099448,
+          "n_obs": 306
+        },
+        "LT": {
+          "accuracy": 0.477124183006536,
+          "roc_auc": 0.4751004189521877,
+          "n_obs": 306
+        },
+        "BHARTIARTL": {
+          "accuracy": 0.5326797385620915,
+          "roc_auc": 0.5297435897435897,
+          "n_obs": 306
+        },
+        "SUNPHARMA": {
+          "accuracy": 0.5098039215686274,
+          "roc_auc": 0.5191583989052343,
+          "n_obs": 306
+        },
+        "CIPLA": {
+          "accuracy": 0.5261437908496732,
+          "roc_auc": 0.5191198461867123,
+          "n_obs": 306
+        },
+        "MARUTI": {
+          "accuracy": 0.5,
+          "roc_auc": 0.4914043790626069,
+          "n_obs": 306
+        },
+        "M&M": {
+          "accuracy": 0.5588235294117647,
+          "roc_auc": 0.5912805373721816,
+          "n_obs": 306
+        },
+        "TATASTEEL": {
+          "accuracy": 0.5065359477124183,
+          "roc_auc": 0.47406869446343125,
+          "n_obs": 306
+        }
+      },
+      "Random Forest": {
+        "RELIANCE": {
+          "accuracy": 0.45098039215686275,
+          "roc_auc": 0.43756679348523064,
+          "n_obs": 306
+        },
+        "TCS": {
+          "accuracy": 0.46405228758169936,
+          "roc_auc": 0.521788639250208,
+          "n_obs": 306
+        },
+        "INFY": {
+          "accuracy": 0.4411764705882353,
+          "roc_auc": 0.4513419204755955,
+          "n_obs": 306
+        },
+        "HDFCBANK": {
+          "accuracy": 0.5,
+          "roc_auc": 0.5258723913787204,
+          "n_obs": 306
+        },
+        "ICICIBANK": {
+          "accuracy": 0.49673202614379086,
+          "roc_auc": 0.47049264454327744,
+          "n_obs": 306
+        },
+        "SBIN": {
+          "accuracy": 0.49019607843137253,
+          "roc_auc": 0.4852834379939339,
+          "n_obs": 306
+        },
+        "HINDUNILVR": {
+          "accuracy": 0.4803921568627451,
+          "roc_auc": 0.5293236301369862,
+          "n_obs": 306
+        },
+        "ITC": {
+          "accuracy": 0.4117647058823529,
+          "roc_auc": 0.45856353591160215,
+          "n_obs": 306
+        },
+        "LT": {
+          "accuracy": 0.5490196078431373,
+          "roc_auc": 0.5343583984796787,
+          "n_obs": 306
+        },
+        "BHARTIARTL": {
+          "accuracy": 0.5065359477124183,
+          "roc_auc": 0.48470085470085467,
+          "n_obs": 306
+        },
+        "SUNPHARMA": {
+          "accuracy": 0.5228758169934641,
+          "roc_auc": 0.5563633253506671,
+          "n_obs": 306
+        },
+        "CIPLA": {
+          "accuracy": 0.5294117647058824,
+          "roc_auc": 0.48562273018585767,
+          "n_obs": 306
+        },
+        "MARUTI": {
+          "accuracy": 0.47058823529411764,
+          "roc_auc": 0.4660023947998631,
+          "n_obs": 306
+        },
+        "M&M": {
+          "accuracy": 0.5098039215686274,
+          "roc_auc": 0.529072006160955,
+          "n_obs": 306
+        },
+        "TATASTEEL": {
+          "accuracy": 0.4542483660130719,
+          "roc_auc": 0.47928058783321936,
+          "n_obs": 306
+        }
+      },
+      "XGBoost": {
+        "RELIANCE": {
+          "accuracy": 0.4673202614379085,
+          "roc_auc": 0.44154234172615736,
+          "n_obs": 306
+        },
+        "TCS": {
+          "accuracy": 0.42483660130718953,
+          "roc_auc": 0.5247886830464679,
+          "n_obs": 306
+        },
+        "INFY": {
+          "accuracy": 0.46078431372549017,
+          "roc_auc": 0.45274199801835174,
+          "n_obs": 306
+        },
+        "HDFCBANK": {
+          "accuracy": 0.48366013071895425,
+          "roc_auc": 0.5085528566541224,
+          "n_obs": 306
+        },
+        "ICICIBANK": {
+          "accuracy": 0.49019607843137253,
+          "roc_auc": 0.4988239822100582,
+          "n_obs": 306
+        },
+        "SBIN": {
+          "accuracy": 0.4869281045751634,
+          "roc_auc": 0.5062155581186724,
+          "n_obs": 306
+        },
+        "HINDUNILVR": {
+          "accuracy": 0.5,
+          "roc_auc": 0.5125,
+          "n_obs": 306
+        },
+        "ITC": {
+          "accuracy": 0.41830065359477125,
+          "roc_auc": 0.4495027624309392,
+          "n_obs": 306
+        },
+        "LT": {
+          "accuracy": 0.5163398692810458,
+          "roc_auc": 0.522955988424826,
+          "n_obs": 306
+        },
+        "BHARTIARTL": {
+          "accuracy": 0.5261437908496732,
+          "roc_auc": 0.5177136752136752,
+          "n_obs": 306
+        },
+        "SUNPHARMA": {
+          "accuracy": 0.4934640522875817,
+          "roc_auc": 0.5209972630858707,
+          "n_obs": 306
+        },
+        "CIPLA": {
+          "accuracy": 0.46078431372549017,
+          "roc_auc": 0.47983336893826106,
+          "n_obs": 306
+        },
+        "MARUTI": {
+          "accuracy": 0.4673202614379085,
+          "roc_auc": 0.4607423879575778,
+          "n_obs": 306
+        },
+        "M&M": {
+          "accuracy": 0.545751633986928,
+          "roc_auc": 0.5283874556111753,
+          "n_obs": 306
+        },
+        "TATASTEEL": {
+          "accuracy": 0.4738562091503268,
+          "roc_auc": 0.47682416267942584,
+          "n_obs": 306
+        }
+      }
+    }
+  },
+  "Exp_A3_MktLM": {
+    "feature_count": 36,
+    "continuous_features": [
+      "ret_1d_lag1",
+      "rsi_14_lag1",
+      "macd_lag1",
+      "macd_signal_lag1",
+      "macd_diff_lag1",
+      "rolling_vol_5d_lag1",
+      "rolling_vol_21d_lag1",
+      "adj_close_sma_ratio_20_lag1",
+      "intraday_range_pct_lag1",
+      "lm_direct_pos_count",
+      "lm_direct_neg_count",
+      "lm_direct_unc_count",
+      "lm_direct_polarity",
+      "lm_direct_subjectivity",
+      "lm_sector_pos_count",
+      "lm_sector_neg_count",
+      "lm_sector_polarity",
+      "lm_market_polarity",
+      "lm_direct_polarity_lag1",
+      "lm_direct_polarity_roll3",
+      "lm_direct_polarity_roll7",
+      "lm_sector_polarity_lag1",
+      "lm_sector_polarity_roll3",
+      "lm_sector_polarity_roll7",
+      "lm_market_polarity_lag1",
+      "lm_market_polarity_roll3",
+      "lm_market_polarity_roll7",
+      "direct_news_count",
+      "direct_news_count_lag1",
+      "direct_news_count_roll3",
+      "direct_news_count_roll7",
+      "sector_news_count",
+      "market_news_count",
+      "has_direct_news",
+      "has_sector_news"
+    ],
+    "Logistic Regression": {
+      "best_hyperparameters": {
+        "C": 0.1,
+        "penalty": "l2",
+        "solver": "lbfgs"
+      },
+      "threshold": 0.47000000000000003,
+      "train_time_sec": 0.02100825309753418,
+      "infer_time_ms": 2.2192001342773438,
+      "train": {
+        "threshold": 0.47000000000000003,
+        "accuracy": 0.5243680485338726,
+        "precision": 0.49208572629219777,
+        "recall": 0.5059772432665994,
+        "f1_positive": 0.49893481039625054,
+        "f1_macro": 0.523139460625377,
+        "roc_auc": 0.5344129216991681,
+        "brier_score": 0.2480241446037725,
+        "confusion_matrix": {
+          "tn": 4266,
+          "fp": 3626,
+          "fn": 3430,
+          "tp": 3513
+        }
+      },
+      "val": {
+        "threshold": 0.47000000000000003,
+        "accuracy": 0.5165311653116531,
+        "precision": 0.4894789579158317,
+        "recall": 0.560849598163031,
+        "f1_positive": 0.5227394328517924,
+        "f1_macro": 0.516449343004699,
+        "roc_auc": 0.5152459940072187,
+        "brier_score": 0.24956830691704554,
+        "confusion_matrix": {
+          "tn": 929,
+          "fp": 1019,
+          "fn": 765,
+          "tp": 977
+        }
+      },
+      "test": {
+        "threshold": 0.47000000000000003,
+        "accuracy": 0.5061002178649238,
+        "precision": 0.4858441104508913,
+        "recall": 0.6358645928636779,
+        "f1_positive": 0.5508222706558351,
+        "f1_macro": 0.5011551469417574,
+        "roc_auc": 0.51161794995532,
+        "brier_score": 0.24989018831944185,
+        "confusion_matrix": {
+          "tn": 933,
+          "fp": 1471,
+          "fn": 796,
+          "tp": 1390
+        }
+      }
+    },
+    "Random Forest": {
+      "best_hyperparameters": {
+        "n_estimators": 300,
+        "max_depth": 6,
+        "min_samples_split": 20,
+        "min_samples_leaf": 10,
+        "max_features": "sqrt",
+        "random_state": 42
+      },
+      "threshold": 0.47000000000000003,
+      "train_time_sec": 0.8636760711669922,
+      "infer_time_ms": 190.1412010192871,
+      "train": {
+        "threshold": 0.47000000000000003,
+        "accuracy": 0.647994607347489,
+        "precision": 0.6214537755822159,
+        "recall": 0.6341639060924672,
+        "f1_positive": 0.627744510978044,
+        "f1_macro": 0.6469498670476461,
+        "roc_auc": 0.7159114559589166,
+        "brier_score": 0.2403877334552514,
+        "confusion_matrix": {
+          "tn": 5210,
+          "fp": 2682,
+          "fn": 2540,
+          "tp": 4403
+        }
+      },
+      "val": {
+        "threshold": 0.47000000000000003,
+        "accuracy": 0.48997289972899727,
+        "precision": 0.46208017334777896,
+        "recall": 0.4896670493685419,
+        "f1_positive": 0.4754738015607581,
+        "f1_macro": 0.4895828923415605,
+        "roc_auc": 0.4937449460956157,
+        "brier_score": 0.24957837665960028,
+        "confusion_matrix": {
+          "tn": 955,
+          "fp": 993,
+          "fn": 889,
+          "tp": 853
+        }
+      },
+      "test": {
+        "threshold": 0.47000000000000003,
+        "accuracy": 0.5030501089324618,
+        "precision": 0.4828581739444244,
+        "recall": 0.6120768526989936,
+        "f1_positive": 0.5398426467621545,
+        "f1_macro": 0.49985265182057526,
+        "roc_auc": 0.5032785019782522,
+        "brier_score": 0.24971838264682972,
+        "confusion_matrix": {
+          "tn": 971,
+          "fp": 1433,
+          "fn": 848,
+          "tp": 1338
+        }
+      }
+    },
+    "XGBoost": {
+      "best_hyperparameters": {
+        "n_estimators": 300,
+        "best_iteration": 2,
+        "learning_rate": 0.03,
+        "max_depth": 4,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_alpha": 0.1,
+        "reg_lambda": 1.0,
+        "random_state": 42
+      },
+      "threshold": 0.47000000000000003,
+      "train_time_sec": 0.06461524963378906,
+      "infer_time_ms": 2.9134750366210938,
+      "train": {
+        "threshold": 0.47000000000000003,
+        "accuracy": 0.5648129423660263,
+        "precision": 0.5766446333018571,
+        "recall": 0.2638628834797638,
+        "f1_positive": 0.36205533596837947,
+        "f1_macro": 0.5159125784701233,
+        "roc_auc": 0.5846342171964469,
+        "brier_score": 0.24836617708206177,
+        "confusion_matrix": {
+          "tn": 6547,
+          "fp": 1345,
+          "fn": 5111,
+          "tp": 1832
+        }
+      },
+      "val": {
+        "threshold": 0.47000000000000003,
+        "accuracy": 0.5181571815718157,
+        "precision": 0.4772727272727273,
+        "recall": 0.21699196326061998,
+        "f1_positive": 0.2983425414364641,
+        "f1_macro": 0.46572100245574755,
+        "roc_auc": 0.5131006631665554,
+        "brier_score": 0.24919040501117706,
+        "confusion_matrix": {
+          "tn": 1534,
+          "fp": 414,
+          "fn": 1364,
+          "tp": 378
+        }
+      },
+      "test": {
+        "threshold": 0.47000000000000003,
+        "accuracy": 0.5132897603485839,
+        "precision": 0.4792746113989637,
+        "recall": 0.2538883806038426,
+        "f1_positive": 0.3319377990430622,
+        "f1_macro": 0.47457068156402593,
+        "roc_auc": 0.5102810693674616,
+        "brier_score": 0.24947068095207214,
+        "confusion_matrix": {
+          "tn": 1801,
+          "fp": 603,
+          "fn": 1631,
+          "tp": 555
+        }
+      }
+    },
+    "per_company_test": {
+      "Logistic Regression": {
+        "RELIANCE": {
+          "accuracy": 0.5261437908496732,
+          "roc_auc": 0.5250716026161671,
+          "n_obs": 306
+        },
+        "TCS": {
+          "accuracy": 0.49019607843137253,
+          "roc_auc": 0.5223579906276004,
+          "n_obs": 306
+        },
+        "INFY": {
+          "accuracy": 0.4934640522875817,
+          "roc_auc": 0.5175548184207125,
+          "n_obs": 306
+        },
+        "HDFCBANK": {
+          "accuracy": 0.5326797385620915,
+          "roc_auc": 0.5567482039001026,
+          "n_obs": 306
+        },
+        "ICICIBANK": {
+          "accuracy": 0.5,
+          "roc_auc": 0.5104772494013,
+          "n_obs": 306
+        },
+        "SBIN": {
+          "accuracy": 0.5294117647058824,
+          "roc_auc": 0.5006194198812423,
+          "n_obs": 306
+        },
+        "HINDUNILVR": {
+          "accuracy": 0.46405228758169936,
+          "roc_auc": 0.4551797945205479,
+          "n_obs": 306
+        },
+        "ITC": {
+          "accuracy": 0.477124183006536,
+          "roc_auc": 0.48959116022099447,
+          "n_obs": 306
+        },
+        "LT": {
+          "accuracy": 0.5130718954248366,
+          "roc_auc": 0.505550036712305,
+          "n_obs": 306
+        },
+        "BHARTIARTL": {
+          "accuracy": 0.5130718954248366,
+          "roc_auc": 0.5372649572649573,
+          "n_obs": 306
+        },
+        "SUNPHARMA": {
+          "accuracy": 0.49673202614379086,
+          "roc_auc": 0.5071843995894628,
+          "n_obs": 306
+        },
+        "CIPLA": {
+          "accuracy": 0.5098039215686274,
+          "roc_auc": 0.5025421918393506,
+          "n_obs": 306
+        },
+        "MARUTI": {
+          "accuracy": 0.5130718954248366,
+          "roc_auc": 0.5115035921997947,
+          "n_obs": 306
+        },
+        "M&M": {
+          "accuracy": 0.5326797385620915,
+          "roc_auc": 0.529457065845206,
+          "n_obs": 306
+        },
+        "TATASTEEL": {
+          "accuracy": 0.5,
+          "roc_auc": 0.49777853725222143,
+          "n_obs": 306
+        }
+      },
+      "Random Forest": {
+        "RELIANCE": {
+          "accuracy": 0.5098039215686274,
+          "roc_auc": 0.5170777583037661,
+          "n_obs": 306
+        },
+        "TCS": {
+          "accuracy": 0.4738562091503268,
+          "roc_auc": 0.5181535496868568,
+          "n_obs": 306
+        },
+        "INFY": {
+          "accuracy": 0.45751633986928103,
+          "roc_auc": 0.48184207125317713,
+          "n_obs": 306
+        },
+        "HDFCBANK": {
+          "accuracy": 0.5359477124183006,
+          "roc_auc": 0.5305336982552171,
+          "n_obs": 306
+        },
+        "ICICIBANK": {
+          "accuracy": 0.5098039215686274,
+          "roc_auc": 0.5059014710913445,
+          "n_obs": 306
+        },
+        "SBIN": {
+          "accuracy": 0.477124183006536,
+          "roc_auc": 0.482720321243966,
+          "n_obs": 306
+        },
+        "HINDUNILVR": {
+          "accuracy": 0.5098039215686274,
+          "roc_auc": 0.5120719178082191,
+          "n_obs": 306
+        },
+        "ITC": {
+          "accuracy": 0.43137254901960786,
+          "roc_auc": 0.45180110497237574,
+          "n_obs": 306
+        },
+        "LT": {
+          "accuracy": 0.5261437908496732,
+          "roc_auc": 0.49639355591068113,
+          "n_obs": 306
+        },
+        "BHARTIARTL": {
+          "accuracy": 0.48366013071895425,
+          "roc_auc": 0.5073076923076923,
+          "n_obs": 306
+        },
+        "SUNPHARMA": {
+          "accuracy": 0.5359477124183006,
+          "roc_auc": 0.5509750256585699,
+          "n_obs": 306
+        },
+        "CIPLA": {
+          "accuracy": 0.5261437908496732,
+          "roc_auc": 0.5163853877376628,
+          "n_obs": 306
+        },
+        "MARUTI": {
+          "accuracy": 0.5098039215686274,
+          "roc_auc": 0.4889240506329114,
+          "n_obs": 306
+        },
+        "M&M": {
+          "accuracy": 0.5588235294117647,
+          "roc_auc": 0.5462713387241689,
+          "n_obs": 306
+        },
+        "TATASTEEL": {
+          "accuracy": 0.5,
+          "roc_auc": 0.48009227614490774,
+          "n_obs": 306
+        }
+      },
+      "XGBoost": {
+        "RELIANCE": {
+          "accuracy": 0.5261437908496732,
+          "roc_auc": 0.4949985038259308,
+          "n_obs": 306
+        },
+        "TCS": {
+          "accuracy": 0.5228758169934641,
+          "roc_auc": 0.5143870713441072,
+          "n_obs": 306
+        },
+        "INFY": {
+          "accuracy": 0.4738562091503268,
+          "roc_auc": 0.4404859346056089,
+          "n_obs": 306
+        },
+        "HDFCBANK": {
+          "accuracy": 0.5196078431372549,
+          "roc_auc": 0.5550376325692781,
+          "n_obs": 306
+        },
+        "ICICIBANK": {
+          "accuracy": 0.5098039215686274,
+          "roc_auc": 0.5335699623674307,
+          "n_obs": 306
+        },
+        "SBIN": {
+          "accuracy": 0.477124183006536,
+          "roc_auc": 0.46862317911914225,
+          "n_obs": 306
+        },
+        "HINDUNILVR": {
+          "accuracy": 0.4803921568627451,
+          "roc_auc": 0.4749571917808219,
+          "n_obs": 306
+        },
+        "ITC": {
+          "accuracy": 0.5490196078431373,
+          "roc_auc": 0.5121546961325967,
+          "n_obs": 306
+        },
+        "LT": {
+          "accuracy": 0.5261437908496732,
+          "roc_auc": 0.5352438128968169,
+          "n_obs": 306
+        },
+        "BHARTIARTL": {
+          "accuracy": 0.5228758169934641,
+          "roc_auc": 0.5273717948717949,
+          "n_obs": 306
+        },
+        "SUNPHARMA": {
+          "accuracy": 0.5326797385620915,
+          "roc_auc": 0.5350667122819022,
+          "n_obs": 306
+        },
+        "CIPLA": {
+          "accuracy": 0.5359477124183006,
+          "roc_auc": 0.5539628284554582,
+          "n_obs": 306
+        },
+        "MARUTI": {
+          "accuracy": 0.4934640522875817,
+          "roc_auc": 0.4996792678754704,
+          "n_obs": 306
+        },
+        "M&M": {
+          "accuracy": 0.5032679738562091,
+          "roc_auc": 0.4915500791511572,
+          "n_obs": 306
+        },
+        "TATASTEEL": {
+          "accuracy": 0.5261437908496732,
+          "roc_auc": 0.527042036910458,
+          "n_obs": 306
+        }
+      }
+    }
+  },
+  "Exp_A4_MktFinBERT": {
+    "feature_count": 40,
+    "continuous_features": [
+      "ret_1d_lag1",
+      "rsi_14_lag1",
+      "macd_lag1",
+      "macd_signal_lag1",
+      "macd_diff_lag1",
+      "rolling_vol_5d_lag1",
+      "rolling_vol_21d_lag1",
+      "adj_close_sma_ratio_20_lag1",
+      "intraday_range_pct_lag1",
+      "finbert_direct_pos",
+      "finbert_direct_neu",
+      "finbert_direct_neg",
+      "finbert_direct_polarity",
+      "finbert_direct_confidence",
+      "finbert_sector_pos",
+      "finbert_sector_neu",
+      "finbert_sector_neg",
+      "finbert_sector_polarity",
+      "finbert_market_pos",
+      "finbert_market_neu",
+      "finbert_market_neg",
+      "finbert_market_polarity",
+      "finbert_direct_polarity_lag1",
+      "finbert_direct_polarity_roll3",
+      "finbert_direct_polarity_roll7",
+      "finbert_sector_polarity_lag1",
+      "finbert_sector_polarity_roll3",
+      "finbert_sector_polarity_roll7",
+      "finbert_market_polarity_lag1",
+      "finbert_market_polarity_roll3",
+      "finbert_market_polarity_roll7",
+      "direct_news_count",
+      "direct_news_count_lag1",
+      "direct_news_count_roll3",
+      "direct_news_count_roll7",
+      "sector_news_count",
+      "market_news_count",
+      "has_direct_news",
+      "has_sector_news"
+    ],
+    "Logistic Regression": {
+      "best_hyperparameters": {
+        "C": 10.0,
+        "penalty": "l2",
+        "solver": "lbfgs"
+      },
+      "threshold": 0.475,
+      "train_time_sec": 0.029389619827270508,
+      "infer_time_ms": 1.5192031860351562,
+      "train": {
+        "threshold": 0.475,
+        "accuracy": 0.5269295584765756,
+        "precision": 0.4939073923639318,
+        "recall": 0.4378510730231888,
+        "f1_positive": 0.4641930065658879,
+        "f1_macro": 0.5203538047553069,
+        "roc_auc": 0.5339264282125269,
+        "brier_score": 0.24810771732646686,
+        "confusion_matrix": {
+          "tn": 4777,
+          "fp": 3115,
+          "fn": 3903,
+          "tp": 3040
+        }
+      },
+      "val": {
+        "threshold": 0.475,
+        "accuracy": 0.4932249322493225,
+        "precision": 0.4621301775147929,
+        "recall": 0.44833524684270953,
+        "f1_positive": 0.4551282051282051,
+        "f1_macro": 0.490735328501286,
+        "roc_auc": 0.4896263823828261,
+        "brier_score": 0.2504735477344264,
+        "confusion_matrix": {
+          "tn": 1039,
+          "fp": 909,
+          "fn": 961,
+          "tp": 781
+        }
+      },
+      "test": {
+        "threshold": 0.475,
+        "accuracy": 0.5183006535947713,
+        "precision": 0.49407302038880985,
+        "recall": 0.47666971637694416,
+        "f1_positive": 0.4852153667054715,
+        "f1_macro": 0.5163026679996139,
+        "roc_auc": 0.5124232561467392,
+        "brier_score": 0.24992631435617427,
+        "confusion_matrix": {
+          "tn": 1337,
+          "fp": 1067,
+          "fn": 1144,
+          "tp": 1042
+        }
+      }
+    },
+    "Random Forest": {
+      "best_hyperparameters": {
+        "n_estimators": 300,
+        "max_depth": 6,
+        "min_samples_split": 20,
+        "min_samples_leaf": 10,
+        "max_features": "sqrt",
+        "random_state": 42
+      },
+      "threshold": 0.475,
+      "train_time_sec": 0.9725344181060791,
+      "infer_time_ms": 215.78550338745117,
+      "train": {
+        "threshold": 0.475,
+        "accuracy": 0.6601280754971351,
+        "precision": 0.6511849848894544,
+        "recall": 0.5896586489989918,
+        "f1_positive": 0.6188964474678761,
+        "f1_macro": 0.656102724950483,
+        "roc_auc": 0.7181206879069366,
+        "brier_score": 0.23939968296745368,
+        "confusion_matrix": {
+          "tn": 5699,
+          "fp": 2193,
+          "fn": 2849,
+          "tp": 4094
+        }
+      },
+      "val": {
+        "threshold": 0.475,
+        "accuracy": 0.5102981029810298,
+        "precision": 0.47952110901071204,
+        "recall": 0.4368541905855339,
+        "f1_positive": 0.457194352658456,
+        "f1_macro": 0.5055658260453475,
+        "roc_auc": 0.4946649629753617,
+        "brier_score": 0.25014604584130484,
+        "confusion_matrix": {
+          "tn": 1122,
+          "fp": 826,
+          "fn": 981,
+          "tp": 761
+        }
+      },
+      "test": {
+        "threshold": 0.475,
+        "accuracy": 0.5063180827886711,
+        "precision": 0.4834983498349835,
+        "recall": 0.5361390667886551,
+        "f1_positive": 0.5084598698481562,
+        "f1_macro": 0.5063087095411459,
+        "roc_auc": 0.4960760352142587,
+        "brier_score": 0.2508066693141487,
+        "confusion_matrix": {
+          "tn": 1152,
+          "fp": 1252,
+          "fn": 1014,
+          "tp": 1172
+        }
+      }
+    },
+    "XGBoost": {
+      "best_hyperparameters": {
+        "n_estimators": 300,
+        "best_iteration": 0,
+        "learning_rate": 0.03,
+        "max_depth": 4,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_alpha": 0.1,
+        "reg_lambda": 1.0,
+        "random_state": 42
+      },
+      "threshold": 0.47000000000000003,
+      "train_time_sec": 0.08359885215759277,
+      "infer_time_ms": 4.127740859985352,
+      "train": {
+        "threshold": 0.47000000000000003,
+        "accuracy": 0.5402763734411864,
+        "precision": 0.548235294117647,
+        "recall": 0.10067694080368716,
+        "f1_positive": 0.17011438306157217,
+        "f1_macro": 0.4260976539585317,
+        "roc_auc": 0.5552290193136655,
+        "brier_score": 0.24875418841838837,
+        "confusion_matrix": {
+          "tn": 7316,
+          "fp": 576,
+          "fn": 6244,
+          "tp": 699
+        }
+      },
+      "val": {
+        "threshold": 0.47000000000000003,
+        "accuracy": 0.5224932249322494,
+        "precision": 0.4696969696969697,
+        "recall": 0.08897818599311137,
+        "f1_positive": 0.14961389961389962,
+        "f1_macro": 0.4088310643510342,
+        "roc_auc": 0.49198271004792804,
+        "brier_score": 0.24925369024276733,
+        "confusion_matrix": {
+          "tn": 1773,
+          "fp": 175,
+          "fn": 1587,
+          "tp": 155
+        }
+      },
+      "test": {
+        "threshold": 0.47000000000000003,
+        "accuracy": 0.5198257080610021,
+        "precision": 0.47413793103448276,
+        "recall": 0.07548032936870998,
+        "f1_positive": 0.13022888713496447,
+        "f1_macro": 0.39930042009471667,
+        "roc_auc": 0.5005397568553782,
+        "brier_score": 0.24951015412807465,
+        "confusion_matrix": {
+          "tn": 2221,
+          "fp": 183,
+          "fn": 2021,
+          "tp": 165
+        }
+      }
+    },
+    "per_company_test": {
+      "Logistic Regression": {
+        "RELIANCE": {
+          "accuracy": 0.5555555555555556,
+          "roc_auc": 0.5427692044628735,
+          "n_obs": 306
+        },
+        "TCS": {
+          "accuracy": 0.5228758169934641,
+          "roc_auc": 0.49516051329216487,
+          "n_obs": 306
+        },
+        "INFY": {
+          "accuracy": 0.49673202614379086,
+          "roc_auc": 0.49661827424288113,
+          "n_obs": 306
+        },
+        "HDFCBANK": {
+          "accuracy": 0.5326797385620915,
+          "roc_auc": 0.5553369825521725,
+          "n_obs": 306
+        },
+        "ICICIBANK": {
+          "accuracy": 0.5424836601307189,
+          "roc_auc": 0.5312606910708176,
+          "n_obs": 306
+        },
+        "SBIN": {
+          "accuracy": 0.545751633986928,
+          "roc_auc": 0.5204835746934939,
+          "n_obs": 306
+        },
+        "HINDUNILVR": {
+          "accuracy": 0.5032679738562091,
+          "roc_auc": 0.5037243150684932,
+          "n_obs": 306
+        },
+        "ITC": {
+          "accuracy": 0.4869281045751634,
+          "roc_auc": 0.5000220994475139,
+          "n_obs": 306
+        },
+        "LT": {
+          "accuracy": 0.48366013071895425,
+          "roc_auc": 0.4634388632142702,
+          "n_obs": 306
+        },
+        "BHARTIARTL": {
+          "accuracy": 0.5163398692810458,
+          "roc_auc": 0.5255555555555556,
+          "n_obs": 306
+        },
+        "SUNPHARMA": {
+          "accuracy": 0.5294117647058824,
+          "roc_auc": 0.5148392062949025,
+          "n_obs": 306
+        },
+        "CIPLA": {
+          "accuracy": 0.48366013071895425,
+          "roc_auc": 0.5149327066866054,
+          "n_obs": 306
+        },
+        "MARUTI": {
+          "accuracy": 0.5163398692810458,
+          "roc_auc": 0.4911477933629832,
+          "n_obs": 306
+        },
+        "M&M": {
+          "accuracy": 0.5686274509803921,
+          "roc_auc": 0.5470842425020322,
+          "n_obs": 306
+        },
+        "TATASTEEL": {
+          "accuracy": 0.49019607843137253,
+          "roc_auc": 0.49483082706766923,
+          "n_obs": 306
+        }
+      },
+      "Random Forest": {
+        "RELIANCE": {
+          "accuracy": 0.5,
+          "roc_auc": 0.53054332492626,
+          "n_obs": 306
+        },
+        "TCS": {
+          "accuracy": 0.5196078431372549,
+          "roc_auc": 0.5425480663951299,
+          "n_obs": 306
+        },
+        "INFY": {
+          "accuracy": 0.5,
+          "roc_auc": 0.5142377116271055,
+          "n_obs": 306
+        },
+        "HDFCBANK": {
+          "accuracy": 0.5228758169934641,
+          "roc_auc": 0.4852890865549093,
+          "n_obs": 306
+        },
+        "ICICIBANK": {
+          "accuracy": 0.4869281045751634,
+          "roc_auc": 0.47340061580567916,
+          "n_obs": 306
+        },
+        "SBIN": {
+          "accuracy": 0.47058823529411764,
+          "roc_auc": 0.43931821094450846,
+          "n_obs": 306
+        },
+        "HINDUNILVR": {
+          "accuracy": 0.5261437908496732,
+          "roc_auc": 0.5243578767123287,
+          "n_obs": 306
+        },
+        "ITC": {
+          "accuracy": 0.4803921568627451,
+          "roc_auc": 0.4782762430939226,
+          "n_obs": 306
+        },
+        "LT": {
+          "accuracy": 0.49673202614379086,
+          "roc_auc": 0.4654688377316114,
+          "n_obs": 306
+        },
+        "BHARTIARTL": {
+          "accuracy": 0.5326797385620915,
+          "roc_auc": 0.5462820512820512,
+          "n_obs": 306
+        },
+        "SUNPHARMA": {
+          "accuracy": 0.5359477124183006,
+          "roc_auc": 0.5119312350325009,
+          "n_obs": 306
+        },
+        "CIPLA": {
+          "accuracy": 0.5098039215686274,
+          "roc_auc": 0.5111728263191626,
+          "n_obs": 306
+        },
+        "MARUTI": {
+          "accuracy": 0.5098039215686274,
+          "roc_auc": 0.477163872733493,
+          "n_obs": 306
+        },
+        "M&M": {
+          "accuracy": 0.5163398692810458,
+          "roc_auc": 0.4949300474906944,
+          "n_obs": 306
+        },
+        "TATASTEEL": {
+          "accuracy": 0.4869281045751634,
+          "roc_auc": 0.4593301435406699,
+          "n_obs": 306
+        }
+      },
+      "XGBoost": {
+        "RELIANCE": {
+          "accuracy": 0.5228758169934641,
+          "roc_auc": 0.5112426794340188,
+          "n_obs": 306
+        },
+        "TCS": {
+          "accuracy": 0.5751633986928104,
+          "roc_auc": 0.5463802391275785,
+          "n_obs": 306
+        },
+        "INFY": {
+          "accuracy": 0.545751633986928,
+          "roc_auc": 0.5494550467410504,
+          "n_obs": 306
+        },
+        "HDFCBANK": {
+          "accuracy": 0.4803921568627451,
+          "roc_auc": 0.4539214847759152,
+          "n_obs": 306
+        },
+        "ICICIBANK": {
+          "accuracy": 0.5065359477124183,
+          "roc_auc": 0.5237983236400958,
+          "n_obs": 306
+        },
+        "SBIN": {
+          "accuracy": 0.5228758169934641,
+          "roc_auc": 0.513114614037336,
+          "n_obs": 306
+        },
+        "HINDUNILVR": {
+          "accuracy": 0.49019607843137253,
+          "roc_auc": 0.4455693493150684,
+          "n_obs": 306
+        },
+        "ITC": {
+          "accuracy": 0.5718954248366013,
+          "roc_auc": 0.5267182320441989,
+          "n_obs": 306
+        },
+        "LT": {
+          "accuracy": 0.5,
+          "roc_auc": 0.4304841705178595,
+          "n_obs": 306
+        },
+        "BHARTIARTL": {
+          "accuracy": 0.5228758169934641,
+          "roc_auc": 0.5525213675213675,
+          "n_obs": 306
+        },
+        "SUNPHARMA": {
+          "accuracy": 0.5163398692810458,
+          "roc_auc": 0.4732723229558672,
+          "n_obs": 306
+        },
+        "CIPLA": {
+          "accuracy": 0.4934640522875817,
+          "roc_auc": 0.5095706045716728,
+          "n_obs": 306
+        },
+        "MARUTI": {
+          "accuracy": 0.5163398692810458,
+          "roc_auc": 0.49959373930892914,
+          "n_obs": 306
+        },
+        "M&M": {
+          "accuracy": 0.5294117647058824,
+          "roc_auc": 0.5248363496341933,
+          "n_obs": 306
+        },
+        "TATASTEEL": {
+          "accuracy": 0.5032679738562091,
+          "roc_auc": 0.4765037593984962,
+          "n_obs": 306
+        }
+      }
+    }
+  },
+  "Exp_A5_MktRoBERTa": {
+    "feature_count": 40,
+    "continuous_features": [
+      "ret_1d_lag1",
+      "rsi_14_lag1",
+      "macd_lag1",
+      "macd_signal_lag1",
+      "macd_diff_lag1",
+      "rolling_vol_5d_lag1",
+      "rolling_vol_21d_lag1",
+      "adj_close_sma_ratio_20_lag1",
+      "intraday_range_pct_lag1",
+      "roberta_direct_pos",
+      "roberta_direct_neu",
+      "roberta_direct_neg",
+      "roberta_direct_polarity",
+      "roberta_direct_confidence",
+      "roberta_sector_pos",
+      "roberta_sector_neu",
+      "roberta_sector_neg",
+      "roberta_sector_polarity",
+      "roberta_market_pos",
+      "roberta_market_neu",
+      "roberta_market_neg",
+      "roberta_market_polarity",
+      "roberta_direct_polarity_lag1",
+      "roberta_direct_polarity_roll3",
+      "roberta_direct_polarity_roll7",
+      "roberta_sector_polarity_lag1",
+      "roberta_sector_polarity_roll3",
+      "roberta_sector_polarity_roll7",
+      "roberta_market_polarity_lag1",
+      "roberta_market_polarity_roll3",
+      "roberta_market_polarity_roll7",
+      "direct_news_count",
+      "direct_news_count_lag1",
+      "direct_news_count_roll3",
+      "direct_news_count_roll7",
+      "sector_news_count",
+      "market_news_count",
+      "has_direct_news",
+      "has_sector_news"
+    ],
+    "Logistic Regression": {
+      "best_hyperparameters": {
+        "C": 10.0,
+        "penalty": "l2",
+        "solver": "lbfgs"
+      },
+      "threshold": 0.475,
+      "train_time_sec": 0.0247037410736084,
+      "infer_time_ms": 1.5091896057128906,
+      "train": {
+        "threshold": 0.475,
+        "accuracy": 0.5324570273003033,
+        "precision": 0.5005809128630705,
+        "recall": 0.4343943540256373,
+        "f1_positive": 0.4651449722393584,
+        "f1_macro": 0.5249326825033458,
+        "roc_auc": 0.5355510905214053,
+        "brier_score": 0.248082465689537,
+        "confusion_matrix": {
+          "tn": 4883,
+          "fp": 3009,
+          "fn": 3927,
+          "tp": 3016
+        }
+      },
+      "val": {
+        "threshold": 0.475,
+        "accuracy": 0.4983739837398374,
+        "precision": 0.4686601495112133,
+        "recall": 0.46785304247990817,
+        "f1_positive": 0.4682562482045389,
+        "f1_macro": 0.4967595680622592,
+        "roc_auc": 0.4955130759093491,
+        "brier_score": 0.25028862214865777,
+        "confusion_matrix": {
+          "tn": 1024,
+          "fp": 924,
+          "fn": 927,
+          "tp": 815
+        }
+      },
+      "test": {
+        "threshold": 0.475,
+        "accuracy": 0.5098039215686274,
+        "precision": 0.4855203619909502,
+        "recall": 0.4908508691674291,
+        "f1_positive": 0.48817106460418563,
+        "f1_macro": 0.5089266694258386,
+        "roc_auc": 0.5092193477476545,
+        "brier_score": 0.2501296429743828,
+        "confusion_matrix": {
+          "tn": 1267,
+          "fp": 1137,
+          "fn": 1113,
+          "tp": 1073
+        }
+      }
+    },
+    "Random Forest": {
+      "best_hyperparameters": {
+        "n_estimators": 300,
+        "max_depth": 6,
+        "min_samples_split": 20,
+        "min_samples_leaf": 10,
+        "max_features": "sqrt",
+        "random_state": 42
+      },
+      "threshold": 0.475,
+      "train_time_sec": 0.9709703922271729,
+      "infer_time_ms": 214.21575546264648,
+      "train": {
+        "threshold": 0.475,
+        "accuracy": 0.6588473205257837,
+        "precision": 0.6461634047840944,
+        "recall": 0.5991646262422584,
+        "f1_positive": 0.6217771467005455,
+        "f1_macro": 0.6555383369944499,
+        "roc_auc": 0.7204638209958012,
+        "brier_score": 0.2397190852370535,
+        "confusion_matrix": {
+          "tn": 5614,
+          "fp": 2278,
+          "fn": 2783,
+          "tp": 4160
+        }
+      },
+      "val": {
+        "threshold": 0.475,
+        "accuracy": 0.5029810298102981,
+        "precision": 0.47225572979493363,
+        "recall": 0.4494833524684271,
+        "f1_positive": 0.46058823529411763,
+        "f1_macro": 0.4998921075968076,
+        "roc_auc": 0.4989668228121751,
+        "brier_score": 0.2500021590992171,
+        "confusion_matrix": {
+          "tn": 1073,
+          "fp": 875,
+          "fn": 959,
+          "tp": 783
+        }
+      },
+      "test": {
+        "threshold": 0.475,
+        "accuracy": 0.49041394335511984,
+        "precision": 0.4688391038696538,
+        "recall": 0.5265324794144556,
+        "f1_positive": 0.4960137901314372,
+        "f1_macro": 0.49035102372841965,
+        "roc_auc": 0.48625442043072464,
+        "brier_score": 0.2509353296415312,
+        "confusion_matrix": {
+          "tn": 1100,
+          "fp": 1304,
+          "fn": 1035,
+          "tp": 1151
+        }
+      }
+    },
+    "XGBoost": {
+      "best_hyperparameters": {
+        "n_estimators": 300,
+        "best_iteration": 5,
+        "learning_rate": 0.03,
+        "max_depth": 4,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_alpha": 0.1,
+        "reg_lambda": 1.0,
+        "random_state": 42
+      },
+      "threshold": 0.47000000000000003,
+      "train_time_sec": 0.07343363761901855,
+      "infer_time_ms": 3.2651424407958984,
+      "train": {
+        "threshold": 0.47000000000000003,
+        "accuracy": 0.5647455342096394,
+        "precision": 0.5531263664188893,
+        "recall": 0.3643957943252196,
+        "f1_positive": 0.4393505253104107,
+        "f1_macro": 0.5418258713700184,
+        "roc_auc": 0.5908787243661532,
+        "brier_score": 0.2479284107685089,
+        "confusion_matrix": {
+          "tn": 5848,
+          "fp": 2044,
+          "fn": 4413,
+          "tp": 2530
+        }
+      },
+      "val": {
+        "threshold": 0.47000000000000003,
+        "accuracy": 0.5238482384823848,
+        "precision": 0.49244712990936557,
+        "recall": 0.2807118254879449,
+        "f1_positive": 0.3575868372943327,
+        "f1_macro": 0.48966532392165507,
+        "roc_auc": 0.520763590435125,
+        "brier_score": 0.24918673932552338,
+        "confusion_matrix": {
+          "tn": 1444,
+          "fp": 504,
+          "fn": 1253,
+          "tp": 489
+        }
+      },
+      "test": {
+        "threshold": 0.47000000000000003,
+        "accuracy": 0.4925925925925926,
+        "precision": 0.4648303000491884,
+        "recall": 0.4322964318389753,
+        "f1_positive": 0.44797345342498224,
+        "f1_macro": 0.48925582568447257,
+        "roc_auc": 0.48604043961497534,
+        "brier_score": 0.24965666234493256,
+        "confusion_matrix": {
+          "tn": 1316,
+          "fp": 1088,
+          "fn": 1241,
+          "tp": 945
+        }
+      }
+    },
+    "per_company_test": {
+      "Logistic Regression": {
+        "RELIANCE": {
+          "accuracy": 0.5130718954248366,
+          "roc_auc": 0.5300730987902363,
+          "n_obs": 306
+        },
+        "TCS": {
+          "accuracy": 0.5065359477124183,
+          "roc_auc": 0.5278763193623264,
+          "n_obs": 306
+        },
+        "INFY": {
+          "accuracy": 0.5294117647058824,
+          "roc_auc": 0.5091112738551674,
+          "n_obs": 306
+        },
+        "HDFCBANK": {
+          "accuracy": 0.5098039215686274,
+          "roc_auc": 0.5219808416010947,
+          "n_obs": 306
+        },
+        "ICICIBANK": {
+          "accuracy": 0.545751633986928,
+          "roc_auc": 0.5319449196031474,
+          "n_obs": 306
+        },
+        "SBIN": {
+          "accuracy": 0.5032679738562091,
+          "roc_auc": 0.5208680422059891,
+          "n_obs": 306
+        },
+        "HINDUNILVR": {
+          "accuracy": 0.4803921568627451,
+          "roc_auc": 0.48227739726027397,
+          "n_obs": 306
+        },
+        "ITC": {
+          "accuracy": 0.5098039215686274,
+          "roc_auc": 0.4911381215469613,
+          "n_obs": 306
+        },
+        "LT": {
+          "accuracy": 0.5,
+          "roc_auc": 0.4846888092255864,
+          "n_obs": 306
+        },
+        "BHARTIARTL": {
+          "accuracy": 0.5,
+          "roc_auc": 0.5002564102564103,
+          "n_obs": 306
+        },
+        "SUNPHARMA": {
+          "accuracy": 0.5228758169934641,
+          "roc_auc": 0.5242473486144372,
+          "n_obs": 306
+        },
+        "CIPLA": {
+          "accuracy": 0.48366013071895425,
+          "roc_auc": 0.4816064943388164,
+          "n_obs": 306
+        },
+        "MARUTI": {
+          "accuracy": 0.48366013071895425,
+          "roc_auc": 0.4761375299349983,
+          "n_obs": 306
+        },
+        "M&M": {
+          "accuracy": 0.545751633986928,
+          "roc_auc": 0.5389124203140375,
+          "n_obs": 306
+        },
+        "TATASTEEL": {
+          "accuracy": 0.5130718954248366,
+          "roc_auc": 0.4979066985645933,
+          "n_obs": 306
+        }
+      },
+      "Random Forest": {
+        "RELIANCE": {
+          "accuracy": 0.5294117647058824,
+          "roc_auc": 0.5060060701919378,
+          "n_obs": 306
+        },
+        "TCS": {
+          "accuracy": 0.5032679738562091,
+          "roc_auc": 0.5353216835282267,
+          "n_obs": 306
+        },
+        "INFY": {
+          "accuracy": 0.45098039215686275,
+          "roc_auc": 0.436005686468789,
+          "n_obs": 306
+        },
+        "HDFCBANK": {
+          "accuracy": 0.49019607843137253,
+          "roc_auc": 0.48644372220321586,
+          "n_obs": 306
+        },
+        "ICICIBANK": {
+          "accuracy": 0.45751633986928103,
+          "roc_auc": 0.4798580225795416,
+          "n_obs": 306
+        },
+        "SBIN": {
+          "accuracy": 0.4411764705882353,
+          "roc_auc": 0.43906189926951167,
+          "n_obs": 306
+        },
+        "HINDUNILVR": {
+          "accuracy": 0.5065359477124183,
+          "roc_auc": 0.5202482876712329,
+          "n_obs": 306
+        },
+        "ITC": {
+          "accuracy": 0.46405228758169936,
+          "roc_auc": 0.49206629834254145,
+          "n_obs": 306
+        },
+        "LT": {
+          "accuracy": 0.5130718954248366,
+          "roc_auc": 0.4773031572582387,
+          "n_obs": 306
+        },
+        "BHARTIARTL": {
+          "accuracy": 0.4869281045751634,
+          "roc_auc": 0.5083333333333333,
+          "n_obs": 306
+        },
+        "SUNPHARMA": {
+          "accuracy": 0.5,
+          "roc_auc": 0.5005559356825179,
+          "n_obs": 306
+        },
+        "CIPLA": {
+          "accuracy": 0.5130718954248366,
+          "roc_auc": 0.48506729331339454,
+          "n_obs": 306
+        },
+        "MARUTI": {
+          "accuracy": 0.4934640522875817,
+          "roc_auc": 0.4758809442353747,
+          "n_obs": 306
+        },
+        "M&M": {
+          "accuracy": 0.5490196078431373,
+          "roc_auc": 0.4989089975612887,
+          "n_obs": 306
+        },
+        "TATASTEEL": {
+          "accuracy": 0.45751633986928103,
+          "roc_auc": 0.4364747095010253,
+          "n_obs": 306
+        }
+      },
+      "XGBoost": {
+        "RELIANCE": {
+          "accuracy": 0.5065359477124183,
+          "roc_auc": 0.517932714914718,
+          "n_obs": 306
+        },
+        "TCS": {
+          "accuracy": 0.5065359477124183,
+          "roc_auc": 0.5185696141549512,
+          "n_obs": 306
+        },
+        "INFY": {
+          "accuracy": 0.49019607843137253,
+          "roc_auc": 0.4736570025416792,
+          "n_obs": 306
+        },
+        "HDFCBANK": {
+          "accuracy": 0.41830065359477125,
+          "roc_auc": 0.4158612726650701,
+          "n_obs": 306
+        },
+        "ICICIBANK": {
+          "accuracy": 0.4803921568627451,
+          "roc_auc": 0.46807646253848784,
+          "n_obs": 306
+        },
+        "SBIN": {
+          "accuracy": 0.4934640522875817,
+          "roc_auc": 0.4794737066940066,
+          "n_obs": 306
+        },
+        "HINDUNILVR": {
+          "accuracy": 0.545751633986928,
+          "roc_auc": 0.5530607876712329,
+          "n_obs": 306
+        },
+        "ITC": {
+          "accuracy": 0.5098039215686274,
+          "roc_auc": 0.5222762430939226,
+          "n_obs": 306
+        },
+        "LT": {
+          "accuracy": 0.4869281045751634,
+          "roc_auc": 0.4508271066384486,
+          "n_obs": 306
+        },
+        "BHARTIARTL": {
+          "accuracy": 0.48366013071895425,
+          "roc_auc": 0.48034188034188036,
+          "n_obs": 306
+        },
+        "SUNPHARMA": {
+          "accuracy": 0.5130718954248366,
+          "roc_auc": 0.5067995210400273,
+          "n_obs": 306
+        },
+        "CIPLA": {
+          "accuracy": 0.4738562091503268,
+          "roc_auc": 0.45597094637897884,
+          "n_obs": 306
+        },
+        "MARUTI": {
+          "accuracy": 0.477124183006536,
+          "roc_auc": 0.4462452959288402,
+          "n_obs": 306
+        },
+        "M&M": {
+          "accuracy": 0.5326797385620915,
+          "roc_auc": 0.5083429598254395,
+          "n_obs": 306
+        },
+        "TATASTEEL": {
+          "accuracy": 0.47058823529411764,
+          "roc_auc": 0.48079716336295286,
+          "n_obs": 306
+        }
+      }
+    }
+  },
+  "Exp_A6_MktCombined": {
+    "feature_count": 80,
+    "continuous_features": [
+      "ret_1d_lag1",
+      "rsi_14_lag1",
+      "macd_lag1",
+      "macd_signal_lag1",
+      "macd_diff_lag1",
+      "rolling_vol_5d_lag1",
+      "rolling_vol_21d_lag1",
+      "adj_close_sma_ratio_20_lag1",
+      "intraday_range_pct_lag1",
+      "lm_direct_pos_count",
+      "lm_direct_neg_count",
+      "lm_direct_unc_count",
+      "lm_direct_polarity",
+      "lm_direct_subjectivity",
+      "lm_sector_pos_count",
+      "lm_sector_neg_count",
+      "lm_sector_polarity",
+      "lm_market_polarity",
+      "lm_direct_polarity_lag1",
+      "lm_direct_polarity_roll3",
+      "lm_direct_polarity_roll7",
+      "lm_sector_polarity_lag1",
+      "lm_sector_polarity_roll3",
+      "lm_sector_polarity_roll7",
+      "lm_market_polarity_lag1",
+      "lm_market_polarity_roll3",
+      "lm_market_polarity_roll7",
+      "finbert_direct_pos",
+      "finbert_direct_neu",
+      "finbert_direct_neg",
+      "finbert_direct_polarity",
+      "finbert_direct_confidence",
+      "finbert_sector_pos",
+      "finbert_sector_neu",
+      "finbert_sector_neg",
+      "finbert_sector_polarity",
+      "finbert_market_pos",
+      "finbert_market_neu",
+      "finbert_market_neg",
+      "finbert_market_polarity",
+      "finbert_direct_polarity_lag1",
+      "finbert_direct_polarity_roll3",
+      "finbert_direct_polarity_roll7",
+      "finbert_sector_polarity_lag1",
+      "finbert_sector_polarity_roll3",
+      "finbert_sector_polarity_roll7",
+      "finbert_market_polarity_lag1",
+      "finbert_market_polarity_roll3",
+      "finbert_market_polarity_roll7",
+      "roberta_direct_pos",
+      "roberta_direct_neu",
+      "roberta_direct_neg",
+      "roberta_direct_polarity",
+      "roberta_direct_confidence",
+      "roberta_sector_pos",
+      "roberta_sector_neu",
+      "roberta_sector_neg",
+      "roberta_sector_polarity",
+      "roberta_market_pos",
+      "roberta_market_neu",
+      "roberta_market_neg",
+      "roberta_market_polarity",
+      "roberta_direct_polarity_lag1",
+      "roberta_direct_polarity_roll3",
+      "roberta_direct_polarity_roll7",
+      "roberta_sector_polarity_lag1",
+      "roberta_sector_polarity_roll3",
+      "roberta_sector_polarity_roll7",
+      "roberta_market_polarity_lag1",
+      "roberta_market_polarity_roll3",
+      "roberta_market_polarity_roll7",
+      "direct_news_count",
+      "direct_news_count_lag1",
+      "direct_news_count_roll3",
+      "direct_news_count_roll7",
+      "sector_news_count",
+      "market_news_count",
+      "has_direct_news",
+      "has_sector_news"
+    ],
+    "Logistic Regression": {
+      "best_hyperparameters": {
+        "C": 5.0,
+        "penalty": "l2",
+        "solver": "lbfgs"
+      },
+      "threshold": 0.48,
+      "train_time_sec": 0.1447749137878418,
+      "infer_time_ms": 3.471851348876953,
+      "train": {
+        "threshold": 0.48,
+        "accuracy": 0.5374452308729356,
+        "precision": 0.5072881050926759,
+        "recall": 0.40602045225406885,
+        "f1_positive": 0.45104,
+        "f1_macro": 0.5256947233546885,
+        "roc_auc": 0.5449833920245072,
+        "brier_score": 0.24746931653161428,
+        "confusion_matrix": {
+          "tn": 5154,
+          "fp": 2738,
+          "fn": 4124,
+          "tp": 2819
+        }
+      },
+      "val": {
+        "threshold": 0.48,
+        "accuracy": 0.5138211382113821,
+        "precision": 0.48287220026350464,
+        "recall": 0.42078071182548793,
+        "f1_positive": 0.44969325153374234,
+        "f1_macro": 0.5071281791649295,
+        "roc_auc": 0.5060216607689715,
+        "brier_score": 0.25023387840228045,
+        "confusion_matrix": {
+          "tn": 1163,
+          "fp": 785,
+          "fn": 1009,
+          "tp": 733
+        }
+      },
+      "test": {
+        "threshold": 0.48,
+        "accuracy": 0.5069716775599129,
+        "precision": 0.47651006711409394,
+        "recall": 0.3572735590118939,
+        "f1_positive": 0.4083660130718954,
+        "f1_macro": 0.4928851540616246,
+        "roc_auc": 0.5053642678487973,
+        "brier_score": 0.25077530558709626,
+        "confusion_matrix": {
+          "tn": 1546,
+          "fp": 858,
+          "fn": 1405,
+          "tp": 781
+        }
+      }
+    },
+    "Random Forest": {
+      "best_hyperparameters": {
+        "n_estimators": 300,
+        "max_depth": 6,
+        "min_samples_split": 20,
+        "min_samples_leaf": 10,
+        "max_features": "sqrt",
+        "random_state": 42
+      },
+      "threshold": 0.47000000000000003,
+      "train_time_sec": 1.1629242897033691,
+      "infer_time_ms": 242.19822883605957,
+      "train": {
+        "threshold": 0.47000000000000003,
+        "accuracy": 0.6746208291203235,
+        "precision": 0.6344345616264295,
+        "recall": 0.7191415814489414,
+        "f1_positive": 0.674137581853777,
+        "f1_macro": 0.6746201135357597,
+        "roc_auc": 0.7469816671690316,
+        "brier_score": 0.2388175114651322,
+        "confusion_matrix": {
+          "tn": 5015,
+          "fp": 2877,
+          "fn": 1950,
+          "tp": 4993
+        }
+      },
+      "val": {
+        "threshold": 0.47000000000000003,
+        "accuracy": 0.4964769647696477,
+        "precision": 0.4717624148003895,
+        "recall": 0.5562571756601608,
+        "f1_positive": 0.5105374077976818,
+        "f1_macro": 0.49606111461312663,
+        "roc_auc": 0.4856902307291532,
+        "brier_score": 0.25030636132533784,
+        "confusion_matrix": {
+          "tn": 863,
+          "fp": 1085,
+          "fn": 773,
+          "tp": 969
+        }
+      },
+      "test": {
+        "threshold": 0.47000000000000003,
+        "accuracy": 0.4906318082788671,
+        "precision": 0.4732958538299368,
+        "recall": 0.6161939615736505,
+        "f1_positive": 0.5353736089030207,
+        "f1_macro": 0.4858642393598999,
+        "roc_auc": 0.4857948707019255,
+        "brier_score": 0.2509453719330669,
+        "confusion_matrix": {
+          "tn": 905,
+          "fp": 1499,
+          "fn": 839,
+          "tp": 1347
+        }
+      }
+    },
+    "XGBoost": {
+      "best_hyperparameters": {
+        "n_estimators": 300,
+        "best_iteration": 13,
+        "learning_rate": 0.03,
+        "max_depth": 4,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_alpha": 0.1,
+        "reg_lambda": 1.0,
+        "random_state": 42
+      },
+      "threshold": 0.47000000000000003,
+      "train_time_sec": 0.12589621543884277,
+      "infer_time_ms": 3.9215087890625,
+      "train": {
+        "threshold": 0.47000000000000003,
+        "accuracy": 0.5948769801145939,
+        "precision": 0.5660858478538037,
+        "recall": 0.5755437130923232,
+        "f1_positive": 0.5707756034852164,
+        "f1_macro": 0.593595613843706,
+        "roc_auc": 0.6347606941878984,
+        "brier_score": 0.24607792496681213,
+        "confusion_matrix": {
+          "tn": 4829,
+          "fp": 3063,
+          "fn": 2947,
+          "tp": 3996
+        }
+      },
+      "val": {
+        "threshold": 0.47000000000000003,
+        "accuracy": 0.5149051490514905,
+        "precision": 0.48747390396659707,
+        "recall": 0.5361653272101033,
+        "f1_positive": 0.5106615636960088,
+        "f1_macro": 0.5148686647066825,
+        "roc_auc": 0.5160560921502109,
+        "brier_score": 0.24913425743579865,
+        "confusion_matrix": {
+          "tn": 966,
+          "fp": 982,
+          "fn": 808,
+          "tp": 934
+        }
+      },
+      "test": {
+        "threshold": 0.47000000000000003,
+        "accuracy": 0.47625272331154683,
+        "precision": 0.45932835820895523,
+        "recall": 0.5631290027447392,
+        "f1_positive": 0.5059597205096589,
+        "f1_macro": 0.4743521365645188,
+        "roc_auc": 0.46994459143269907,
+        "brier_score": 0.25020867586135864,
+        "confusion_matrix": {
+          "tn": 955,
+          "fp": 1449,
+          "fn": 955,
+          "tp": 1231
+        }
+      }
+    },
+    "per_company_test": {
+      "Logistic Regression": {
+        "RELIANCE": {
+          "accuracy": 0.5261437908496732,
+          "roc_auc": 0.5452058308040867,
+          "n_obs": 306
+        },
+        "TCS": {
+          "accuracy": 0.5359477124183006,
+          "roc_auc": 0.5242412297989751,
+          "n_obs": 306
+        },
+        "INFY": {
+          "accuracy": 0.49673202614379086,
+          "roc_auc": 0.4853314952828156,
+          "n_obs": 306
+        },
+        "HDFCBANK": {
+          "accuracy": 0.5130718954248366,
+          "roc_auc": 0.537076633595621,
+          "n_obs": 306
+        },
+        "ICICIBANK": {
+          "accuracy": 0.5,
+          "roc_auc": 0.5221946630174478,
+          "n_obs": 306
+        },
+        "SBIN": {
+          "accuracy": 0.49673202614379086,
+          "roc_auc": 0.5171942415310351,
+          "n_obs": 306
+        },
+        "HINDUNILVR": {
+          "accuracy": 0.4673202614379085,
+          "roc_auc": 0.4517123287671233,
+          "n_obs": 306
+        },
+        "ITC": {
+          "accuracy": 0.4869281045751634,
+          "roc_auc": 0.4582099447513812,
+          "n_obs": 306
+        },
+        "LT": {
+          "accuracy": 0.545751633986928,
+          "roc_auc": 0.5050317453461755,
+          "n_obs": 306
+        },
+        "BHARTIARTL": {
+          "accuracy": 0.4869281045751634,
+          "roc_auc": 0.48128205128205126,
+          "n_obs": 306
+        },
+        "SUNPHARMA": {
+          "accuracy": 0.4803921568627451,
+          "roc_auc": 0.4913616147793363,
+          "n_obs": 306
+        },
+        "CIPLA": {
+          "accuracy": 0.4934640522875817,
+          "roc_auc": 0.48698995941038237,
+          "n_obs": 306
+        },
+        "MARUTI": {
+          "accuracy": 0.5392156862745098,
+          "roc_auc": 0.5162504276428327,
+          "n_obs": 306
+        },
+        "M&M": {
+          "accuracy": 0.5130718954248366,
+          "roc_auc": 0.5315107174945449,
+          "n_obs": 306
+        },
+        "TATASTEEL": {
+          "accuracy": 0.5228758169934641,
+          "roc_auc": 0.5364832535885167,
+          "n_obs": 306
+        }
+      },
+      "Random Forest": {
+        "RELIANCE": {
+          "accuracy": 0.5294117647058824,
+          "roc_auc": 0.5480271876202283,
+          "n_obs": 306
+        },
+        "TCS": {
+          "accuracy": 0.4869281045751634,
+          "roc_auc": 0.5088687426093812,
+          "n_obs": 306
+        },
+        "INFY": {
+          "accuracy": 0.45751633986928103,
+          "roc_auc": 0.4650842200491104,
+          "n_obs": 306
+        },
+        "HDFCBANK": {
+          "accuracy": 0.46078431372549017,
+          "roc_auc": 0.4711768730756073,
+          "n_obs": 306
+        },
+        "ICICIBANK": {
+          "accuracy": 0.5065359477124183,
+          "roc_auc": 0.4769500513171399,
+          "n_obs": 306
+        },
+        "SBIN": {
+          "accuracy": 0.4738562091503268,
+          "roc_auc": 0.4464949378444188,
+          "n_obs": 306
+        },
+        "HINDUNILVR": {
+          "accuracy": 0.4803921568627451,
+          "roc_auc": 0.47696917808219186,
+          "n_obs": 306
+        },
+        "ITC": {
+          "accuracy": 0.4542483660130719,
+          "roc_auc": 0.4710276243093923,
+          "n_obs": 306
+        },
+        "LT": {
+          "accuracy": 0.49019607843137253,
+          "roc_auc": 0.4776486848356584,
+          "n_obs": 306
+        },
+        "BHARTIARTL": {
+          "accuracy": 0.5130718954248366,
+          "roc_auc": 0.5155128205128205,
+          "n_obs": 306
+        },
+        "SUNPHARMA": {
+          "accuracy": 0.4934640522875817,
+          "roc_auc": 0.49110502907971265,
+          "n_obs": 306
+        },
+        "CIPLA": {
+          "accuracy": 0.5098039215686274,
+          "roc_auc": 0.5073702200384533,
+          "n_obs": 306
+        },
+        "MARUTI": {
+          "accuracy": 0.4803921568627451,
+          "roc_auc": 0.47169004447485463,
+          "n_obs": 306
+        },
+        "M&M": {
+          "accuracy": 0.5359477124183006,
+          "roc_auc": 0.5035724981816626,
+          "n_obs": 306
+        },
+        "TATASTEEL": {
+          "accuracy": 0.4869281045751634,
+          "roc_auc": 0.4587320574162679,
+          "n_obs": 306
+        }
+      },
+      "XGBoost": {
+        "RELIANCE": {
+          "accuracy": 0.46078431372549017,
+          "roc_auc": 0.47223528405933396,
+          "n_obs": 306
+        },
+        "TCS": {
+          "accuracy": 0.477124183006536,
+          "roc_auc": 0.531861779004073,
+          "n_obs": 306
+        },
+        "INFY": {
+          "accuracy": 0.45098039215686275,
+          "roc_auc": 0.4684444061517254,
+          "n_obs": 306
+        },
+        "HDFCBANK": {
+          "accuracy": 0.4673202614379085,
+          "roc_auc": 0.43715788573383507,
+          "n_obs": 306
+        },
+        "ICICIBANK": {
+          "accuracy": 0.47058823529411764,
+          "roc_auc": 0.4545629490249743,
+          "n_obs": 306
+        },
+        "SBIN": {
+          "accuracy": 0.4738562091503268,
+          "roc_auc": 0.4412832671194839,
+          "n_obs": 306
+        },
+        "HINDUNILVR": {
+          "accuracy": 0.43790849673202614,
+          "roc_auc": 0.40014982876712324,
+          "n_obs": 306
+        },
+        "ITC": {
+          "accuracy": 0.4869281045751634,
+          "roc_auc": 0.48083977900552494,
+          "n_obs": 306
+        },
+        "LT": {
+          "accuracy": 0.47058823529411764,
+          "roc_auc": 0.4738694769576296,
+          "n_obs": 306
+        },
+        "BHARTIARTL": {
+          "accuracy": 0.5130718954248366,
+          "roc_auc": 0.5138247863247863,
+          "n_obs": 306
+        },
+        "SUNPHARMA": {
+          "accuracy": 0.5032679738562091,
+          "roc_auc": 0.47667208347588097,
+          "n_obs": 306
+        },
+        "CIPLA": {
+          "accuracy": 0.4738562091503268,
+          "roc_auc": 0.44872890408032473,
+          "n_obs": 306
+        },
+        "MARUTI": {
+          "accuracy": 0.48366013071895425,
+          "roc_auc": 0.47859647622305856,
+          "n_obs": 306
+        },
+        "M&M": {
+          "accuracy": 0.5196078431372549,
+          "roc_auc": 0.4836135712146494,
+          "n_obs": 306
+        },
+        "TATASTEEL": {
+          "accuracy": 0.4542483660130719,
+          "roc_auc": 0.46185064935064934,
+          "n_obs": 306
+        }
+      }
+    }
+  },
+  "Exp_B1_MktOnly": {
+    "feature_count": 11,
+    "continuous_features": [
+      "ret_1d_lag1",
+      "rsi_14_lag1",
+      "macd_lag1",
+      "macd_signal_lag1",
+      "macd_diff_lag1",
+      "rolling_vol_5d_lag1",
+      "rolling_vol_21d_lag1",
+      "adj_close_sma_ratio_20_lag1",
+      "intraday_range_pct_lag1",
+      "open_gap_pct"
+    ],
+    "Logistic Regression": {
+      "best_hyperparameters": {
+        "C": 0.01,
+        "penalty": "l2",
+        "solver": "lbfgs"
+      },
+      "threshold": 0.475,
+      "train_time_sec": 0.009060144424438477,
+      "infer_time_ms": 0.9093284606933594,
+      "train": {
+        "threshold": 0.475,
+        "accuracy": 0.5315133131108865,
+        "precision": 0.4993808597205024,
+        "recall": 0.40659657208699407,
+        "f1_positive": 0.4482375357256272,
+        "f1_macro": 0.5205929391173527,
+        "roc_auc": 0.5373024269230463,
+        "brier_score": 0.24816273354191,
+        "confusion_matrix": {
+          "tn": 5062,
+          "fp": 2830,
+          "fn": 4120,
+          "tp": 2823
+        }
+      },
+      "val": {
+        "threshold": 0.475,
+        "accuracy": 0.5444444444444444,
+        "precision": 0.5196647324306899,
+        "recall": 0.4626865671641791,
+        "f1_positive": 0.4895232310962648,
+        "f1_macro": 0.5391095480169359,
+        "roc_auc": 0.5436271297123606,
+        "brier_score": 0.24832232616885835,
+        "confusion_matrix": {
+          "tn": 1203,
+          "fp": 745,
+          "fn": 936,
+          "tp": 806
+        }
+      },
+      "test": {
+        "threshold": 0.475,
+        "accuracy": 0.5189542483660131,
+        "precision": 0.49582384206529995,
+        "recall": 0.5974382433668801,
+        "f1_positive": 0.541908713692946,
+        "f1_macro": 0.5177433476721611,
+        "roc_auc": 0.5445251357527026,
+        "brier_score": 0.24801917091106293,
+        "confusion_matrix": {
+          "tn": 1076,
+          "fp": 1328,
+          "fn": 880,
+          "tp": 1306
+        }
+      }
+    },
+    "Random Forest": {
+      "best_hyperparameters": {
+        "n_estimators": 300,
+        "max_depth": 6,
+        "min_samples_split": 20,
+        "min_samples_leaf": 10,
+        "max_features": "sqrt",
+        "random_state": 42
+      },
+      "threshold": 0.475,
+      "train_time_sec": 0.7061443328857422,
+      "infer_time_ms": 168.53642463684082,
+      "train": {
+        "threshold": 0.475,
+        "accuracy": 0.59561846983485,
+        "precision": 0.570008899436369,
+        "recall": 0.5535071294829325,
+        "f1_positive": 0.5616368286445013,
+        "f1_macro": 0.5931737474470551,
+        "roc_auc": 0.6449962839102769,
+        "brier_score": 0.24049692569626185,
+        "confusion_matrix": {
+          "tn": 4993,
+          "fp": 2899,
+          "fn": 3100,
+          "tp": 3843
+        }
+      },
+      "val": {
+        "threshold": 0.475,
+        "accuracy": 0.5349593495934959,
+        "precision": 0.5068637803590285,
+        "recall": 0.5510907003444316,
+        "f1_positive": 0.528052805280528,
+        "f1_macro": 0.5348597359735974,
+        "roc_auc": 0.5424306952050677,
+        "brier_score": 0.2480156504675713,
+        "confusion_matrix": {
+          "tn": 1014,
+          "fp": 934,
+          "fn": 782,
+          "tp": 960
+        }
+      },
+      "test": {
+        "threshold": 0.475,
+        "accuracy": 0.5222222222222223,
+        "precision": 0.4987757957327737,
+        "recall": 0.6523330283623056,
+        "f1_positive": 0.5653121902874133,
+        "f1_macro": 0.5174807626164999,
+        "roc_auc": 0.5279050393290841,
+        "brier_score": 0.24881890292217348,
+        "confusion_matrix": {
+          "tn": 971,
+          "fp": 1433,
+          "fn": 760,
+          "tp": 1426
+        }
+      }
+    },
+    "XGBoost": {
+      "best_hyperparameters": {
+        "n_estimators": 300,
+        "best_iteration": 64,
+        "learning_rate": 0.03,
+        "max_depth": 4,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_alpha": 0.1,
+        "reg_lambda": 1.0,
+        "random_state": 42
+      },
+      "threshold": 0.475,
+      "train_time_sec": 0.07290053367614746,
+      "infer_time_ms": 5.119085311889648,
+      "train": {
+        "threshold": 0.475,
+        "accuracy": 0.5815975733063701,
+        "precision": 0.5584126984126984,
+        "recall": 0.506697393057756,
+        "f1_positive": 0.5312995544816129,
+        "f1_macro": 0.5767230103326675,
+        "roc_auc": 0.6184226288657498,
+        "brier_score": 0.2425459325313568,
+        "confusion_matrix": {
+          "tn": 5110,
+          "fp": 2782,
+          "fn": 3425,
+          "tp": 3518
+        }
+      },
+      "val": {
+        "threshold": 0.475,
+        "accuracy": 0.5368563685636857,
+        "precision": 0.5093910073989756,
+        "recall": 0.5137772675086107,
+        "f1_positive": 0.5115747356387539,
+        "f1_macro": 0.5356121552452981,
+        "roc_auc": 0.5456006572727894,
+        "brier_score": 0.24793694913387299,
+        "confusion_matrix": {
+          "tn": 1086,
+          "fp": 862,
+          "fn": 847,
+          "tp": 895
+        }
+      },
+      "test": {
+        "threshold": 0.475,
+        "accuracy": 0.5174291938997821,
+        "precision": 0.4945179584120983,
+        "recall": 0.5983531564501372,
+        "f1_positive": 0.5415027944524943,
+        "f1_macro": 0.5160951544118071,
+        "roc_auc": 0.5211468039695962,
+        "brier_score": 0.24909356236457825,
+        "confusion_matrix": {
+          "tn": 1067,
+          "fp": 1337,
+          "fn": 878,
+          "tp": 1308
+        }
+      }
+    },
+    "per_company_test": {
+      "Logistic Regression": {
+        "RELIANCE": {
+          "accuracy": 0.5065359477124183,
+          "roc_auc": 0.4976702432351558,
+          "n_obs": 306
+        },
+        "TCS": {
+          "accuracy": 0.4869281045751634,
+          "roc_auc": 0.5498182455218323,
+          "n_obs": 306
+        },
+        "INFY": {
+          "accuracy": 0.5261437908496732,
+          "roc_auc": 0.5379744108904493,
+          "n_obs": 306
+        },
+        "HDFCBANK": {
+          "accuracy": 0.565359477124183,
+          "roc_auc": 0.5634194320903182,
+          "n_obs": 306
+        },
+        "ICICIBANK": {
+          "accuracy": 0.5098039215686274,
+          "roc_auc": 0.5455867259664728,
+          "n_obs": 306
+        },
+        "SBIN": {
+          "accuracy": 0.48366013071895425,
+          "roc_auc": 0.524328249818446,
+          "n_obs": 306
+        },
+        "HINDUNILVR": {
+          "accuracy": 0.5326797385620915,
+          "roc_auc": 0.5598030821917808,
+          "n_obs": 306
+        },
+        "ITC": {
+          "accuracy": 0.5032679738562091,
+          "roc_auc": 0.5727734806629833,
+          "n_obs": 306
+        },
+        "LT": {
+          "accuracy": 0.46405228758169936,
+          "roc_auc": 0.47946270461711227,
+          "n_obs": 306
+        },
+        "BHARTIARTL": {
+          "accuracy": 0.5555555555555556,
+          "roc_auc": 0.5743589743589743,
+          "n_obs": 306
+        },
+        "SUNPHARMA": {
+          "accuracy": 0.545751633986928,
+          "roc_auc": 0.5981012658227848,
+          "n_obs": 306
+        },
+        "CIPLA": {
+          "accuracy": 0.5261437908496732,
+          "roc_auc": 0.5347148045289468,
+          "n_obs": 306
+        },
+        "MARUTI": {
+          "accuracy": 0.5032679738562091,
+          "roc_auc": 0.4971775573041396,
+          "n_obs": 306
+        },
+        "M&M": {
+          "accuracy": 0.5718954248366013,
+          "roc_auc": 0.5944893680742738,
+          "n_obs": 306
+        },
+        "TATASTEEL": {
+          "accuracy": 0.5032679738562091,
+          "roc_auc": 0.5246496924128503,
+          "n_obs": 306
+        }
+      },
+      "Random Forest": {
+        "RELIANCE": {
+          "accuracy": 0.4803921568627451,
+          "roc_auc": 0.4527422733296286,
+          "n_obs": 306
+        },
+        "TCS": {
+          "accuracy": 0.4673202614379085,
+          "roc_auc": 0.5188104935838479,
+          "n_obs": 306
+        },
+        "INFY": {
+          "accuracy": 0.5196078431372549,
+          "roc_auc": 0.5195795459440831,
+          "n_obs": 306
+        },
+        "HDFCBANK": {
+          "accuracy": 0.565359477124183,
+          "roc_auc": 0.5796270954498803,
+          "n_obs": 306
+        },
+        "ICICIBANK": {
+          "accuracy": 0.5555555555555556,
+          "roc_auc": 0.5225367772836128,
+          "n_obs": 306
+        },
+        "SBIN": {
+          "accuracy": 0.5228758169934641,
+          "roc_auc": 0.5273185526934085,
+          "n_obs": 306
+        },
+        "HINDUNILVR": {
+          "accuracy": 0.5326797385620915,
+          "roc_auc": 0.568792808219178,
+          "n_obs": 306
+        },
+        "ITC": {
+          "accuracy": 0.49019607843137253,
+          "roc_auc": 0.5194696132596686,
+          "n_obs": 306
+        },
+        "LT": {
+          "accuracy": 0.5228758169934641,
+          "roc_auc": 0.5173843562389323,
+          "n_obs": 306
+        },
+        "BHARTIARTL": {
+          "accuracy": 0.5359477124183006,
+          "roc_auc": 0.5470940170940171,
+          "n_obs": 306
+        },
+        "SUNPHARMA": {
+          "accuracy": 0.5816993464052288,
+          "roc_auc": 0.6066541224769072,
+          "n_obs": 306
+        },
+        "CIPLA": {
+          "accuracy": 0.5228758169934641,
+          "roc_auc": 0.5216406750694296,
+          "n_obs": 306
+        },
+        "MARUTI": {
+          "accuracy": 0.4869281045751634,
+          "roc_auc": 0.47998631542935344,
+          "n_obs": 306
+        },
+        "M&M": {
+          "accuracy": 0.5326797385620915,
+          "roc_auc": 0.5338638600094125,
+          "n_obs": 306
+        },
+        "TATASTEEL": {
+          "accuracy": 0.5163398692810458,
+          "roc_auc": 0.52857997265892,
+          "n_obs": 306
+        }
+      },
+      "XGBoost": {
+        "RELIANCE": {
+          "accuracy": 0.477124183006536,
+          "roc_auc": 0.45090411661608176,
+          "n_obs": 306
+        },
+        "TCS": {
+          "accuracy": 0.49673202614379086,
+          "roc_auc": 0.5134016554986204,
+          "n_obs": 306
+        },
+        "INFY": {
+          "accuracy": 0.5032679738562091,
+          "roc_auc": 0.5132468875199242,
+          "n_obs": 306
+        },
+        "HDFCBANK": {
+          "accuracy": 0.5686274509803921,
+          "roc_auc": 0.5896339377352036,
+          "n_obs": 306
+        },
+        "ICICIBANK": {
+          "accuracy": 0.5130718954248366,
+          "roc_auc": 0.5072913102976395,
+          "n_obs": 306
+        },
+        "SBIN": {
+          "accuracy": 0.5130718954248366,
+          "roc_auc": 0.5279593318809005,
+          "n_obs": 306
+        },
+        "HINDUNILVR": {
+          "accuracy": 0.5228758169934641,
+          "roc_auc": 0.5397688356164383,
+          "n_obs": 306
+        },
+        "ITC": {
+          "accuracy": 0.4934640522875817,
+          "roc_auc": 0.5103646408839779,
+          "n_obs": 306
+        },
+        "LT": {
+          "accuracy": 0.5392156862745098,
+          "roc_auc": 0.5165637282425604,
+          "n_obs": 306
+        },
+        "BHARTIARTL": {
+          "accuracy": 0.5522875816993464,
+          "roc_auc": 0.5535042735042734,
+          "n_obs": 306
+        },
+        "SUNPHARMA": {
+          "accuracy": 0.5915032679738562,
+          "roc_auc": 0.5983150872391378,
+          "n_obs": 306
+        },
+        "CIPLA": {
+          "accuracy": 0.5,
+          "roc_auc": 0.49923093356120485,
+          "n_obs": 306
+        },
+        "MARUTI": {
+          "accuracy": 0.47058823529411764,
+          "roc_auc": 0.46025059869996576,
+          "n_obs": 306
+        },
+        "M&M": {
+          "accuracy": 0.5,
+          "roc_auc": 0.5283446712018139,
+          "n_obs": 306
+        },
+        "TATASTEEL": {
+          "accuracy": 0.5196078431372549,
+          "roc_auc": 0.5260594668489406,
+          "n_obs": 306
+        }
+      }
+    }
+  },
+  "Exp_B2_MktVol": {
+    "feature_count": 19,
+    "continuous_features": [
+      "ret_1d_lag1",
+      "rsi_14_lag1",
+      "macd_lag1",
+      "macd_signal_lag1",
+      "macd_diff_lag1",
+      "rolling_vol_5d_lag1",
+      "rolling_vol_21d_lag1",
+      "adj_close_sma_ratio_20_lag1",
+      "intraday_range_pct_lag1",
+      "open_gap_pct",
+      "direct_news_count",
+      "direct_news_count_lag1",
+      "direct_news_count_roll3",
+      "direct_news_count_roll7",
+      "sector_news_count",
+      "market_news_count",
+      "has_direct_news",
+      "has_sector_news"
+    ],
+    "Logistic Regression": {
+      "best_hyperparameters": {
+        "C": 5.0,
+        "penalty": "l2",
+        "solver": "lbfgs"
+      },
+      "threshold": 0.475,
+      "train_time_sec": 0.01012563705444336,
+      "infer_time_ms": 1.1310577392578125,
+      "train": {
+        "threshold": 0.475,
+        "accuracy": 0.5317155375800472,
+        "precision": 0.4996598639455782,
+        "recall": 0.423160017283595,
+        "f1_positive": 0.4582391016142868,
+        "f1_macro": 0.5229404091201961,
+        "roc_auc": 0.5373023356724392,
+        "brier_score": 0.24806040382368796,
+        "confusion_matrix": {
+          "tn": 4950,
+          "fp": 2942,
+          "fn": 4005,
+          "tp": 2938
+        }
+      },
+      "val": {
+        "threshold": 0.475,
+        "accuracy": 0.5346883468834689,
+        "precision": 0.5075165363800361,
+        "recall": 0.4845005740528129,
+        "f1_positive": 0.4957415565345081,
+        "f1_macro": 0.5318959354999584,
+        "roc_auc": 0.539477034351226,
+        "brier_score": 0.24825018019200015,
+        "confusion_matrix": {
+          "tn": 1129,
+          "fp": 819,
+          "fn": 898,
+          "tp": 844
+        }
+      },
+      "test": {
+        "threshold": 0.475,
+        "accuracy": 0.5246187363834423,
+        "precision": 0.5007794232268121,
+        "recall": 0.5878316559926807,
+        "f1_positive": 0.5408249158249159,
+        "f1_macro": 0.524025827379486,
+        "roc_auc": 0.5433086134271488,
+        "brier_score": 0.24797843332331587,
+        "confusion_matrix": {
+          "tn": 1123,
+          "fp": 1281,
+          "fn": 901,
+          "tp": 1285
+        }
+      }
+    },
+    "Random Forest": {
+      "best_hyperparameters": {
+        "n_estimators": 300,
+        "max_depth": 6,
+        "min_samples_split": 20,
+        "min_samples_leaf": 10,
+        "max_features": "sqrt",
+        "random_state": 42
+      },
+      "threshold": 0.475,
+      "train_time_sec": 0.6883265972137451,
+      "infer_time_ms": 254.8537254333496,
+      "train": {
+        "threshold": 0.475,
+        "accuracy": 0.6006066734074823,
+        "precision": 0.574393452206957,
+        "recall": 0.5660377358490566,
+        "f1_positive": 0.5701849836779108,
+        "f1_macro": 0.5985957968436768,
+        "roc_auc": 0.6583361736605633,
+        "brier_score": 0.24037258569704076,
+        "confusion_matrix": {
+          "tn": 4980,
+          "fp": 2912,
+          "fn": 3013,
+          "tp": 3930
+        }
+      },
+      "val": {
+        "threshold": 0.475,
+        "accuracy": 0.5360433604336043,
+        "precision": 0.5077962577962578,
+        "recall": 0.560849598163031,
+        "f1_positive": 0.5330060010911075,
+        "f1_macro": 0.5360237329095818,
+        "roc_auc": 0.5433126972938184,
+        "brier_score": 0.24799208253208785,
+        "confusion_matrix": {
+          "tn": 1001,
+          "fp": 947,
+          "fn": 765,
+          "tp": 977
+        }
+      },
+      "test": {
+        "threshold": 0.475,
+        "accuracy": 0.5274509803921569,
+        "precision": 0.5029340697273041,
+        "recall": 0.6665141811527905,
+        "f1_positive": 0.5732834939996065,
+        "f1_macro": 0.5219358646468621,
+        "roc_auc": 0.5321663878287636,
+        "brier_score": 0.24858754897046906,
+        "confusion_matrix": {
+          "tn": 964,
+          "fp": 1440,
+          "fn": 729,
+          "tp": 1457
+        }
+      }
+    },
+    "XGBoost": {
+      "best_hyperparameters": {
+        "n_estimators": 300,
+        "best_iteration": 118,
+        "learning_rate": 0.03,
+        "max_depth": 4,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_alpha": 0.1,
+        "reg_lambda": 1.0,
+        "random_state": 42
+      },
+      "threshold": 0.48,
+      "train_time_sec": 0.14598560333251953,
+      "infer_time_ms": 5.359888076782227,
+      "train": {
+        "threshold": 0.48,
+        "accuracy": 0.6153690596562184,
+        "precision": 0.6023837113060752,
+        "recall": 0.5241250180037448,
+        "f1_positive": 0.5605360443622921,
+        "f1_macro": 0.6092863609082226,
+        "roc_auc": 0.6644704774720867,
+        "brier_score": 0.23736873269081116,
+        "confusion_matrix": {
+          "tn": 5490,
+          "fp": 2402,
+          "fn": 3304,
+          "tp": 3639
+        }
+      },
+      "val": {
+        "threshold": 0.48,
+        "accuracy": 0.5463414634146342,
+        "precision": 0.5208845208845209,
+        "recall": 0.48679678530424797,
+        "f1_positive": 0.5032640949554896,
+        "f1_macro": 0.5429038679266226,
+        "roc_auc": 0.5507711108805994,
+        "brier_score": 0.24752461910247803,
+        "confusion_matrix": {
+          "tn": 1168,
+          "fp": 780,
+          "fn": 894,
+          "tp": 848
+        }
+      },
+      "test": {
+        "threshold": 0.48,
+        "accuracy": 0.5093681917211329,
+        "precision": 0.48719937936384794,
+        "recall": 0.5745654162854529,
+        "f1_positive": 0.5272879932829555,
+        "f1_macro": 0.5086621125835067,
+        "roc_auc": 0.5169254163158992,
+        "brier_score": 0.24973352253437042,
+        "confusion_matrix": {
+          "tn": 1082,
+          "fp": 1322,
+          "fn": 930,
+          "tp": 1256
+        }
+      }
+    },
+    "per_company_test": {
+      "Logistic Regression": {
+        "RELIANCE": {
+          "accuracy": 0.5228758169934641,
+          "roc_auc": 0.5023297567648441,
+          "n_obs": 306
+        },
+        "TCS": {
+          "accuracy": 0.5032679738562091,
+          "roc_auc": 0.5391757543905751,
+          "n_obs": 306
+        },
+        "INFY": {
+          "accuracy": 0.5228758169934641,
+          "roc_auc": 0.5359066040580709,
+          "n_obs": 306
+        },
+        "HDFCBANK": {
+          "accuracy": 0.5686274509803921,
+          "roc_auc": 0.5869397878891549,
+          "n_obs": 306
+        },
+        "ICICIBANK": {
+          "accuracy": 0.5261437908496732,
+          "roc_auc": 0.5522579541566883,
+          "n_obs": 306
+        },
+        "SBIN": {
+          "accuracy": 0.5326797385620915,
+          "roc_auc": 0.5454312443931821,
+          "n_obs": 306
+        },
+        "HINDUNILVR": {
+          "accuracy": 0.5196078431372549,
+          "roc_auc": 0.5589041095890411,
+          "n_obs": 306
+        },
+        "ITC": {
+          "accuracy": 0.5130718954248366,
+          "roc_auc": 0.5492154696132596,
+          "n_obs": 306
+        },
+        "LT": {
+          "accuracy": 0.4673202614379085,
+          "roc_auc": 0.4738910724312185,
+          "n_obs": 306
+        },
+        "BHARTIARTL": {
+          "accuracy": 0.5490196078431373,
+          "roc_auc": 0.5706410256410257,
+          "n_obs": 306
+        },
+        "SUNPHARMA": {
+          "accuracy": 0.5490196078431373,
+          "roc_auc": 0.5943807731782416,
+          "n_obs": 306
+        },
+        "CIPLA": {
+          "accuracy": 0.5392156862745098,
+          "roc_auc": 0.5300149540696433,
+          "n_obs": 306
+        },
+        "MARUTI": {
+          "accuracy": 0.5032679738562091,
+          "roc_auc": 0.49850325008552854,
+          "n_obs": 306
+        },
+        "M&M": {
+          "accuracy": 0.5588235294117647,
+          "roc_auc": 0.5945749368929962,
+          "n_obs": 306
+        },
+        "TATASTEEL": {
+          "accuracy": 0.4934640522875817,
+          "roc_auc": 0.5081168831168831,
+          "n_obs": 306
+        }
+      },
+      "Random Forest": {
+        "RELIANCE": {
+          "accuracy": 0.4542483660130719,
+          "roc_auc": 0.42982943615611513,
+          "n_obs": 306
+        },
+        "TCS": {
+          "accuracy": 0.48366013071895425,
+          "roc_auc": 0.5183725309858538,
+          "n_obs": 306
+        },
+        "INFY": {
+          "accuracy": 0.5294117647058824,
+          "roc_auc": 0.5260845216042735,
+          "n_obs": 306
+        },
+        "HDFCBANK": {
+          "accuracy": 0.5686274509803921,
+          "roc_auc": 0.595107765993842,
+          "n_obs": 306
+        },
+        "ICICIBANK": {
+          "accuracy": 0.545751633986928,
+          "roc_auc": 0.5349811837153609,
+          "n_obs": 306
+        },
+        "SBIN": {
+          "accuracy": 0.5228758169934641,
+          "roc_auc": 0.5447050279806912,
+          "n_obs": 306
+        },
+        "HINDUNILVR": {
+          "accuracy": 0.545751633986928,
+          "roc_auc": 0.5779537671232876,
+          "n_obs": 306
+        },
+        "ITC": {
+          "accuracy": 0.4869281045751634,
+          "roc_auc": 0.5252154696132597,
+          "n_obs": 306
+        },
+        "LT": {
+          "accuracy": 0.5032679738562091,
+          "roc_auc": 0.5014037057832678,
+          "n_obs": 306
+        },
+        "BHARTIARTL": {
+          "accuracy": 0.5555555555555556,
+          "roc_auc": 0.5508547008547009,
+          "n_obs": 306
+        },
+        "SUNPHARMA": {
+          "accuracy": 0.5882352941176471,
+          "roc_auc": 0.6222630858706808,
+          "n_obs": 306
+        },
+        "CIPLA": {
+          "accuracy": 0.5424836601307189,
+          "roc_auc": 0.522537919248024,
+          "n_obs": 306
+        },
+        "MARUTI": {
+          "accuracy": 0.49673202614379086,
+          "roc_auc": 0.4734433800889497,
+          "n_obs": 306
+        },
+        "M&M": {
+          "accuracy": 0.5555555555555556,
+          "roc_auc": 0.5558122620117228,
+          "n_obs": 306
+        },
+        "TATASTEEL": {
+          "accuracy": 0.5326797385620915,
+          "roc_auc": 0.5285799726589201,
+          "n_obs": 306
+        }
+      },
+      "XGBoost": {
+        "RELIANCE": {
+          "accuracy": 0.42810457516339867,
+          "roc_auc": 0.40627538152438764,
+          "n_obs": 306
+        },
+        "TCS": {
+          "accuracy": 0.477124183006536,
+          "roc_auc": 0.5015109709630797,
+          "n_obs": 306
+        },
+        "INFY": {
+          "accuracy": 0.5032679738562091,
+          "roc_auc": 0.5060526429156076,
+          "n_obs": 306
+        },
+        "HDFCBANK": {
+          "accuracy": 0.5424836601307189,
+          "roc_auc": 0.5729558672596647,
+          "n_obs": 306
+        },
+        "ICICIBANK": {
+          "accuracy": 0.5163398692810458,
+          "roc_auc": 0.49358535750940813,
+          "n_obs": 306
+        },
+        "SBIN": {
+          "accuracy": 0.5065359477124183,
+          "roc_auc": 0.5410312273057372,
+          "n_obs": 306
+        },
+        "HINDUNILVR": {
+          "accuracy": 0.5490196078431373,
+          "roc_auc": 0.5663527397260274,
+          "n_obs": 306
+        },
+        "ITC": {
+          "accuracy": 0.46405228758169936,
+          "roc_auc": 0.5161104972375691,
+          "n_obs": 306
+        },
+        "LT": {
+          "accuracy": 0.5228758169934641,
+          "roc_auc": 0.49190169740422407,
+          "n_obs": 306
+        },
+        "BHARTIARTL": {
+          "accuracy": 0.5098039215686274,
+          "roc_auc": 0.535897435897436,
+          "n_obs": 306
+        },
+        "SUNPHARMA": {
+          "accuracy": 0.6013071895424836,
+          "roc_auc": 0.5982723229558673,
+          "n_obs": 306
+        },
+        "CIPLA": {
+          "accuracy": 0.5359477124183006,
+          "roc_auc": 0.5129245887630849,
+          "n_obs": 306
+        },
+        "MARUTI": {
+          "accuracy": 0.47058823529411764,
+          "roc_auc": 0.4730157372562436,
+          "n_obs": 306
+        },
+        "M&M": {
+          "accuracy": 0.4934640522875817,
+          "roc_auc": 0.5189748855517049,
+          "n_obs": 306
+        },
+        "TATASTEEL": {
+          "accuracy": 0.5196078431372549,
+          "roc_auc": 0.5312713602187287,
+          "n_obs": 306
+        }
+      }
+    }
+  },
+  "Exp_B3_MktLM": {
+    "feature_count": 37,
+    "continuous_features": [
+      "ret_1d_lag1",
+      "rsi_14_lag1",
+      "macd_lag1",
+      "macd_signal_lag1",
+      "macd_diff_lag1",
+      "rolling_vol_5d_lag1",
+      "rolling_vol_21d_lag1",
+      "adj_close_sma_ratio_20_lag1",
+      "intraday_range_pct_lag1",
+      "open_gap_pct",
+      "lm_direct_pos_count",
+      "lm_direct_neg_count",
+      "lm_direct_unc_count",
+      "lm_direct_polarity",
+      "lm_direct_subjectivity",
+      "lm_sector_pos_count",
+      "lm_sector_neg_count",
+      "lm_sector_polarity",
+      "lm_market_polarity",
+      "lm_direct_polarity_lag1",
+      "lm_direct_polarity_roll3",
+      "lm_direct_polarity_roll7",
+      "lm_sector_polarity_lag1",
+      "lm_sector_polarity_roll3",
+      "lm_sector_polarity_roll7",
+      "lm_market_polarity_lag1",
+      "lm_market_polarity_roll3",
+      "lm_market_polarity_roll7",
+      "direct_news_count",
+      "direct_news_count_lag1",
+      "direct_news_count_roll3",
+      "direct_news_count_roll7",
+      "sector_news_count",
+      "market_news_count",
+      "has_direct_news",
+      "has_sector_news"
+    ],
+    "Logistic Regression": {
+      "best_hyperparameters": {
+        "C": 0.1,
+        "penalty": "l2",
+        "solver": "lbfgs"
+      },
+      "threshold": 0.475,
+      "train_time_sec": 0.0215761661529541,
+      "infer_time_ms": 1.483917236328125,
+      "train": {
+        "threshold": 0.475,
+        "accuracy": 0.532794068082238,
+        "precision": 0.5009419152276295,
+        "recall": 0.45959959671611694,
+        "f1_positive": 0.47938105611056864,
+        "f1_macro": 0.52782404887206,
+        "roc_auc": 0.5454999434611238,
+        "brier_score": 0.24747838427205715,
+        "confusion_matrix": {
+          "tn": 4713,
+          "fp": 3179,
+          "fn": 3752,
+          "tp": 3191
+        }
+      },
+      "val": {
+        "threshold": 0.475,
+        "accuracy": 0.5254742547425474,
+        "precision": 0.4975715056664868,
+        "recall": 0.529276693455798,
+        "f1_positive": 0.5129346314325453,
+        "f1_macro": 0.5251595217928908,
+        "roc_auc": 0.5317043356900539,
+        "brier_score": 0.24871919818823668,
+        "confusion_matrix": {
+          "tn": 1017,
+          "fp": 931,
+          "fn": 820,
+          "tp": 922
+        }
+      },
+      "test": {
+        "threshold": 0.475,
+        "accuracy": 0.5222222222222223,
+        "precision": 0.4986543637062668,
+        "recall": 0.5933211344922232,
+        "f1_positive": 0.5418842698976395,
+        "f1_macro": 0.5213404959777294,
+        "roc_auc": 0.5362102351524526,
+        "brier_score": 0.2483889095730864,
+        "confusion_matrix": {
+          "tn": 1100,
+          "fp": 1304,
+          "fn": 889,
+          "tp": 1297
+        }
+      }
+    },
+    "Random Forest": {
+      "best_hyperparameters": {
+        "n_estimators": 300,
+        "max_depth": 6,
+        "min_samples_split": 20,
+        "min_samples_leaf": 10,
+        "max_features": "sqrt",
+        "random_state": 42
+      },
+      "threshold": 0.475,
+      "train_time_sec": 0.9528748989105225,
+      "infer_time_ms": 179.19397354125977,
+      "train": {
+        "threshold": 0.475,
+        "accuracy": 0.6362655881361645,
+        "precision": 0.6193857076709369,
+        "recall": 0.5779922223822556,
+        "f1_positive": 0.5979734763820593,
+        "f1_macro": 0.6329355318887155,
+        "roc_auc": 0.6989219434276897,
+        "brier_score": 0.23897957290543181,
+        "confusion_matrix": {
+          "tn": 5426,
+          "fp": 2466,
+          "fn": 2930,
+          "tp": 4013
+        }
+      },
+      "val": {
+        "threshold": 0.475,
+        "accuracy": 0.5271002710027101,
+        "precision": 0.4991717283268912,
+        "recall": 0.5189437428243399,
+        "f1_positive": 0.5088657472558401,
+        "f1_macro": 0.5264475064996211,
+        "roc_auc": 0.5325813280776657,
+        "brier_score": 0.24839933715206586,
+        "confusion_matrix": {
+          "tn": 1041,
+          "fp": 907,
+          "fn": 838,
+          "tp": 904
+        }
+      },
+      "test": {
+        "threshold": 0.475,
+        "accuracy": 0.5193899782135076,
+        "precision": 0.49617737003058104,
+        "recall": 0.5937785910338518,
+        "f1_positive": 0.5406080799666806,
+        "f1_macro": 0.5183625141724677,
+        "roc_auc": 0.5352958929384237,
+        "brier_score": 0.2485151924587094,
+        "confusion_matrix": {
+          "tn": 1086,
+          "fp": 1318,
+          "fn": 888,
+          "tp": 1298
+        }
+      }
+    },
+    "XGBoost": {
+      "best_hyperparameters": {
+        "n_estimators": 300,
+        "best_iteration": 42,
+        "learning_rate": 0.03,
+        "max_depth": 4,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_alpha": 0.1,
+        "reg_lambda": 1.0,
+        "random_state": 42
+      },
+      "threshold": 0.48,
+      "train_time_sec": 0.10399675369262695,
+      "infer_time_ms": 3.267526626586914,
+      "train": {
+        "threshold": 0.48,
+        "accuracy": 0.5915065722952477,
+        "precision": 0.5762389915385944,
+        "recall": 0.48062797061788853,
+        "f1_positive": 0.5241086854091409,
+        "f1_macro": 0.5831455094499649,
+        "roc_auc": 0.6351646606254872,
+        "brier_score": 0.24174928665161133,
+        "confusion_matrix": {
+          "tn": 5438,
+          "fp": 2454,
+          "fn": 3606,
+          "tp": 3337
+        }
+      },
+      "val": {
+        "threshold": 0.48,
+        "accuracy": 0.529539295392954,
+        "precision": 0.5018181818181818,
+        "recall": 0.4753157290470723,
+        "f1_positive": 0.4882075471698113,
+        "f1_macro": 0.5264508147082758,
+        "roc_auc": 0.535233670142417,
+        "brier_score": 0.24836285412311554,
+        "confusion_matrix": {
+          "tn": 1126,
+          "fp": 822,
+          "fn": 914,
+          "tp": 828
+        }
+      },
+      "test": {
+        "threshold": 0.48,
+        "accuracy": 0.5250544662309368,
+        "precision": 0.5013066202090593,
+        "recall": 0.5265324794144556,
+        "f1_positive": 0.5136099955377064,
+        "f1_macro": 0.5247913749506327,
+        "roc_auc": 0.532039845149819,
+        "brier_score": 0.24861355125904083,
+        "confusion_matrix": {
+          "tn": 1259,
+          "fp": 1145,
+          "fn": 1035,
+          "tp": 1151
+        }
+      }
+    },
+    "per_company_test": {
+      "Logistic Regression": {
+        "RELIANCE": {
+          "accuracy": 0.5228758169934641,
+          "roc_auc": 0.5267387680075237,
+          "n_obs": 306
+        },
+        "TCS": {
+          "accuracy": 0.5065359477124183,
+          "roc_auc": 0.5372925152192003,
+          "n_obs": 306
+        },
+        "INFY": {
+          "accuracy": 0.5196078431372549,
+          "roc_auc": 0.5320294662473615,
+          "n_obs": 306
+        },
+        "HDFCBANK": {
+          "accuracy": 0.5588235294117647,
+          "roc_auc": 0.5926274375641464,
+          "n_obs": 306
+        },
+        "ICICIBANK": {
+          "accuracy": 0.5163398692810458,
+          "roc_auc": 0.5402839548409168,
+          "n_obs": 306
+        },
+        "SBIN": {
+          "accuracy": 0.5490196078431373,
+          "roc_auc": 0.5394506386432569,
+          "n_obs": 306
+        },
+        "HINDUNILVR": {
+          "accuracy": 0.477124183006536,
+          "roc_auc": 0.47649828767123287,
+          "n_obs": 306
+        },
+        "ITC": {
+          "accuracy": 0.48366013071895425,
+          "roc_auc": 0.5308729281767955,
+          "n_obs": 306
+        },
+        "LT": {
+          "accuracy": 0.5359477124183006,
+          "roc_auc": 0.5145769446723967,
+          "n_obs": 306
+        },
+        "BHARTIARTL": {
+          "accuracy": 0.5555555555555556,
+          "roc_auc": 0.5691025641025641,
+          "n_obs": 306
+        },
+        "SUNPHARMA": {
+          "accuracy": 0.5359477124183006,
+          "roc_auc": 0.5586298323640095,
+          "n_obs": 306
+        },
+        "CIPLA": {
+          "accuracy": 0.5163398692810458,
+          "roc_auc": 0.523947874385815,
+          "n_obs": 306
+        },
+        "MARUTI": {
+          "accuracy": 0.5228758169934641,
+          "roc_auc": 0.5141549777625727,
+          "n_obs": 306
+        },
+        "M&M": {
+          "accuracy": 0.5130718954248366,
+          "roc_auc": 0.5579086980704231,
+          "n_obs": 306
+        },
+        "TATASTEEL": {
+          "accuracy": 0.5196078431372549,
+          "roc_auc": 0.5297334244702666,
+          "n_obs": 306
+        }
+      },
+      "Random Forest": {
+        "RELIANCE": {
+          "accuracy": 0.5032679738562091,
+          "roc_auc": 0.4851451288847092,
+          "n_obs": 306
+        },
+        "TCS": {
+          "accuracy": 0.4803921568627451,
+          "roc_auc": 0.5063285595410152,
+          "n_obs": 306
+        },
+        "INFY": {
+          "accuracy": 0.5032679738562091,
+          "roc_auc": 0.5058372463705683,
+          "n_obs": 306
+        },
+        "HDFCBANK": {
+          "accuracy": 0.5555555555555556,
+          "roc_auc": 0.5929267875470408,
+          "n_obs": 306
+        },
+        "ICICIBANK": {
+          "accuracy": 0.5326797385620915,
+          "roc_auc": 0.5637187820732125,
+          "n_obs": 306
+        },
+        "SBIN": {
+          "accuracy": 0.4869281045751634,
+          "roc_auc": 0.5178777393310265,
+          "n_obs": 306
+        },
+        "HINDUNILVR": {
+          "accuracy": 0.5326797385620915,
+          "roc_auc": 0.5556078767123288,
+          "n_obs": 306
+        },
+        "ITC": {
+          "accuracy": 0.4803921568627451,
+          "roc_auc": 0.5119558011049724,
+          "n_obs": 306
+        },
+        "LT": {
+          "accuracy": 0.49673202614379086,
+          "roc_auc": 0.5075368202824688,
+          "n_obs": 306
+        },
+        "BHARTIARTL": {
+          "accuracy": 0.5130718954248366,
+          "roc_auc": 0.5487606837606838,
+          "n_obs": 306
+        },
+        "SUNPHARMA": {
+          "accuracy": 0.5620915032679739,
+          "roc_auc": 0.6047724940130004,
+          "n_obs": 306
+        },
+        "CIPLA": {
+          "accuracy": 0.5490196078431373,
+          "roc_auc": 0.5579149754325998,
+          "n_obs": 306
+        },
+        "MARUTI": {
+          "accuracy": 0.48366013071895425,
+          "roc_auc": 0.485545672254533,
+          "n_obs": 306
+        },
+        "M&M": {
+          "accuracy": 0.565359477124183,
+          "roc_auc": 0.5852051512428871,
+          "n_obs": 306
+        },
+        "TATASTEEL": {
+          "accuracy": 0.545751633986928,
+          "roc_auc": 0.5381066302118933,
+          "n_obs": 306
+        }
+      },
+      "XGBoost": {
+        "RELIANCE": {
+          "accuracy": 0.47058823529411764,
+          "roc_auc": 0.4873466421579105,
+          "n_obs": 306
+        },
+        "TCS": {
+          "accuracy": 0.49673202614379086,
+          "roc_auc": 0.4757149739412254,
+          "n_obs": 306
+        },
+        "INFY": {
+          "accuracy": 0.49019607843137253,
+          "roc_auc": 0.4785680437685779,
+          "n_obs": 306
+        },
+        "HDFCBANK": {
+          "accuracy": 0.5588235294117647,
+          "roc_auc": 0.5809527882312693,
+          "n_obs": 306
+        },
+        "ICICIBANK": {
+          "accuracy": 0.5522875816993464,
+          "roc_auc": 0.5642319534724598,
+          "n_obs": 306
+        },
+        "SBIN": {
+          "accuracy": 0.5163398692810458,
+          "roc_auc": 0.5532487504805844,
+          "n_obs": 306
+        },
+        "HINDUNILVR": {
+          "accuracy": 0.5065359477124183,
+          "roc_auc": 0.5110873287671234,
+          "n_obs": 306
+        },
+        "ITC": {
+          "accuracy": 0.5032679738562091,
+          "roc_auc": 0.5188950276243094,
+          "n_obs": 306
+        },
+        "LT": {
+          "accuracy": 0.5392156862745098,
+          "roc_auc": 0.5320692782792726,
+          "n_obs": 306
+        },
+        "BHARTIARTL": {
+          "accuracy": 0.5130718954248366,
+          "roc_auc": 0.5199145299145299,
+          "n_obs": 306
+        },
+        "SUNPHARMA": {
+          "accuracy": 0.565359477124183,
+          "roc_auc": 0.5880516592541909,
+          "n_obs": 306
+        },
+        "CIPLA": {
+          "accuracy": 0.5490196078431373,
+          "roc_auc": 0.5151676992095706,
+          "n_obs": 306
+        },
+        "MARUTI": {
+          "accuracy": 0.5228758169934641,
+          "roc_auc": 0.5154806705439617,
+          "n_obs": 306
+        },
+        "M&M": {
+          "accuracy": 0.565359477124183,
+          "roc_auc": 0.5791725495229538,
+          "n_obs": 306
+        },
+        "TATASTEEL": {
+          "accuracy": 0.5261437908496732,
+          "roc_auc": 0.5472060833902939,
+          "n_obs": 306
+        }
+      }
+    }
+  },
+  "Exp_B4_MktFinBERT": {
+    "feature_count": 41,
+    "continuous_features": [
+      "ret_1d_lag1",
+      "rsi_14_lag1",
+      "macd_lag1",
+      "macd_signal_lag1",
+      "macd_diff_lag1",
+      "rolling_vol_5d_lag1",
+      "rolling_vol_21d_lag1",
+      "adj_close_sma_ratio_20_lag1",
+      "intraday_range_pct_lag1",
+      "open_gap_pct",
+      "finbert_direct_pos",
+      "finbert_direct_neu",
+      "finbert_direct_neg",
+      "finbert_direct_polarity",
+      "finbert_direct_confidence",
+      "finbert_sector_pos",
+      "finbert_sector_neu",
+      "finbert_sector_neg",
+      "finbert_sector_polarity",
+      "finbert_market_pos",
+      "finbert_market_neu",
+      "finbert_market_neg",
+      "finbert_market_polarity",
+      "finbert_direct_polarity_lag1",
+      "finbert_direct_polarity_roll3",
+      "finbert_direct_polarity_roll7",
+      "finbert_sector_polarity_lag1",
+      "finbert_sector_polarity_roll3",
+      "finbert_sector_polarity_roll7",
+      "finbert_market_polarity_lag1",
+      "finbert_market_polarity_roll3",
+      "finbert_market_polarity_roll7",
+      "direct_news_count",
+      "direct_news_count_lag1",
+      "direct_news_count_roll3",
+      "direct_news_count_roll7",
+      "sector_news_count",
+      "market_news_count",
+      "has_direct_news",
+      "has_sector_news"
+    ],
+    "Logistic Regression": {
+      "best_hyperparameters": {
+        "C": 10.0,
+        "penalty": "l2",
+        "solver": "lbfgs"
+      },
+      "threshold": 0.475,
+      "train_time_sec": 0.027304410934448242,
+      "infer_time_ms": 2.070903778076172,
+      "train": {
+        "threshold": 0.475,
+        "accuracy": 0.5363667003707449,
+        "precision": 0.5051334702258727,
+        "recall": 0.4606078064237361,
+        "f1_positive": 0.4818442067199036,
+        "f1_macro": 0.5311758237795663,
+        "roc_auc": 0.5443270264077067,
+        "brier_score": 0.24758852990029892,
+        "confusion_matrix": {
+          "tn": 4759,
+          "fp": 3133,
+          "fn": 3745,
+          "tp": 3198
+        }
+      },
+      "val": {
+        "threshold": 0.475,
+        "accuracy": 0.5113821138211382,
+        "precision": 0.48283624085537424,
+        "recall": 0.4925373134328358,
+        "f1_positive": 0.4876385336743393,
+        "f1_macro": 0.5103305333484361,
+        "roc_auc": 0.511151889423519,
+        "brier_score": 0.24963592924442848,
+        "confusion_matrix": {
+          "tn": 1029,
+          "fp": 919,
+          "fn": 884,
+          "tp": 858
+        }
+      },
+      "test": {
+        "threshold": 0.475,
+        "accuracy": 0.5352941176470588,
+        "precision": 0.5119638826185101,
+        "recall": 0.5187557182067704,
+        "f1_positive": 0.5153374233128835,
+        "f1_macro": 0.5345048698485322,
+        "roc_auc": 0.5376766079102685,
+        "brier_score": 0.2483904318990957,
+        "confusion_matrix": {
+          "tn": 1323,
+          "fp": 1081,
+          "fn": 1052,
+          "tp": 1134
+        }
+      }
+    },
+    "Random Forest": {
+      "best_hyperparameters": {
+        "n_estimators": 300,
+        "max_depth": 6,
+        "min_samples_split": 20,
+        "min_samples_leaf": 10,
+        "max_features": "sqrt",
+        "random_state": 42
+      },
+      "threshold": 0.475,
+      "train_time_sec": 0.9430253505706787,
+      "infer_time_ms": 192.93975830078125,
+      "train": {
+        "threshold": 0.475,
+        "accuracy": 0.6318166498146276,
+        "precision": 0.6077717944986174,
+        "recall": 0.6014691055739594,
+        "f1_positive": 0.604604024902273,
+        "f1_macro": 0.6300643737023979,
+        "roc_auc": 0.699692810306267,
+        "brier_score": 0.23800873233030512,
+        "confusion_matrix": {
+          "tn": 5197,
+          "fp": 2695,
+          "fn": 2767,
+          "tp": 4176
+        }
+      },
+      "val": {
+        "threshold": 0.475,
+        "accuracy": 0.5271002710027101,
+        "precision": 0.4992183428869203,
+        "recall": 0.5499425947187141,
+        "f1_positive": 0.5233542747883092,
+        "f1_macro": 0.5270710604917614,
+        "roc_auc": 0.5287907524453236,
+        "brier_score": 0.24883236362688432,
+        "confusion_matrix": {
+          "tn": 987,
+          "fp": 961,
+          "fn": 784,
+          "tp": 958
+        }
+      },
+      "test": {
+        "threshold": 0.475,
+        "accuracy": 0.5122004357298475,
+        "precision": 0.4896686159844055,
+        "recall": 0.5745654162854529,
+        "f1_positive": 0.5287307935171542,
+        "f1_macro": 0.5115995353903224,
+        "roc_auc": 0.5113334667898729,
+        "brier_score": 0.24981894681135242,
+        "confusion_matrix": {
+          "tn": 1095,
+          "fp": 1309,
+          "fn": 930,
+          "tp": 1256
+        }
+      }
+    },
+    "XGBoost": {
+      "best_hyperparameters": {
+        "n_estimators": 300,
+        "best_iteration": 43,
+        "learning_rate": 0.03,
+        "max_depth": 4,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_alpha": 0.1,
+        "reg_lambda": 1.0,
+        "random_state": 42
+      },
+      "threshold": 0.47000000000000003,
+      "train_time_sec": 0.1362743377685547,
+      "infer_time_ms": 4.499912261962891,
+      "train": {
+        "threshold": 0.47000000000000003,
+        "accuracy": 0.5847657566565554,
+        "precision": 0.5506140917905624,
+        "recall": 0.6134235921071582,
+        "f1_positive": 0.5803242948630604,
+        "f1_macro": 0.5847192445499934,
+        "roc_auc": 0.643187961504508,
+        "brier_score": 0.24123866856098175,
+        "confusion_matrix": {
+          "tn": 4416,
+          "fp": 3476,
+          "fn": 2684,
+          "tp": 4259
+        }
+      },
+      "val": {
+        "threshold": 0.47000000000000003,
+        "accuracy": 0.5260162601626016,
+        "precision": 0.4983513895430994,
+        "recall": 0.6073478760045924,
+        "f1_positive": 0.547477360931436,
+        "f1_macro": 0.5249477843064008,
+        "roc_auc": 0.5341526061054702,
+        "brier_score": 0.2483759969472885,
+        "confusion_matrix": {
+          "tn": 883,
+          "fp": 1065,
+          "fn": 684,
+          "tp": 1058
+        }
+      },
+      "test": {
+        "threshold": 0.47000000000000003,
+        "accuracy": 0.5176470588235295,
+        "precision": 0.49486426999266325,
+        "recall": 0.6171088746569076,
+        "f1_positive": 0.5492671009771987,
+        "f1_macro": 0.515261479260858,
+        "roc_auc": 0.5141396696265602,
+        "brier_score": 0.2498938888311386,
+        "confusion_matrix": {
+          "tn": 1027,
+          "fp": 1377,
+          "fn": 837,
+          "tp": 1349
+        }
+      }
+    },
+    "per_company_test": {
+      "Logistic Regression": {
+        "RELIANCE": {
+          "accuracy": 0.5261437908496732,
+          "roc_auc": 0.54016158679947,
+          "n_obs": 306
+        },
+        "TCS": {
+          "accuracy": 0.5261437908496732,
+          "roc_auc": 0.5221390093286034,
+          "n_obs": 306
+        },
+        "INFY": {
+          "accuracy": 0.5,
+          "roc_auc": 0.5134192047559556,
+          "n_obs": 306
+        },
+        "HDFCBANK": {
+          "accuracy": 0.5620915032679739,
+          "roc_auc": 0.595877523092713,
+          "n_obs": 306
+        },
+        "ICICIBANK": {
+          "accuracy": 0.5620915032679739,
+          "roc_auc": 0.5548665754361957,
+          "n_obs": 306
+        },
+        "SBIN": {
+          "accuracy": 0.565359477124183,
+          "roc_auc": 0.5588448887180144,
+          "n_obs": 306
+        },
+        "HINDUNILVR": {
+          "accuracy": 0.5261437908496732,
+          "roc_auc": 0.5340325342465753,
+          "n_obs": 306
+        },
+        "ITC": {
+          "accuracy": 0.5326797385620915,
+          "roc_auc": 0.5462099447513812,
+          "n_obs": 306
+        },
+        "LT": {
+          "accuracy": 0.5,
+          "roc_auc": 0.4638275817388675,
+          "n_obs": 306
+        },
+        "BHARTIARTL": {
+          "accuracy": 0.565359477124183,
+          "roc_auc": 0.5693162393162393,
+          "n_obs": 306
+        },
+        "SUNPHARMA": {
+          "accuracy": 0.5620915032679739,
+          "roc_auc": 0.5699623674307219,
+          "n_obs": 306
+        },
+        "CIPLA": {
+          "accuracy": 0.5098039215686274,
+          "roc_auc": 0.5432172612689596,
+          "n_obs": 306
+        },
+        "MARUTI": {
+          "accuracy": 0.5032679738562091,
+          "roc_auc": 0.4929011289770783,
+          "n_obs": 306
+        },
+        "M&M": {
+          "accuracy": 0.565359477124183,
+          "roc_auc": 0.5693321353698712,
+          "n_obs": 306
+        },
+        "TATASTEEL": {
+          "accuracy": 0.5228758169934641,
+          "roc_auc": 0.5175580997949419,
+          "n_obs": 306
+        }
+      },
+      "Random Forest": {
+        "RELIANCE": {
+          "accuracy": 0.5098039215686274,
+          "roc_auc": 0.48941991193946904,
+          "n_obs": 306
+        },
+        "TCS": {
+          "accuracy": 0.5032679738562091,
+          "roc_auc": 0.5386064030131826,
+          "n_obs": 306
+        },
+        "INFY": {
+          "accuracy": 0.49019607843137253,
+          "roc_auc": 0.49648903631585756,
+          "n_obs": 306
+        },
+        "HDFCBANK": {
+          "accuracy": 0.5620915032679739,
+          "roc_auc": 0.5567909681833733,
+          "n_obs": 306
+        },
+        "ICICIBANK": {
+          "accuracy": 0.5522875816993464,
+          "roc_auc": 0.517105713308245,
+          "n_obs": 306
+        },
+        "SBIN": {
+          "accuracy": 0.5098039215686274,
+          "roc_auc": 0.4904523901063693,
+          "n_obs": 306
+        },
+        "HINDUNILVR": {
+          "accuracy": 0.5163398692810458,
+          "roc_auc": 0.5199486301369862,
+          "n_obs": 306
+        },
+        "ITC": {
+          "accuracy": 0.4934640522875817,
+          "roc_auc": 0.5020552486187846,
+          "n_obs": 306
+        },
+        "LT": {
+          "accuracy": 0.46405228758169936,
+          "roc_auc": 0.45950848702112035,
+          "n_obs": 306
+        },
+        "BHARTIARTL": {
+          "accuracy": 0.565359477124183,
+          "roc_auc": 0.573076923076923,
+          "n_obs": 306
+        },
+        "SUNPHARMA": {
+          "accuracy": 0.5555555555555556,
+          "roc_auc": 0.5862555593568252,
+          "n_obs": 306
+        },
+        "CIPLA": {
+          "accuracy": 0.5130718954248366,
+          "roc_auc": 0.533646656697287,
+          "n_obs": 306
+        },
+        "MARUTI": {
+          "accuracy": 0.434640522875817,
+          "roc_auc": 0.4341857680465275,
+          "n_obs": 306
+        },
+        "M&M": {
+          "accuracy": 0.5326797385620915,
+          "roc_auc": 0.5126000085568818,
+          "n_obs": 306
+        },
+        "TATASTEEL": {
+          "accuracy": 0.4803921568627451,
+          "roc_auc": 0.47889610389610393,
+          "n_obs": 306
+        }
+      },
+      "XGBoost": {
+        "RELIANCE": {
+          "accuracy": 0.5294117647058824,
+          "roc_auc": 0.4950626255717523,
+          "n_obs": 306
+        },
+        "TCS": {
+          "accuracy": 0.49019607843137253,
+          "roc_auc": 0.5063723558008146,
+          "n_obs": 306
+        },
+        "INFY": {
+          "accuracy": 0.5098039215686274,
+          "roc_auc": 0.49032869512773025,
+          "n_obs": 306
+        },
+        "HDFCBANK": {
+          "accuracy": 0.5294117647058824,
+          "roc_auc": 0.5503763256927814,
+          "n_obs": 306
+        },
+        "ICICIBANK": {
+          "accuracy": 0.5620915032679739,
+          "roc_auc": 0.5408826548067055,
+          "n_obs": 306
+        },
+        "SBIN": {
+          "accuracy": 0.5294117647058824,
+          "roc_auc": 0.5367166474432911,
+          "n_obs": 306
+        },
+        "HINDUNILVR": {
+          "accuracy": 0.5065359477124183,
+          "roc_auc": 0.509417808219178,
+          "n_obs": 306
+        },
+        "ITC": {
+          "accuracy": 0.47058823529411764,
+          "roc_auc": 0.48888397790055244,
+          "n_obs": 306
+        },
+        "LT": {
+          "accuracy": 0.49019607843137253,
+          "roc_auc": 0.4677579579320174,
+          "n_obs": 306
+        },
+        "BHARTIARTL": {
+          "accuracy": 0.5490196078431373,
+          "roc_auc": 0.5494017094017094,
+          "n_obs": 306
+        },
+        "SUNPHARMA": {
+          "accuracy": 0.5424836601307189,
+          "roc_auc": 0.5735118029421827,
+          "n_obs": 306
+        },
+        "CIPLA": {
+          "accuracy": 0.5326797385620915,
+          "roc_auc": 0.5202307199316386,
+          "n_obs": 306
+        },
+        "MARUTI": {
+          "accuracy": 0.4542483660130719,
+          "roc_auc": 0.44705781731098193,
+          "n_obs": 306
+        },
+        "M&M": {
+          "accuracy": 0.5228758169934641,
+          "roc_auc": 0.5286013776579814,
+          "n_obs": 306
+        },
+        "TATASTEEL": {
+          "accuracy": 0.545751633986928,
+          "roc_auc": 0.5172590567327409,
+          "n_obs": 306
+        }
+      }
+    }
+  },
+  "Exp_B5_MktRoBERTa": {
+    "feature_count": 41,
+    "continuous_features": [
+      "ret_1d_lag1",
+      "rsi_14_lag1",
+      "macd_lag1",
+      "macd_signal_lag1",
+      "macd_diff_lag1",
+      "rolling_vol_5d_lag1",
+      "rolling_vol_21d_lag1",
+      "adj_close_sma_ratio_20_lag1",
+      "intraday_range_pct_lag1",
+      "open_gap_pct",
+      "roberta_direct_pos",
+      "roberta_direct_neu",
+      "roberta_direct_neg",
+      "roberta_direct_polarity",
+      "roberta_direct_confidence",
+      "roberta_sector_pos",
+      "roberta_sector_neu",
+      "roberta_sector_neg",
+      "roberta_sector_polarity",
+      "roberta_market_pos",
+      "roberta_market_neu",
+      "roberta_market_neg",
+      "roberta_market_polarity",
+      "roberta_direct_polarity_lag1",
+      "roberta_direct_polarity_roll3",
+      "roberta_direct_polarity_roll7",
+      "roberta_sector_polarity_lag1",
+      "roberta_sector_polarity_roll3",
+      "roberta_sector_polarity_roll7",
+      "roberta_market_polarity_lag1",
+      "roberta_market_polarity_roll3",
+      "roberta_market_polarity_roll7",
+      "direct_news_count",
+      "direct_news_count_lag1",
+      "direct_news_count_roll3",
+      "direct_news_count_roll7",
+      "sector_news_count",
+      "market_news_count",
+      "has_direct_news",
+      "has_sector_news"
+    ],
+    "Logistic Regression": {
+      "best_hyperparameters": {
+        "C": 10.0,
+        "penalty": "l2",
+        "solver": "lbfgs"
+      },
+      "threshold": 0.475,
+      "train_time_sec": 0.019820690155029297,
+      "infer_time_ms": 1.5077590942382812,
+      "train": {
+        "threshold": 0.475,
+        "accuracy": 0.5381193124368049,
+        "precision": 0.5073493781295428,
+        "recall": 0.45239809880455134,
+        "f1_positive": 0.47830059387848334,
+        "f1_macro": 0.5319659718303882,
+        "roc_auc": 0.545907724174089,
+        "brier_score": 0.2475743298808582,
+        "confusion_matrix": {
+          "tn": 4842,
+          "fp": 3050,
+          "fn": 3802,
+          "tp": 3141
+        }
+      },
+      "val": {
+        "threshold": 0.475,
+        "accuracy": 0.5151761517615177,
+        "precision": 0.4869371873262924,
+        "recall": 0.5028702640642939,
+        "f1_positive": 0.49477548715052244,
+        "f1_macro": 0.5143843572767459,
+        "roc_auc": 0.5130093097928459,
+        "brier_score": 0.2494670454270988,
+        "confusion_matrix": {
+          "tn": 1025,
+          "fp": 923,
+          "fn": 866,
+          "tp": 876
+        }
+      },
+      "test": {
+        "threshold": 0.475,
+        "accuracy": 0.5178649237472767,
+        "precision": 0.4943205721497686,
+        "recall": 0.5375114364135407,
+        "f1_positive": 0.5150120534735919,
+        "f1_macro": 0.5178482402953838,
+        "roc_auc": 0.5346047605926688,
+        "brier_score": 0.2485704031490668,
+        "confusion_matrix": {
+          "tn": 1202,
+          "fp": 1202,
+          "fn": 1011,
+          "tp": 1175
+        }
+      }
+    },
+    "Random Forest": {
+      "best_hyperparameters": {
+        "n_estimators": 300,
+        "max_depth": 6,
+        "min_samples_split": 20,
+        "min_samples_leaf": 10,
+        "max_features": "sqrt",
+        "random_state": 42
+      },
+      "threshold": 0.48,
+      "train_time_sec": 0.942800760269165,
+      "infer_time_ms": 156.7082405090332,
+      "train": {
+        "threshold": 0.48,
+        "accuracy": 0.6362655881361645,
+        "precision": 0.6351091703056768,
+        "recall": 0.5236929281290509,
+        "f1_positive": 0.5740448373855384,
+        "f1_macro": 0.628335205423742,
+        "roc_auc": 0.7015240092392333,
+        "brier_score": 0.2383504189992146,
+        "confusion_matrix": {
+          "tn": 5803,
+          "fp": 2089,
+          "fn": 3307,
+          "tp": 3636
+        }
+      },
+      "val": {
+        "threshold": 0.48,
+        "accuracy": 0.5344173441734418,
+        "precision": 0.5074441687344913,
+        "recall": 0.4695752009184845,
+        "f1_positive": 0.4877757901013715,
+        "f1_macro": 0.5305247554580379,
+        "roc_auc": 0.5385770562760357,
+        "brier_score": 0.2482935596524548,
+        "confusion_matrix": {
+          "tn": 1154,
+          "fp": 794,
+          "fn": 924,
+          "tp": 818
+        }
+      },
+      "test": {
+        "threshold": 0.48,
+        "accuracy": 0.516557734204793,
+        "precision": 0.49290322580645163,
+        "recall": 0.5242451967063129,
+        "f1_positive": 0.5080913322988251,
+        "f1_macro": 0.5164144817416164,
+        "roc_auc": 0.5206277886961803,
+        "brier_score": 0.2494427137348315,
+        "confusion_matrix": {
+          "tn": 1225,
+          "fp": 1179,
+          "fn": 1040,
+          "tp": 1146
+        }
+      }
+    },
+    "XGBoost": {
+      "best_hyperparameters": {
+        "n_estimators": 300,
+        "best_iteration": 84,
+        "learning_rate": 0.03,
+        "max_depth": 4,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_alpha": 0.1,
+        "reg_lambda": 1.0,
+        "random_state": 42
+      },
+      "threshold": 0.485,
+      "train_time_sec": 0.2104048728942871,
+      "infer_time_ms": 4.676103591918945,
+      "train": {
+        "threshold": 0.485,
+        "accuracy": 0.6254802831142569,
+        "precision": 0.6275988960441582,
+        "recall": 0.4912861875270056,
+        "f1_positive": 0.5511391177896268,
+        "f1_macro": 0.6149172341203513,
+        "roc_auc": 0.6809471433413447,
+        "brier_score": 0.23664964735507965,
+        "confusion_matrix": {
+          "tn": 5868,
+          "fp": 2024,
+          "fn": 3532,
+          "tp": 3411
+        }
+      },
+      "val": {
+        "threshold": 0.485,
+        "accuracy": 0.5390243902439025,
+        "precision": 0.513567174056916,
+        "recall": 0.4454649827784156,
+        "f1_positive": 0.47709806332616045,
+        "f1_macro": 0.5324671319780789,
+        "roc_auc": 0.5439448037022281,
+        "brier_score": 0.24791665375232697,
+        "confusion_matrix": {
+          "tn": 1213,
+          "fp": 735,
+          "fn": 966,
+          "tp": 776
+        }
+      },
+      "test": {
+        "threshold": 0.485,
+        "accuracy": 0.5215686274509804,
+        "precision": 0.4975562072336266,
+        "recall": 0.4656907593778591,
+        "f1_positive": 0.4810964083175803,
+        "f1_macro": 0.5186403626066479,
+        "roc_auc": 0.5183303254867992,
+        "brier_score": 0.24988515675067902,
+        "confusion_matrix": {
+          "tn": 1376,
+          "fp": 1028,
+          "fn": 1168,
+          "tp": 1018
+        }
+      }
+    },
+    "per_company_test": {
+      "Logistic Regression": {
+        "RELIANCE": {
+          "accuracy": 0.5261437908496732,
+          "roc_auc": 0.5381951865942803,
+          "n_obs": 306
+        },
+        "TCS": {
+          "accuracy": 0.5163398692810458,
+          "roc_auc": 0.5374677002583979,
+          "n_obs": 306
+        },
+        "INFY": {
+          "accuracy": 0.5,
+          "roc_auc": 0.5194503080170594,
+          "n_obs": 306
+        },
+        "HDFCBANK": {
+          "accuracy": 0.5359477124183006,
+          "roc_auc": 0.5625641464249058,
+          "n_obs": 306
+        },
+        "ICICIBANK": {
+          "accuracy": 0.5588235294117647,
+          "roc_auc": 0.5588436537803626,
+          "n_obs": 306
+        },
+        "SBIN": {
+          "accuracy": 0.5359477124183006,
+          "roc_auc": 0.5614507240804819,
+          "n_obs": 306
+        },
+        "HINDUNILVR": {
+          "accuracy": 0.4869281045751634,
+          "roc_auc": 0.5106592465753425,
+          "n_obs": 306
+        },
+        "ITC": {
+          "accuracy": 0.5098039215686274,
+          "roc_auc": 0.5280883977900552,
+          "n_obs": 306
+        },
+        "LT": {
+          "accuracy": 0.49019607843137253,
+          "roc_auc": 0.4891374767848659,
+          "n_obs": 306
+        },
+        "BHARTIARTL": {
+          "accuracy": 0.5261437908496732,
+          "roc_auc": 0.5556837606837607,
+          "n_obs": 306
+        },
+        "SUNPHARMA": {
+          "accuracy": 0.5424836601307189,
+          "roc_auc": 0.5855285665412248,
+          "n_obs": 306
+        },
+        "CIPLA": {
+          "accuracy": 0.5032679738562091,
+          "roc_auc": 0.5143772698141423,
+          "n_obs": 306
+        },
+        "MARUTI": {
+          "accuracy": 0.49673202614379086,
+          "roc_auc": 0.4812692439274717,
+          "n_obs": 306
+        },
+        "M&M": {
+          "accuracy": 0.5490196078431373,
+          "roc_auc": 0.5582937577546742,
+          "n_obs": 306
+        },
+        "TATASTEEL": {
+          "accuracy": 0.49019607843137253,
+          "roc_auc": 0.5144822282980178,
+          "n_obs": 306
+        }
+      },
+      "Random Forest": {
+        "RELIANCE": {
+          "accuracy": 0.5065359477124183,
+          "roc_auc": 0.5061343136835805,
+          "n_obs": 306
+        },
+        "TCS": {
+          "accuracy": 0.4803921568627451,
+          "roc_auc": 0.49940875049270794,
+          "n_obs": 306
+        },
+        "INFY": {
+          "accuracy": 0.4738562091503268,
+          "roc_auc": 0.49187955025201396,
+          "n_obs": 306
+        },
+        "HDFCBANK": {
+          "accuracy": 0.5686274509803921,
+          "roc_auc": 0.5682090318166269,
+          "n_obs": 306
+        },
+        "ICICIBANK": {
+          "accuracy": 0.565359477124183,
+          "roc_auc": 0.5528994184057475,
+          "n_obs": 306
+        },
+        "SBIN": {
+          "accuracy": 0.5098039215686274,
+          "roc_auc": 0.5164253065060447,
+          "n_obs": 306
+        },
+        "HINDUNILVR": {
+          "accuracy": 0.5392156862745098,
+          "roc_auc": 0.539597602739726,
+          "n_obs": 306
+        },
+        "ITC": {
+          "accuracy": 0.5098039215686274,
+          "roc_auc": 0.5347182320441989,
+          "n_obs": 306
+        },
+        "LT": {
+          "accuracy": 0.4934640522875817,
+          "roc_auc": 0.48987172288688285,
+          "n_obs": 306
+        },
+        "BHARTIARTL": {
+          "accuracy": 0.5424836601307189,
+          "roc_auc": 0.5718376068376069,
+          "n_obs": 306
+        },
+        "SUNPHARMA": {
+          "accuracy": 0.5882352941176471,
+          "roc_auc": 0.577873759835785,
+          "n_obs": 306
+        },
+        "CIPLA": {
+          "accuracy": 0.5163398692810458,
+          "roc_auc": 0.534629352702414,
+          "n_obs": 306
+        },
+        "MARUTI": {
+          "accuracy": 0.4673202614379085,
+          "roc_auc": 0.4616832021895313,
+          "n_obs": 306
+        },
+        "M&M": {
+          "accuracy": 0.5196078431372549,
+          "roc_auc": 0.5323664056817695,
+          "n_obs": 306
+        },
+        "TATASTEEL": {
+          "accuracy": 0.4673202614379085,
+          "roc_auc": 0.46569548872180455,
+          "n_obs": 306
+        }
+      },
+      "XGBoost": {
+        "RELIANCE": {
+          "accuracy": 0.5032679738562091,
+          "roc_auc": 0.4916427991279442,
+          "n_obs": 306
+        },
+        "TCS": {
+          "accuracy": 0.5228758169934641,
+          "roc_auc": 0.5171462357114702,
+          "n_obs": 306
+        },
+        "INFY": {
+          "accuracy": 0.49019607843137253,
+          "roc_auc": 0.47951578856675137,
+          "n_obs": 306
+        },
+        "HDFCBANK": {
+          "accuracy": 0.5522875816993464,
+          "roc_auc": 0.5591002394799863,
+          "n_obs": 306
+        },
+        "ICICIBANK": {
+          "accuracy": 0.565359477124183,
+          "roc_auc": 0.566412931919261,
+          "n_obs": 306
+        },
+        "SBIN": {
+          "accuracy": 0.5130718954248366,
+          "roc_auc": 0.5239010636934512,
+          "n_obs": 306
+        },
+        "HINDUNILVR": {
+          "accuracy": 0.5555555555555556,
+          "roc_auc": 0.5342465753424657,
+          "n_obs": 306
+        },
+        "ITC": {
+          "accuracy": 0.5196078431372549,
+          "roc_auc": 0.5142099447513812,
+          "n_obs": 306
+        },
+        "LT": {
+          "accuracy": 0.4934640522875817,
+          "roc_auc": 0.4774327300997711,
+          "n_obs": 306
+        },
+        "BHARTIARTL": {
+          "accuracy": 0.5294117647058824,
+          "roc_auc": 0.5497435897435897,
+          "n_obs": 306
+        },
+        "SUNPHARMA": {
+          "accuracy": 0.5718954248366013,
+          "roc_auc": 0.5706465959630517,
+          "n_obs": 306
+        },
+        "CIPLA": {
+          "accuracy": 0.5261437908496732,
+          "roc_auc": 0.5227942747276223,
+          "n_obs": 306
+        },
+        "MARUTI": {
+          "accuracy": 0.46405228758169936,
+          "roc_auc": 0.46420629490249743,
+          "n_obs": 306
+        },
+        "M&M": {
+          "accuracy": 0.5196078431372549,
+          "roc_auc": 0.5175202156334232,
+          "n_obs": 306
+        },
+        "TATASTEEL": {
+          "accuracy": 0.49673202614379086,
+          "roc_auc": 0.5116626794258373,
+          "n_obs": 306
+        }
+      }
+    }
+  },
+  "Exp_B6_MktCombined": {
+    "feature_count": 81,
+    "continuous_features": [
+      "ret_1d_lag1",
+      "rsi_14_lag1",
+      "macd_lag1",
+      "macd_signal_lag1",
+      "macd_diff_lag1",
+      "rolling_vol_5d_lag1",
+      "rolling_vol_21d_lag1",
+      "adj_close_sma_ratio_20_lag1",
+      "intraday_range_pct_lag1",
+      "open_gap_pct",
+      "lm_direct_pos_count",
+      "lm_direct_neg_count",
+      "lm_direct_unc_count",
+      "lm_direct_polarity",
+      "lm_direct_subjectivity",
+      "lm_sector_pos_count",
+      "lm_sector_neg_count",
+      "lm_sector_polarity",
+      "lm_market_polarity",
+      "lm_direct_polarity_lag1",
+      "lm_direct_polarity_roll3",
+      "lm_direct_polarity_roll7",
+      "lm_sector_polarity_lag1",
+      "lm_sector_polarity_roll3",
+      "lm_sector_polarity_roll7",
+      "lm_market_polarity_lag1",
+      "lm_market_polarity_roll3",
+      "lm_market_polarity_roll7",
+      "finbert_direct_pos",
+      "finbert_direct_neu",
+      "finbert_direct_neg",
+      "finbert_direct_polarity",
+      "finbert_direct_confidence",
+      "finbert_sector_pos",
+      "finbert_sector_neu",
+      "finbert_sector_neg",
+      "finbert_sector_polarity",
+      "finbert_market_pos",
+      "finbert_market_neu",
+      "finbert_market_neg",
+      "finbert_market_polarity",
+      "finbert_direct_polarity_lag1",
+      "finbert_direct_polarity_roll3",
+      "finbert_direct_polarity_roll7",
+      "finbert_sector_polarity_lag1",
+      "finbert_sector_polarity_roll3",
+      "finbert_sector_polarity_roll7",
+      "finbert_market_polarity_lag1",
+      "finbert_market_polarity_roll3",
+      "finbert_market_polarity_roll7",
+      "roberta_direct_pos",
+      "roberta_direct_neu",
+      "roberta_direct_neg",
+      "roberta_direct_polarity",
+      "roberta_direct_confidence",
+      "roberta_sector_pos",
+      "roberta_sector_neu",
+      "roberta_sector_neg",
+      "roberta_sector_polarity",
+      "roberta_market_pos",
+      "roberta_market_neu",
+      "roberta_market_neg",
+      "roberta_market_polarity",
+      "roberta_direct_polarity_lag1",
+      "roberta_direct_polarity_roll3",
+      "roberta_direct_polarity_roll7",
+      "roberta_sector_polarity_lag1",
+      "roberta_sector_polarity_roll3",
+      "roberta_sector_polarity_roll7",
+      "roberta_market_polarity_lag1",
+      "roberta_market_polarity_roll3",
+      "roberta_market_polarity_roll7",
+      "direct_news_count",
+      "direct_news_count_lag1",
+      "direct_news_count_roll3",
+      "direct_news_count_roll7",
+      "sector_news_count",
+      "market_news_count",
+      "has_direct_news",
+      "has_sector_news"
+    ],
+    "Logistic Regression": {
+      "best_hyperparameters": {
+        "C": 10.0,
+        "penalty": "l2",
+        "solver": "lbfgs"
+      },
+      "threshold": 0.475,
+      "train_time_sec": 0.1424553394317627,
+      "infer_time_ms": 3.5619735717773438,
+      "train": {
+        "threshold": 0.475,
+        "accuracy": 0.5362318840579711,
+        "precision": 0.5048157774040667,
+        "recall": 0.4755869220797926,
+        "f1_positive": 0.4897656481756155,
+        "f1_macro": 0.5323534777391113,
+        "roc_auc": 0.5525115488593345,
+        "brier_score": 0.24692276174116645,
+        "confusion_matrix": {
+          "tn": 4653,
+          "fp": 3239,
+          "fn": 3641,
+          "tp": 3302
+        }
+      },
+      "val": {
+        "threshold": 0.475,
+        "accuracy": 0.5149051490514905,
+        "precision": 0.48659217877094973,
+        "recall": 0.5,
+        "f1_positive": 0.4932049830124575,
+        "f1_macro": 0.5140141339178712,
+        "roc_auc": 0.5212004658432683,
+        "brier_score": 0.24932413430973702,
+        "confusion_matrix": {
+          "tn": 1029,
+          "fp": 919,
+          "fn": 871,
+          "tp": 871
+        }
+      },
+      "test": {
+        "threshold": 0.475,
+        "accuracy": 0.5250544662309368,
+        "precision": 0.5014955134596212,
+        "recall": 0.4602012808783166,
+        "f1_positive": 0.4799618320610687,
+        "f1_macro": 0.5214564573296523,
+        "roc_auc": 0.5279617456724306,
+        "brier_score": 0.2491387562269486,
+        "confusion_matrix": {
+          "tn": 1404,
+          "fp": 1000,
+          "fn": 1180,
+          "tp": 1006
+        }
+      }
+    },
+    "Random Forest": {
+      "best_hyperparameters": {
+        "n_estimators": 300,
+        "max_depth": 6,
+        "min_samples_split": 20,
+        "min_samples_leaf": 10,
+        "max_features": "sqrt",
+        "random_state": 42
+      },
+      "threshold": 0.47000000000000003,
+      "train_time_sec": 1.4075303077697754,
+      "infer_time_ms": 240.8745288848877,
+      "train": {
+        "threshold": 0.47000000000000003,
+        "accuracy": 0.653252443545669,
+        "precision": 0.6175356069515223,
+        "recall": 0.6806855826011811,
+        "f1_positive": 0.647574677993971,
+        "f1_macro": 0.6531624219212259,
+        "roc_auc": 0.733062518564936,
+        "brier_score": 0.23711321229777527,
+        "confusion_matrix": {
+          "tn": 4965,
+          "fp": 2927,
+          "fn": 2217,
+          "tp": 4726
+        }
+      },
+      "val": {
+        "threshold": 0.47000000000000003,
+        "accuracy": 0.5197831978319783,
+        "precision": 0.49282982791587,
+        "recall": 0.5918484500574053,
+        "f1_positive": 0.5378195096504955,
+        "f1_macro": 0.5190507587733584,
+        "roc_auc": 0.5241382135287864,
+        "brier_score": 0.24910832119145612,
+        "confusion_matrix": {
+          "tn": 887,
+          "fp": 1061,
+          "fn": 711,
+          "tp": 1031
+        }
+      },
+      "test": {
+        "threshold": 0.47000000000000003,
+        "accuracy": 0.5087145969498911,
+        "precision": 0.4876565295169946,
+        "recall": 0.6235132662397073,
+        "f1_positive": 0.5472796627183296,
+        "f1_macro": 0.5051235179512106,
+        "roc_auc": 0.5091506531505131,
+        "brier_score": 0.25012982912323684,
+        "confusion_matrix": {
+          "tn": 972,
+          "fp": 1432,
+          "fn": 823,
+          "tp": 1363
+        }
+      }
+    },
+    "XGBoost": {
+      "best_hyperparameters": {
+        "n_estimators": 300,
+        "best_iteration": 45,
+        "learning_rate": 0.03,
+        "max_depth": 4,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_alpha": 0.1,
+        "reg_lambda": 1.0,
+        "random_state": 42
+      },
+      "threshold": 0.475,
+      "train_time_sec": 0.22880911827087402,
+      "infer_time_ms": 5.859851837158203,
+      "train": {
+        "threshold": 0.475,
+        "accuracy": 0.6103808560835862,
+        "precision": 0.5900294163183155,
+        "recall": 0.5488981708195305,
+        "f1_positive": 0.5687210864050142,
+        "f1_macro": 0.6067111702002941,
+        "roc_auc": 0.6639478031197341,
+        "brier_score": 0.23987627029418945,
+        "confusion_matrix": {
+          "tn": 5244,
+          "fp": 2648,
+          "fn": 3132,
+          "tp": 3811
+        }
+      },
+      "val": {
+        "threshold": 0.475,
+        "accuracy": 0.5306233062330623,
+        "precision": 0.5026824034334764,
+        "recall": 0.5378874856486797,
+        "f1_positive": 0.5196894065446478,
+        "f1_macro": 0.5303799443958004,
+        "roc_auc": 0.5340535908359011,
+        "brier_score": 0.24852843582630157,
+        "confusion_matrix": {
+          "tn": 1021,
+          "fp": 927,
+          "fn": 805,
+          "tp": 937
+        }
+      },
+      "test": {
+        "threshold": 0.475,
+        "accuracy": 0.5248366013071896,
+        "precision": 0.501039501039501,
+        "recall": 0.5512351326623971,
+        "f1_positive": 0.5249401001960358,
+        "f1_macro": 0.5248365787534983,
+        "roc_auc": 0.5228460913725674,
+        "brier_score": 0.24930953979492188,
+        "confusion_matrix": {
+          "tn": 1204,
+          "fp": 1200,
+          "fn": 981,
+          "tp": 1205
+        }
+      }
+    },
+    "per_company_test": {
+      "Logistic Regression": {
+        "RELIANCE": {
+          "accuracy": 0.5326797385620915,
+          "roc_auc": 0.5481981789424186,
+          "n_obs": 306
+        },
+        "TCS": {
+          "accuracy": 0.5490196078431373,
+          "roc_auc": 0.5436867691499147,
+          "n_obs": 306
+        },
+        "INFY": {
+          "accuracy": 0.49673202614379086,
+          "roc_auc": 0.5020462671778745,
+          "n_obs": 306
+        },
+        "HDFCBANK": {
+          "accuracy": 0.545751633986928,
+          "roc_auc": 0.5643602463222717,
+          "n_obs": 306
+        },
+        "ICICIBANK": {
+          "accuracy": 0.5294117647058824,
+          "roc_auc": 0.5472545330140267,
+          "n_obs": 306
+        },
+        "SBIN": {
+          "accuracy": 0.5228758169934641,
+          "roc_auc": 0.5499166987056261,
+          "n_obs": 306
+        },
+        "HINDUNILVR": {
+          "accuracy": 0.5032679738562091,
+          "roc_auc": 0.4720462328767123,
+          "n_obs": 306
+        },
+        "ITC": {
+          "accuracy": 0.5,
+          "roc_auc": 0.5016574585635358,
+          "n_obs": 306
+        },
+        "LT": {
+          "accuracy": 0.5424836601307189,
+          "roc_auc": 0.5000647864207661,
+          "n_obs": 306
+        },
+        "BHARTIARTL": {
+          "accuracy": 0.5065359477124183,
+          "roc_auc": 0.5149145299145299,
+          "n_obs": 306
+        },
+        "SUNPHARMA": {
+          "accuracy": 0.5032679738562091,
+          "roc_auc": 0.5394714334587752,
+          "n_obs": 306
+        },
+        "CIPLA": {
+          "accuracy": 0.5228758169934641,
+          "roc_auc": 0.5155735953856013,
+          "n_obs": 306
+        },
+        "MARUTI": {
+          "accuracy": 0.5392156862745098,
+          "roc_auc": 0.522280191583989,
+          "n_obs": 306
+        },
+        "M&M": {
+          "accuracy": 0.5326797385620915,
+          "roc_auc": 0.5488384032858427,
+          "n_obs": 306
+        },
+        "TATASTEEL": {
+          "accuracy": 0.5490196078431373,
+          "roc_auc": 0.5536995898838004,
+          "n_obs": 306
+        }
+      },
+      "Random Forest": {
+        "RELIANCE": {
+          "accuracy": 0.5392156862745098,
+          "roc_auc": 0.5233616893942632,
+          "n_obs": 306
+        },
+        "TCS": {
+          "accuracy": 0.5098039215686274,
+          "roc_auc": 0.5112337406385495,
+          "n_obs": 306
+        },
+        "INFY": {
+          "accuracy": 0.477124183006536,
+          "roc_auc": 0.49786757420410976,
+          "n_obs": 306
+        },
+        "HDFCBANK": {
+          "accuracy": 0.5555555555555556,
+          "roc_auc": 0.5599127608621279,
+          "n_obs": 306
+        },
+        "ICICIBANK": {
+          "accuracy": 0.5163398692810458,
+          "roc_auc": 0.5303626411221348,
+          "n_obs": 306
+        },
+        "SBIN": {
+          "accuracy": 0.49019607843137253,
+          "roc_auc": 0.48682130804391466,
+          "n_obs": 306
+        },
+        "HINDUNILVR": {
+          "accuracy": 0.4869281045751634,
+          "roc_auc": 0.48934075342465755,
+          "n_obs": 306
+        },
+        "ITC": {
+          "accuracy": 0.5032679738562091,
+          "roc_auc": 0.5169944751381216,
+          "n_obs": 306
+        },
+        "LT": {
+          "accuracy": 0.46405228758169936,
+          "roc_auc": 0.45661469356022977,
+          "n_obs": 306
+        },
+        "BHARTIARTL": {
+          "accuracy": 0.5784313725490197,
+          "roc_auc": 0.5682051282051281,
+          "n_obs": 306
+        },
+        "SUNPHARMA": {
+          "accuracy": 0.5326797385620915,
+          "roc_auc": 0.5558501539514197,
+          "n_obs": 306
+        },
+        "CIPLA": {
+          "accuracy": 0.5163398692810458,
+          "roc_auc": 0.5255714590899381,
+          "n_obs": 306
+        },
+        "MARUTI": {
+          "accuracy": 0.4444444444444444,
+          "roc_auc": 0.459288402326377,
+          "n_obs": 306
+        },
+        "M&M": {
+          "accuracy": 0.5261437908496732,
+          "roc_auc": 0.5214135968852949,
+          "n_obs": 306
+        },
+        "TATASTEEL": {
+          "accuracy": 0.49019607843137253,
+          "roc_auc": 0.4529647983595352,
+          "n_obs": 306
+        }
+      },
+      "XGBoost": {
+        "RELIANCE": {
+          "accuracy": 0.5228758169934641,
+          "roc_auc": 0.5261830462104048,
+          "n_obs": 306
+        },
+        "TCS": {
+          "accuracy": 0.5,
+          "roc_auc": 0.5218324355100075,
+          "n_obs": 306
+        },
+        "INFY": {
+          "accuracy": 0.5065359477124183,
+          "roc_auc": 0.50519105673545,
+          "n_obs": 306
+        },
+        "HDFCBANK": {
+          "accuracy": 0.5980392156862745,
+          "roc_auc": 0.5982295586725966,
+          "n_obs": 306
+        },
+        "ICICIBANK": {
+          "accuracy": 0.5718954248366013,
+          "roc_auc": 0.5579883681149503,
+          "n_obs": 306
+        },
+        "SBIN": {
+          "accuracy": 0.5261437908496732,
+          "roc_auc": 0.520398137468495,
+          "n_obs": 306
+        },
+        "HINDUNILVR": {
+          "accuracy": 0.5032679738562091,
+          "roc_auc": 0.48570205479452055,
+          "n_obs": 306
+        },
+        "ITC": {
+          "accuracy": 0.5130718954248366,
+          "roc_auc": 0.5297016574585635,
+          "n_obs": 306
+        },
+        "LT": {
+          "accuracy": 0.5032679738562091,
+          "roc_auc": 0.4867619746901049,
+          "n_obs": 306
+        },
+        "BHARTIARTL": {
+          "accuracy": 0.5294117647058824,
+          "roc_auc": 0.5345299145299146,
+          "n_obs": 306
+        },
+        "SUNPHARMA": {
+          "accuracy": 0.5686274509803921,
+          "roc_auc": 0.550419089976052,
+          "n_obs": 306
+        },
+        "CIPLA": {
+          "accuracy": 0.5294117647058824,
+          "roc_auc": 0.5151890621662037,
+          "n_obs": 306
+        },
+        "MARUTI": {
+          "accuracy": 0.4934640522875817,
+          "roc_auc": 0.4927300718439959,
+          "n_obs": 306
+        },
+        "M&M": {
+          "accuracy": 0.5392156862745098,
+          "roc_auc": 0.5354896675651393,
+          "n_obs": 306
+        },
+        "TATASTEEL": {
+          "accuracy": 0.4673202614379085,
+          "roc_auc": 0.48705570745044424,
+          "n_obs": 306
+        }
+      }
+    }
+  }
+}

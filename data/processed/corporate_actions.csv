@@ -1,0 +1,151 @@
+exchange,symbol,isin,company,ex_date,record_date,type,ratio_num,ratio_den,cash_amount,face_value_from,face_value_to,raw_subject
+NSE,BHARTIARTL,INE397D01024,Bharti Airtel Limited,2020-08-06,2020-08-07,dividend,,,2.0,,,Dividend - Rs 2 Per Share
+NSE,BHARTIARTL,INE397D01024,Bharti Airtel Limited,2021-09-27,2021-09-28,rights,1.0,14.0,,,,Rights 1:14 @ Premium Rs 530/-
+NSE,BHARTIARTL,INE397D01024,Bharti Airtel Limited,2022-08-01,2022-08-02,dividend,,,3.0,,,Dividend - Rs 3 Per Share
+NSE,BHARTIARTL,INE397D01024,Bharti Airtel Limited,2023-08-11,2023-08-11,dividend,,,4.0,,,Dividend - Rs 4 Per Share
+NSE,BHARTIARTL,INE397D01024,Bharti Airtel Limited,2024-08-07,2024-08-07,dividend,,,8.0,,,Dividend - Rs 8 Per Share
+NSE,BHARTIARTL,INE397D01024,Bharti Airtel Limited,2025-07-18,2025-07-18,dividend,,,16.0,,,Dividend - Rs 16 Per Share
+NSE,CIPLA,INE059A01026,Cipla Limited,2020-03-19,2020-03-20,dividend,,,4.0,,,Interim Dividend - Rs 3 Per Share Special Dividend - Re 1 Per Share
+NSE,CIPLA,INE059A01026,Cipla Limited,2020-08-11,,agm,,,,,,Annual General Meeting
+NSE,CIPLA,INE059A01026,Cipla Limited,2021-08-09,,dividend,,,5.0,,,Annual General Meeting/Dividend - Rs 5 Per Share
+NSE,CIPLA,INE059A01026,Cipla Limited,2022-08-08,2022-08-10,dividend,,,5.0,,,Dividend - Rs 5 Per Share
+NSE,CIPLA,INE059A01026,Cipla Limited,2023-07-21,2023-07-21,dividend,,,8.5,,,Dividend - Rs 8.50 Per Share
+NSE,CIPLA,INE059A01026,Cipla Limited,2024-08-02,2024-08-02,dividend,,,13.0,,,Dividend - Rs 13 Per Share
+NSE,CIPLA,INE059A01026,Cipla Limited,2025-06-27,2025-06-27,dividend,,,16.0,,,Dividend - Rs 13 Per Share/Special Dividend - Rs 3 Per Share
+NSE,HDFCBANK,INE040A01018,HDFC Bank Limited,2021-06-29,2021-06-30,dividend,,,6.5,,,Dividend - Rs 6.50 Per Share
+NSE,HDFCBANK,INE040A01018,HDFC Bank Limited,2022-05-12,2022-05-13,dividend,,,15.5,,,Dividend - Rs 15.50 Per Share
+NSE,HDFCBANK,INE040A01018,HDFC Bank Limited,2023-05-16,2023-05-16,dividend,,,19.0,,,Dividend - Rs 19 Per Share
+NSE,HDFCBANK,INE040A01018,HDFC Bank Limited,2024-05-10,2024-05-10,dividend,,,19.5,,,Dividend - Rs 19.50 Per Share
+NSE,HDFCBANK,INE040A01018,HDFC Bank Limited,2025-06-27,2025-06-27,dividend,,,22.0,,,Dividend - Rs 22 Per Share
+NSE,HDFCBANK,INE040A01018,HDFC Bank Limited,2025-07-25,2025-07-25,dividend,,,5.0,,,Special Dividend - Rs 5 Per Share
+NSE,HDFCBANK,INE040A01018,HDFC Bank Limited,2025-08-26,2025-08-27,bonus,1.0,1.0,,,,Bonus 1:1
+NSE,HINDUNILVR,INE030A01027,Hindustan Unilever Limited,2020-06-19,,dividend,,,14.0,,,Annual General Meeting/Dividend - Rs 14 Per Share
+NSE,HINDUNILVR,INE030A01027,Hindustan Unilever Limited,2020-07-30,2020-07-31,dividend,,,9.5,,,Special Dividend - Rs 9.50 Per Share
+NSE,HINDUNILVR,INE030A01027,Hindustan Unilever Limited,2020-10-28,2020-10-29,dividend,,,14.0,,,Interim Dividend - Rs 14 Per Share
+NSE,HINDUNILVR,INE030A01027,Hindustan Unilever Limited,2021-06-14,,dividend,,,17.0,,,Annual General Meeting/Dividend - Rs 17  Per Sh
+NSE,HINDUNILVR,INE030A01027,Hindustan Unilever Limited,2021-10-26,2021-10-27,dividend,,,15.0,,,Interim Dividend - Rs 15 Per Share
+NSE,HINDUNILVR,INE030A01027,Hindustan Unilever Limited,2022-06-15,,dividend,,,19.0,,,Annual General Meeting/Dividend - Rs  19 Per Share
+NSE,HINDUNILVR,INE030A01027,Hindustan Unilever Limited,2022-11-01,2022-11-02,dividend,,,17.0,,,Interim Dividend - Rs 17 Per Share
+NSE,HINDUNILVR,INE030A01027,Hindustan Unilever Limited,2023-06-19,,dividend,,,22.0,,,Annual General Meeting/Dividend - Rs 22 Per Share
+NSE,HINDUNILVR,INE030A01027,Hindustan Unilever Limited,2023-11-02,2023-11-02,dividend,,,18.0,,,Interim Dividend - Rs 18 Per Share
+NSE,HINDUNILVR,INE030A01027,Hindustan Unilever Limited,2024-06-14,,dividend,,,24.0,,,Annual General Meeting/Dividend - Rs 24 Per Share
+NSE,HINDUNILVR,INE030A01027,Hindustan Unilever Limited,2024-11-06,2024-11-06,dividend,,,29.0,,,Interim Dividend - Rs 19 Per Share/Special Dividend - Rs 10 Per Share
+NSE,HINDUNILVR,INE030A01027,Hindustan Unilever Limited,2025-06-23,2025-06-23,dividend,,,24.0,,,Dividend - Rs 24 Per Share
+NSE,HINDUNILVR,INE030A01027,Hindustan Unilever Limited,2025-11-07,2025-11-07,dividend,,,19.0,,,Interim Dividend - Rs 19 Per Share
+NSE,HINDUNILVR,INE030A01027,Hindustan Unilever Limited,2025-12-05,2025-12-05,demerger,,,,,,Demerger
+NSE,ICICIBANK,INE090A01013,ICICI Bank Limited,2021-07-29,2021-07-30,dividend,,,2.0,,,Dividend - Rs 2 Per Share
+NSE,ICICIBANK,INE090A01013,ICICI Bank Limited,2022-08-08,2022-08-10,dividend,,,5.0,,,Dividend - Rs 5 Per Share
+NSE,ICICIBANK,INE090A01013,ICICI Bank Limited,2023-08-09,2023-08-09,dividend,,,8.0,,,Dividend - Rs 8 Per Share
+NSE,ICICIBANK,INE090A01013,ICICI Bank Limited,2024-08-12,2024-08-12,dividend,,,10.0,,,Dividend - Rs 10 Per Share
+NSE,ICICIBANK,INE090A01013,ICICI Bank Limited,2025-08-12,2025-08-12,dividend,,,11.0,,,Dividend - Rs 11 Per Share
+NSE,INFY,INE009A01021,Infosys Limited,2020-05-29,2020-06-01,dividend,,,9.5,,,Dividend - Rs 9.50 Per Share
+NSE,INFY,INE009A01021,Infosys Limited,2020-10-23,2020-10-26,dividend,,,12.0,,,Interim Dividend - Rs 12 Per Share
+NSE,INFY,INE009A01021,Infosys Limited,2021-05-31,2021-06-01,dividend,,,15.0,,,Annual General Meeting/Dividend - Rs 15 Per Share
+NSE,INFY,INE009A01021,Infosys Limited,2021-10-26,2021-10-27,dividend,,,15.0,,,Interim Dividend - Rs 15 Per Sh
+NSE,INFY,INE009A01021,Infosys Limited,2022-05-31,2022-06-01,dividend,,,16.0,,,Annual General Meeting/Dividend - Rs 16 Per Share
+NSE,INFY,INE009A01021,Infosys Limited,2022-10-27,2022-10-28,dividend,,,16.5,,,Interim Dividend - Rs 16.50 Per Share
+NSE,INFY,INE009A01021,Infosys Limited,2023-06-02,2023-06-02,dividend,,,17.5,,,Annual General Meeting/Dividend - Rs 17.50 Per Share
+NSE,INFY,INE009A01021,Infosys Limited,2023-10-25,2023-10-25,dividend,,,18.0,,,Interim Dividend - Rs 18 Per Share
+NSE,INFY,INE009A01021,Infosys Limited,2024-05-31,2024-05-31,dividend,,,28.0,,,Annual General Meeting/Special Dividend - Rs 8 Per Share /Dividend - Rs 20 Per Share
+NSE,INFY,INE009A01021,Infosys Limited,2024-10-29,2024-10-29,dividend,,,21.0,,,Interim Dividend - Rs 21 Per Share
+NSE,INFY,INE009A01021,Infosys Limited,2025-05-30,2025-05-30,dividend,,,22.0,,,Dividend - Rs 22 Per Share
+NSE,INFY,INE009A01021,Infosys Limited,2025-10-27,2025-10-27,dividend,,,23.0,,,Interim Dividend - Rs 23 Per Share
+NSE,INFY,INE009A01021,Infosys Limited,2025-11-14,2025-11-14,buyback,,,,,,Buy Back
+NSE,ITC,INE154A01025,ITC Limited,2020-07-06,,dividend,,,10.15,,,Dividend - Rs 10.15 Per Share
+NSE,ITC,INE154A01025,ITC Limited,2021-02-22,2021-02-23,dividend,,,5.0,,,Interim Dividend - Rs 5 Per Share
+NSE,ITC,INE154A01025,ITC Limited,2021-06-10,2021-06-11,dividend,,,5.75,,,Dividend - Rs 5.75 Per Share
+NSE,ITC,INE154A01025,ITC Limited,2022-02-14,2022-02-15,dividend,,,5.25,,,Interim Dividend - Rs 5.25 Per Share
+NSE,ITC,INE154A01025,ITC Limited,2022-05-26,2022-05-28,dividend,,,6.25,,,Dividend - Rs 6.25 Per Share
+NSE,ITC,INE154A01025,ITC Limited,2023-02-15,2023-02-15,dividend,,,6.0,,,Interim Dividend - Rs  6 Per Share
+NSE,ITC,INE154A01025,ITC Limited,2023-05-30,2023-05-30,dividend,,,9.5,,,Dividend - Rs 6.75 Per Share /Special Dividend - Rs 2.75 Per Share
+NSE,ITC,INE154A01025,ITC Limited,2024-02-08,2024-02-08,dividend,,,6.25,,,Interim Dividend - Rs 6.25 Per Share
+NSE,ITC,INE154A01025,ITC Limited,2024-06-04,2024-06-04,dividend,,,7.5,,,Dividend - Rs 7.50 Per Share
+NSE,ITC,INE154A01025,ITC Limited,2025-01-06,2025-01-06,demerger,,,,,,Demerger
+NSE,ITC,INE154A01025,ITC Limited,2025-02-12,2025-02-12,dividend,,,6.5,,,Interim Dividend - Rs 6.50 Per Share
+NSE,ITC,INE154A01025,ITC Limited,2025-05-28,2025-05-28,dividend,,,7.85,,,Dividend - Rs 7.85 Per Share
+NSE,ITC,INE154A01025,ITC Limited,2026-02-04,2026-02-04,dividend,,,6.5,,,Interim Dividend - Rs 6.50 Per Share
+NSE,LT,INE018A01030,Larsen & Toubro Limited,2020-03-24,2020-03-26,dividend,,,10.0,,,Interim Dividend - Rs 10 Per Share
+NSE,LT,INE018A01030,Larsen & Toubro Limited,2020-08-05,,dividend,,,8.0,,,Annual General Meeting/Dividend - Rs  8 Per Share
+NSE,LT,INE018A01030,Larsen & Toubro Limited,2020-11-04,2020-11-05,dividend,,,18.0,,,Special Dividend - Rs 18 Per Share
+NSE,LT,INE018A01030,Larsen & Toubro Limited,2021-07-28,,dividend,,,18.0,,,Annual General Meeting/Dividend - Rs 18 Per Share
+NSE,LT,INE018A01030,Larsen & Toubro Limited,2022-07-21,2022-07-22,dividend,,,22.0,,,Dividend - Rs 22 Per Share
+NSE,LT,INE018A01030,Larsen & Toubro Limited,2023-08-02,2023-08-02,dividend,,,24.0,,,Dividend - Rs 24 Per Share
+NSE,LT,INE018A01030,Larsen & Toubro Limited,2023-08-02,2023-08-02,dividend,,,6.0,,,Special Dividend - Rs 6 Per Share
+NSE,LT,INE018A01030,Larsen & Toubro Limited,2023-09-12,2023-09-12,buyback,,,,,,Buy Back
+NSE,LT,INE018A01030,Larsen & Toubro Limited,2024-06-20,2024-06-20,dividend,,,28.0,,,Dividend - Rs 28 Per Share
+NSE,LT,INE018A01030,Larsen & Toubro Limited,2025-06-03,2025-06-03,dividend,,,34.0,,,Dividend - Rs 34 Per Share
+NSE,M&M,INE101A01026,Mahindra & Mahindra Limited,2020-07-16,,dividend,,,2.35,,,Annual General Meeting/Dividend - Rs 2.35 Per Share
+NSE,M&M,INE101A01026,Mahindra & Mahindra Limited,2021-07-15,,dividend,,,8.75,,,Annual General Meeting/Dividend - Rs 8.75 Per Share
+NSE,M&M,INE101A01026,Mahindra & Mahindra Limited,2022-07-14,,dividend,,,11.55,,,Annual General Meeting/Dividend - Rs 11.55 Per Share
+NSE,M&M,INE101A01026,Mahindra & Mahindra Limited,2023-07-14,,dividend,,,16.25,,,Annual General Meeting/Dividend - Rs 16.25 Per Share
+NSE,M&M,INE101A01026,Mahindra & Mahindra Limited,2024-07-05,,dividend,,,21.1,,,Annual General Meeting/Dividend - Rs 21.10 Per Share
+NSE,M&M,INE101A01026,Mahindra & Mahindra Limited,2025-07-04,2025-07-04,dividend,,,25.3,,,Dividend - Rs 25.30 Per Share
+NSE,MARUTI,INE585B01010,Maruti Suzuki India Limited,2020-08-13,,dividend,,,60.0,,,Dividend - Rs 60 Per Share
+NSE,MARUTI,INE585B01010,Maruti Suzuki India Limited,2021-08-05,,dividend,,,45.0,,,Dividend - Rs 45 Per Share
+NSE,MARUTI,INE585B01010,Maruti Suzuki India Limited,2022-08-03,,dividend,,,60.0,,,Dividend - Rs 60 Per Share
+NSE,MARUTI,INE585B01010,Maruti Suzuki India Limited,2023-08-03,,dividend,,,90.0,,,Dividend - Rs 90 Per Share
+NSE,MARUTI,INE585B01010,Maruti Suzuki India Limited,2024-08-02,,dividend,,,125.0,,,Dividend - Rs 125 Per Share
+NSE,MARUTI,INE585B01010,Maruti Suzuki India Limited,2025-08-01,2025-08-01,dividend,,,135.0,,,Dividend - Rs 135 Per Share
+NSE,RELIANCE,INE002A01018,Reliance Industries Limited,2020-05-13,2020-05-14,rights,1.0,15.0,,,,Rights 1:15 @ Premium Rs 1247
+NSE,RELIANCE,INE002A01018,Reliance Industries Limited,2020-07-02,2020-07-03,dividend,,,6.5,,,Dividend - Rs 6.50  Per Share
+NSE,RELIANCE,INE002A01018,Reliance Industries Limited,2021-06-11,2021-06-14,dividend,,,7.0,,,Dividend - Rs 7 Per Share
+NSE,RELIANCE,INE002A01018,Reliance Industries Limited,2022-08-18,2022-08-19,dividend,,,8.0,,,Dividend - Rs 8 Per Share
+NSE,RELIANCE,INE002A01018,Reliance Industries Limited,2023-07-20,2023-07-20,demerger,,,,,,Demerger
+NSE,RELIANCE,INE002A01018,Reliance Industries Limited,2023-08-21,2023-08-21,dividend,,,9.0,,,Dividend - Rs 9 Per Share
+NSE,RELIANCE,INE002A01018,Reliance Industries Limited,2024-08-19,2024-08-19,dividend,,,10.0,,,Dividend - Rs 10 Per Share
+NSE,RELIANCE,INE002A01018,Reliance Industries Limited,2024-10-28,2024-10-28,bonus,1.0,1.0,,,,Bonus 1:1
+NSE,RELIANCE,INE002A01018,Reliance Industries Limited,2025-08-14,2025-08-14,dividend,,,5.5,,,Dividend - Rs 5.5 Per Share
+NSE,SBIN,INE062A01012,State Bank of India,2021-06-03,2021-06-04,dividend,,,4.0,,,Dividend - Rs 4 Per Share
+NSE,SBIN,INE062A01012,State Bank of India,2022-05-25,,dividend,,,7.1,,,Dividend - Rs 7.10 Per Share
+NSE,SBIN,INE062A01012,State Bank of India,2023-05-31,,dividend,,,11.3,,,Dividend - Rs 11.30 Per Share
+NSE,SBIN,INE062A01012,State Bank of India,2024-05-22,2024-05-22,dividend,,,13.7,,,Dividend - Rs 13.70 Per Share
+NSE,SBIN,INE062A01012,State Bank of India,2025-05-16,2025-05-16,dividend,,,15.9,,,Dividend - Rs 15.90 Per Share
+NSE,SUNPHARMA,INE044A01028,Sun Pharmaceutical Industries Limited,2020-02-17,2020-02-18,dividend,,,3.0,,,Interim Dividend - Rs 3 Per Share
+NSE,SUNPHARMA,INE044A01028,Sun Pharmaceutical Industries Limited,2020-08-19,,dividend,,,1.0,,,Annual General Meeting/Dividend - Re 1 Per Share
+NSE,SUNPHARMA,INE044A01028,Sun Pharmaceutical Industries Limited,2021-02-09,2021-02-10,dividend,,,5.5,,,Interim Dividend - Rs 5.50 Per Share
+NSE,SUNPHARMA,INE044A01028,Sun Pharmaceutical Industries Limited,2021-08-23,,dividend,,,2.0,,,Annual General Meeting/Dividend - Rs 2 Per Share
+NSE,SUNPHARMA,INE044A01028,Sun Pharmaceutical Industries Limited,2022-02-09,2022-02-10,dividend,,,7.0,,,Interim Dividend - Rs 7 Per Share
+NSE,SUNPHARMA,INE044A01028,Sun Pharmaceutical Industries Limited,2022-08-19,2022-08-22,dividend,,,3.0,,,Dividend - Rs 3 Per Share
+NSE,SUNPHARMA,INE044A01028,Sun Pharmaceutical Industries Limited,2023-02-08,2023-02-08,dividend,,,7.5,,,Interim Dividend - Rs 7.50 Per Share
+NSE,SUNPHARMA,INE044A01028,Sun Pharmaceutical Industries Limited,2023-07-28,2023-07-28,dividend,,,4.0,,,Dividend - Rs 4 Per Share
+NSE,SUNPHARMA,INE044A01028,Sun Pharmaceutical Industries Limited,2024-02-09,2024-02-09,dividend,,,8.5,,,Interim Dividend - Rs 8.50 Per Share
+NSE,SUNPHARMA,INE044A01028,Sun Pharmaceutical Industries Limited,2024-07-12,2024-07-12,dividend,,,5.0,,,Dividend - Rs 5 Per Share
+NSE,SUNPHARMA,INE044A01028,Sun Pharmaceutical Industries Limited,2025-02-06,2025-02-06,dividend,,,10.5,,,Interim Dividend - Rs 10.50 Per Share
+NSE,SUNPHARMA,INE044A01028,Sun Pharmaceutical Industries Limited,2025-07-07,2025-07-07,dividend,,,5.5,,,Dividend - Rs 5.50 Per Share
+NSE,SUNPHARMA,INE044A01028,Sun Pharmaceutical Industries Limited,2026-02-05,2026-02-05,dividend,,,11.0,,,Interim Dividend - Rs 11 Per Share
+NSE,TATASTEEL,INE081A01012,Tata Steel Limited,2020-08-06,,dividend,,,10.0,,,Dividend - Rs 10 Per Share
+NSE,TATASTEEL,INE081A01012,Tata Steel Limited,2021-06-17,,dividend,,,25.0,,,Annual General Meeting/Dividend - Rs 25 Per Share
+NSE,TATASTEEL,INE081A01012,Tata Steel Limited,2022-06-15,,dividend,,,51.0,,,Annual General Meeting/Dividend - Rs  51 Per Share
+NSE,TATASTEEL,INE081A01012,Tata Steel Limited,2022-07-28,2022-07-29,split,,,,10.0,1.0,Face Value Split (Sub-Division) - From Rs 10/- Per Share To Re 1/- Per Share
+NSE,TATASTEEL,INE081A01012,Tata Steel Limited,2023-06-22,,dividend,,,3.6,,,Annual General Meeting/Dividend - Rs 3.60 Per Share
+NSE,TATASTEEL,INE081A01012,Tata Steel Limited,2024-06-21,2024-06-21,dividend,,,3.6,,,Dividend - Rs 3.60 Per Share
+NSE,TATASTEEL,INE081A01012,Tata Steel Limited,2025-06-06,2025-06-06,dividend,,,3.6,,,Dividend - Rs 3.60 Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2020-01-23,2020-01-25,dividend,,,5.0,,,Interim Dividend - Rs 5 Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2020-03-19,2020-03-20,dividend,,,12.0,,,Interim Dividend - Rs 12 Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2020-06-03,2020-06-04,dividend,,,6.0,,,Dividend - Rs 6 Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2020-07-16,2020-07-17,dividend,,,5.0,,,Interim Dividend - Rs    5 Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2020-10-14,2020-10-15,dividend,,,12.0,,,Interim Dividend - Rs 12 Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2020-11-26,2020-11-28,buyback,,,,,,Buyback
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2021-01-14,2021-01-16,dividend,,,6.0,,,Interim Dividend - Rs 6 Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2021-05-25,2021-05-27,dividend,,,15.0,,,Dividend - Rs 15 Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2021-07-15,2021-07-16,dividend,,,7.0,,,Interim Dividend - Rs 7 Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2021-10-14,2021-10-19,dividend,,,7.0,,,Interim Dividend - Rs 7 Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2022-01-19,2022-01-20,dividend,,,7.0,,,Interim Dividend - Rs 7 Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2022-02-22,2022-02-23,buyback,,,,,,Buyback
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2022-05-25,2022-05-26,dividend,,,22.0,,,Dividend - Rs 22 Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2022-07-14,2022-07-16,dividend,,,8.0,,,Interim Dividend- Rs 8 Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2022-10-17,2022-10-18,dividend,,,8.0,,,Interim Dividend - Rs 8 Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2023-01-16,2023-01-17,dividend,,,75.0,,,Interim Dividend - Rs 8 Per Share Special Dividend - Rs 67 Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2023-06-15,2023-06-15,dividend,,,24.0,,,Dividend - Rs 24 Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2023-07-20,2023-07-20,dividend,,,9.0,,,Interim Dividend - Rs 9 Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2023-10-19,2023-10-19,dividend,,,9.0,,,Interim Dividend - Rs 9 Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2023-11-24,2023-11-25,buyback,,,,,,Buy Back
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2024-01-19,2024-01-19,dividend,,,27.0,,,Interim Dividend - Rs 9 Per Share Special Dividend - Rs 18 Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2024-05-16,2024-05-16,dividend,,,28.0,,,Dividend - Rs 28 Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2024-07-19,2024-07-20,dividend,,,10.0,,,Interim Dividend - Rs 10 Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2024-10-18,2024-10-18,dividend,,,10.0,,,Interim Dividend - Rs 10 Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2025-01-17,2025-01-17,dividend,,,76.0,,,Interim Dividend - Rs 10 Per Share Special Dividend - Rs 66 Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2025-06-04,2025-06-04,dividend,,,30.0,,,Dividend - Rs 30 Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2025-07-16,2025-07-16,dividend,,,11.0,,,Interim Dividend - Rs 11 Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2025-10-15,2025-10-15,dividend,,,11.0,,,Interim Dividend - Rs 11 Per Share
+NSE,TCS,INE467B01029,Tata Consultancy Services Limited,2026-01-16,2026-01-17,dividend,,,57.0,,,Interim Dividend Rs 11 Per Share/ Special Dividend Rs 46 Per Share
