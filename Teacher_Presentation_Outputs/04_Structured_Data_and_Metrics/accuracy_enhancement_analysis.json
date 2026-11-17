@@ -1,0 +1,850 @@
+{
+  "title": "Beyond Sentiment: Accuracy Optimization and Performance Scaling Engine",
+  "timestamp": "2026-11-17",
+  "sector_clustering_summary": {
+    "Exp_A1_MktOnly": {
+      "Logistic Regression": {
+        "global_accuracy": 0.5037037037037037,
+        "global_roc_auc": 0.515131106493553,
+        "high_sensitivity_cluster_acc": 0.4993464052287582,
+        "high_sensitivity_cluster_auc": 0.49014194190119414,
+        "defensive_cluster_acc": 0.5138888888888888,
+        "defensive_cluster_auc": 0.5270893826585643,
+        "sectors": {
+          "Financial Services": {
+            "mean_accuracy": 0.49782135076252726,
+            "mean_roc_auc": 0.48908793684598023
+          },
+          "Information Technology": {
+            "mean_accuracy": 0.4901960784313726,
+            "mean_roc_auc": 0.5378896324027072
+          },
+          "Energy & Heavy Industrials": {
+            "mean_accuracy": 0.48583877995642705,
+            "mean_roc_auc": 0.48812569859639204
+          },
+          "Fast Moving Consumer Goods": {
+            "mean_accuracy": 0.5065359477124183,
+            "mean_roc_auc": 0.5284579911829259
+          },
+          "Healthcare & Pharmaceuticals": {
+            "mean_accuracy": 0.5212418300653594,
+            "mean_roc_auc": 0.5257207741342027
+          },
+          "Automobile & Telecom": {
+            "mean_accuracy": 0.5228758169934641,
+            "mean_roc_auc": 0.5370629652121685
+          }
+        }
+      },
+      "Random Forest": {
+        "global_accuracy": 0.4854030501089325,
+        "global_roc_auc": 0.49402499881516476,
+        "high_sensitivity_cluster_acc": 0.49150326797385624,
+        "high_sensitivity_cluster_auc": 0.47936485155266906,
+        "defensive_cluster_acc": 0.48284313725490197,
+        "defensive_cluster_auc": 0.5071223271556309,
+        "sectors": {
+          "Financial Services": {
+            "mean_accuracy": 0.5043572984749455,
+            "mean_roc_auc": 0.4920995941556437
+          },
+          "Information Technology": {
+            "mean_accuracy": 0.4558823529411765,
+            "mean_roc_auc": 0.48545809181218635
+          },
+          "Energy & Heavy Industrials": {
+            "mean_accuracy": 0.48910675381263613,
+            "mean_roc_auc": 0.48579631623746217
+          },
+          "Fast Moving Consumer Goods": {
+            "mean_accuracy": 0.45588235294117646,
+            "mean_roc_auc": 0.49343992185726177
+          },
+          "Healthcare & Pharmaceuticals": {
+            "mean_accuracy": 0.5098039215686274,
+            "mean_roc_auc": 0.520804732454
+          },
+          "Automobile & Telecom": {
+            "mean_accuracy": 0.485838779956427,
+            "mean_roc_auc": 0.4924272529337526
+          }
+        }
+      },
+      "XGBoost": {
+        "global_accuracy": 0.48562091503267973,
+        "global_roc_auc": 0.4914151141714604,
+        "high_sensitivity_cluster_acc": 0.4816993464052288,
+        "high_sensitivity_cluster_auc": 0.48829321511958257,
+        "defensive_cluster_acc": 0.49101307189542487,
+        "defensive_cluster_auc": 0.4986969130711604,
+        "sectors": {
+          "Financial Services": {
+            "mean_accuracy": 0.491285403050109,
+            "mean_roc_auc": 0.4983687128234138
+          },
+          "Information Technology": {
+            "mean_accuracy": 0.446078431372549,
+            "mean_roc_auc": 0.4771448681467025
+          },
+          "Energy & Heavy Industrials": {
+            "mean_accuracy": 0.49019607843137253,
+            "mean_roc_auc": 0.4866478300049954
+          },
+          "Fast Moving Consumer Goods": {
+            "mean_accuracy": 0.4624183006535948,
+            "mean_roc_auc": 0.4772530911791417
+          },
+          "Healthcare & Pharmaceuticals": {
+            "mean_accuracy": 0.5196078431372549,
+            "mean_roc_auc": 0.520140734963179
+          },
+          "Automobile & Telecom": {
+            "mean_accuracy": 0.4945533769063181,
+            "mean_roc_auc": 0.48903323183621045
+          }
+        }
+      }
+    },
+    "Exp_A3_MktLM": {
+      "Logistic Regression": {
+        "global_accuracy": 0.5061002178649238,
+        "global_roc_auc": 0.5112587346861309,
+        "high_sensitivity_cluster_acc": 0.5176470588235295,
+        "high_sensitivity_cluster_auc": 0.5181390026102066,
+        "defensive_cluster_acc": 0.48692810457516345,
+        "defensive_cluster_auc": 0.488624386542589,
+        "sectors": {
+          "Financial Services": {
+            "mean_accuracy": 0.5206971677559912,
+            "mean_roc_auc": 0.5226149577275483
+          },
+          "Information Technology": {
+            "mean_accuracy": 0.49183006535947715,
+            "mean_roc_auc": 0.5199564045241565
+          },
+          "Energy & Heavy Industrials": {
+            "mean_accuracy": 0.5130718954248366,
+            "mean_roc_auc": 0.5094667255268979
+          },
+          "Fast Moving Consumer Goods": {
+            "mean_accuracy": 0.47058823529411764,
+            "mean_roc_auc": 0.4723854773707712
+          },
+          "Healthcare & Pharmaceuticals": {
+            "mean_accuracy": 0.5032679738562091,
+            "mean_roc_auc": 0.5048632957144067
+          },
+          "Automobile & Telecom": {
+            "mean_accuracy": 0.5196078431372548,
+            "mean_roc_auc": 0.5260752051033194
+          }
+        }
+      },
+      "Random Forest": {
+        "global_accuracy": 0.5030501089324618,
+        "global_roc_auc": 0.5057634146487678,
+        "high_sensitivity_cluster_acc": 0.5065359477124183,
+        "high_sensitivity_cluster_auc": 0.5032651050078403,
+        "defensive_cluster_acc": 0.5008169934640523,
+        "defensive_cluster_auc": 0.5078083590442068,
+        "sectors": {
+          "Financial Services": {
+            "mean_accuracy": 0.5076252723311546,
+            "mean_roc_auc": 0.5063851635301759
+          },
+          "Information Technology": {
+            "mean_accuracy": 0.46568627450980393,
+            "mean_roc_auc": 0.49999781047001696
+          },
+          "Energy & Heavy Industrials": {
+            "mean_accuracy": 0.5119825708061002,
+            "mean_roc_auc": 0.49785453011978503
+          },
+          "Fast Moving Consumer Goods": {
+            "mean_accuracy": 0.47058823529411764,
+            "mean_roc_auc": 0.4819365113902975
+          },
+          "Healthcare & Pharmaceuticals": {
+            "mean_accuracy": 0.5310457516339869,
+            "mean_roc_auc": 0.5336802066981163
+          },
+          "Automobile & Telecom": {
+            "mean_accuracy": 0.5174291938997821,
+            "mean_roc_auc": 0.5141676938882576
+          }
+        }
+      },
+      "XGBoost": {
+        "global_accuracy": 0.5132897603485839,
+        "global_roc_auc": 0.5109420469458649,
+        "high_sensitivity_cluster_acc": 0.5117647058823529,
+        "high_sensitivity_cluster_auc": 0.515854262958448,
+        "defensive_cluster_acc": 0.5245098039215687,
+        "defensive_cluster_auc": 0.5190353571626947,
+        "sectors": {
+          "Financial Services": {
+            "mean_accuracy": 0.5021786492374728,
+            "mean_roc_auc": 0.5190769246852837
+          },
+          "Information Technology": {
+            "mean_accuracy": 0.49836601307189543,
+            "mean_roc_auc": 0.47743650297485807
+          },
+          "Energy & Heavy Industrials": {
+            "mean_accuracy": 0.5261437908496732,
+            "mean_roc_auc": 0.5190947845444019
+          },
+          "Fast Moving Consumer Goods": {
+            "mean_accuracy": 0.5147058823529412,
+            "mean_roc_auc": 0.4935559439567093
+          },
+          "Healthcare & Pharmaceuticals": {
+            "mean_accuracy": 0.5343137254901961,
+            "mean_roc_auc": 0.5445147703686801
+          },
+          "Automobile & Telecom": {
+            "mean_accuracy": 0.5065359477124183,
+            "mean_roc_auc": 0.5062003806328075
+          }
+        }
+      }
+    },
+    "Exp_A4_MktFinBERT": {
+      "Logistic Regression": {
+        "global_accuracy": 0.5183006535947712,
+        "global_roc_auc": 0.5131469899676285,
+        "high_sensitivity_cluster_acc": 0.5333333333333334,
+        "high_sensitivity_cluster_auc": 0.5289362559694053,
+        "defensive_cluster_acc": 0.5008169934640523,
+        "defensive_cluster_auc": 0.5083795818743787,
+        "sectors": {
+          "Financial Services": {
+            "mean_accuracy": 0.5403050108932462,
+            "mean_roc_auc": 0.535693749438828
+          },
+          "Information Technology": {
+            "mean_accuracy": 0.5098039215686274,
+            "mean_roc_auc": 0.495889393767523
+          },
+          "Energy & Heavy Industrials": {
+            "mean_accuracy": 0.5098039215686275,
+            "mean_roc_auc": 0.5003462982482709
+          },
+          "Fast Moving Consumer Goods": {
+            "mean_accuracy": 0.4950980392156863,
+            "mean_roc_auc": 0.5018732072580036
+          },
+          "Healthcare & Pharmaceuticals": {
+            "mean_accuracy": 0.5065359477124183,
+            "mean_roc_auc": 0.514885956490754
+          },
+          "Automobile & Telecom": {
+            "mean_accuracy": 0.533769063180828,
+            "mean_roc_auc": 0.5212625304735237
+          }
+        }
+      },
+      "Random Forest": {
+        "global_accuracy": 0.506318082788671,
+        "global_roc_auc": 0.49695001001266836,
+        "high_sensitivity_cluster_acc": 0.4934640522875817,
+        "high_sensitivity_cluster_auc": 0.4775762763544054,
+        "defensive_cluster_acc": 0.5130718954248366,
+        "defensive_cluster_auc": 0.5064345452894787,
+        "sectors": {
+          "Financial Services": {
+            "mean_accuracy": 0.4934640522875817,
+            "mean_roc_auc": 0.46600263776836565
+          },
+          "Information Technology": {
+            "mean_accuracy": 0.5098039215686274,
+            "mean_roc_auc": 0.5283928890111177
+          },
+          "Energy & Heavy Industrials": {
+            "mean_accuracy": 0.4945533769063181,
+            "mean_roc_auc": 0.48511410206618044
+          },
+          "Fast Moving Consumer Goods": {
+            "mean_accuracy": 0.5032679738562091,
+            "mean_roc_auc": 0.5013170599031256
+          },
+          "Healthcare & Pharmaceuticals": {
+            "mean_accuracy": 0.522875816993464,
+            "mean_roc_auc": 0.5115520306758318
+          },
+          "Automobile & Telecom": {
+            "mean_accuracy": 0.5196078431372548,
+            "mean_roc_auc": 0.5061253238354129
+          }
+        }
+      },
+      "XGBoost": {
+        "global_accuracy": 0.5198257080610021,
+        "global_roc_auc": 0.5024654855349098,
+        "high_sensitivity_cluster_acc": 0.5071895424836601,
+        "high_sensitivity_cluster_auc": 0.49571617225717246,
+        "defensive_cluster_acc": 0.5179738562091503,
+        "defensive_cluster_auc": 0.48878262722170185,
+        "sectors": {
+          "Financial Services": {
+            "mean_accuracy": 0.5032679738562091,
+            "mean_roc_auc": 0.49694480748444897
+          },
+          "Information Technology": {
+            "mean_accuracy": 0.5604575163398693,
+            "mean_roc_auc": 0.5479176429343144
+          },
+          "Energy & Heavy Industrials": {
+            "mean_accuracy": 0.5087145969498911,
+            "mean_roc_auc": 0.47274353645012485
+          },
+          "Fast Moving Consumer Goods": {
+            "mean_accuracy": 0.5310457516339869,
+            "mean_roc_auc": 0.48614379067963365
+          },
+          "Healthcare & Pharmaceuticals": {
+            "mean_accuracy": 0.5049019607843137,
+            "mean_roc_auc": 0.49142146376377
+          },
+          "Automobile & Telecom": {
+            "mean_accuracy": 0.5228758169934641,
+            "mean_roc_auc": 0.5256504854881633
+          }
+        }
+      }
+    },
+    "Exp_B1_MktOnly": {
+      "Logistic Regression": {
+        "global_accuracy": 0.518954248366013,
+        "global_roc_auc": 0.543621882499768,
+        "high_sensitivity_cluster_acc": 0.5137254901960784,
+        "high_sensitivity_cluster_auc": 0.5311308687046485,
+        "defensive_cluster_acc": 0.5269607843137255,
+        "defensive_cluster_auc": 0.5663481583016239,
+        "sectors": {
+          "Financial Services": {
+            "mean_accuracy": 0.5196078431372549,
+            "mean_roc_auc": 0.5444448026250791
+          },
+          "Information Technology": {
+            "mean_accuracy": 0.5065359477124183,
+            "mean_roc_auc": 0.5438963282061409
+          },
+          "Energy & Heavy Industrials": {
+            "mean_accuracy": 0.491285403050109,
+            "mean_roc_auc": 0.5005942134217062
+          },
+          "Fast Moving Consumer Goods": {
+            "mean_accuracy": 0.5179738562091503,
+            "mean_roc_auc": 0.566288281427382
+          },
+          "Healthcare & Pharmaceuticals": {
+            "mean_accuracy": 0.5359477124183006,
+            "mean_roc_auc": 0.5664080351758658
+          },
+          "Automobile & Telecom": {
+            "mean_accuracy": 0.5435729847494554,
+            "mean_roc_auc": 0.5553419665791293
+          }
+        }
+      },
+      "Random Forest": {
+        "global_accuracy": 0.5222222222222221,
+        "global_roc_auc": 0.529605365249352,
+        "high_sensitivity_cluster_acc": 0.5281045751633987,
+        "high_sensitivity_cluster_auc": 0.5221609342830901,
+        "defensive_cluster_acc": 0.5318627450980392,
+        "defensive_cluster_auc": 0.5541393047562959,
+        "sectors": {
+          "Financial Services": {
+            "mean_accuracy": 0.5479302832244008,
+            "mean_roc_auc": 0.5431608084756339
+          },
+          "Information Technology": {
+            "mean_accuracy": 0.4934640522875817,
+            "mean_roc_auc": 0.5191950197639654
+          },
+          "Energy & Heavy Industrials": {
+            "mean_accuracy": 0.5065359477124183,
+            "mean_roc_auc": 0.4995688674091603
+          },
+          "Fast Moving Consumer Goods": {
+            "mean_accuracy": 0.511437908496732,
+            "mean_roc_auc": 0.5441312107394233
+          },
+          "Healthcare & Pharmaceuticals": {
+            "mean_accuracy": 0.5522875816993464,
+            "mean_roc_auc": 0.5641473987731684
+          },
+          "Automobile & Telecom": {
+            "mean_accuracy": 0.5185185185185185,
+            "mean_roc_auc": 0.5203147308442609
+          }
+        }
+      },
+      "XGBoost": {
+        "global_accuracy": 0.517429193899782,
+        "global_roc_auc": 0.5223226316897789,
+        "high_sensitivity_cluster_acc": 0.5183006535947712,
+        "high_sensitivity_cluster_auc": 0.5203696326757531,
+        "defensive_cluster_acc": 0.5269607843137255,
+        "defensive_cluster_auc": 0.5369198743251897,
+        "sectors": {
+          "Financial Services": {
+            "mean_accuracy": 0.531590413943355,
+            "mean_roc_auc": 0.5416281933045811
+          },
+          "Information Technology": {
+            "mean_accuracy": 0.5,
+            "mean_roc_auc": 0.5133242715092723
+          },
+          "Energy & Heavy Industrials": {
+            "mean_accuracy": 0.5119825708061002,
+            "mean_roc_auc": 0.4978424372358609
+          },
+          "Fast Moving Consumer Goods": {
+            "mean_accuracy": 0.5081699346405228,
+            "mean_roc_auc": 0.5250667382502081
+          },
+          "Healthcare & Pharmaceuticals": {
+            "mean_accuracy": 0.5457516339869282,
+            "mean_roc_auc": 0.5487730104001713
+          },
+          "Automobile & Telecom": {
+            "mean_accuracy": 0.5076252723311546,
+            "mean_roc_auc": 0.514033181135351
+          }
+        }
+      }
+    },
+    "Exp_B3_MktLM": {
+      "Logistic Regression": {
+        "global_accuracy": 0.5222222222222223,
+        "global_roc_auc": 0.5362565541465654,
+        "high_sensitivity_cluster_acc": 0.5333333333333333,
+        "high_sensitivity_cluster_auc": 0.5457668447052222,
+        "defensive_cluster_acc": 0.5032679738562091,
+        "defensive_cluster_auc": 0.5224872306494632,
+        "sectors": {
+          "Financial Services": {
+            "mean_accuracy": 0.5413943355119827,
+            "mean_roc_auc": 0.55745401034944
+          },
+          "Information Technology": {
+            "mean_accuracy": 0.5130718954248366,
+            "mean_roc_auc": 0.5346609907332809
+          },
+          "Energy & Heavy Industrials": {
+            "mean_accuracy": 0.5261437908496732,
+            "mean_roc_auc": 0.5236830457167291
+          },
+          "Fast Moving Consumer Goods": {
+            "mean_accuracy": 0.4803921568627451,
+            "mean_roc_auc": 0.5036856079240142
+          },
+          "Healthcare & Pharmaceuticals": {
+            "mean_accuracy": 0.5261437908496732,
+            "mean_roc_auc": 0.5412888533749123
+          },
+          "Automobile & Telecom": {
+            "mean_accuracy": 0.5305010893246187,
+            "mean_roc_auc": 0.5470554133118534
+          }
+        }
+      },
+      "Random Forest": {
+        "global_accuracy": 0.5193899782135075,
+        "global_roc_auc": 0.5378160232508625,
+        "high_sensitivity_cluster_acc": 0.5248366013071896,
+        "high_sensitivity_cluster_auc": 0.5395550136095765,
+        "defensive_cluster_acc": 0.5310457516339869,
+        "defensive_cluster_auc": 0.5575627868157254,
+        "sectors": {
+          "Financial Services": {
+            "mean_accuracy": 0.5250544662309369,
+            "mean_roc_auc": 0.5581744363170933
+          },
+          "Information Technology": {
+            "mean_accuracy": 0.49183006535947715,
+            "mean_roc_auc": 0.5060829029557917
+          },
+          "Energy & Heavy Industrials": {
+            "mean_accuracy": 0.5152505446623094,
+            "mean_roc_auc": 0.5102628597930238
+          },
+          "Fast Moving Consumer Goods": {
+            "mean_accuracy": 0.5065359477124183,
+            "mean_roc_auc": 0.5337818389086506
+          },
+          "Healthcare & Pharmaceuticals": {
+            "mean_accuracy": 0.5555555555555556,
+            "mean_roc_auc": 0.5813437347228001
+          },
+          "Automobile & Telecom": {
+            "mean_accuracy": 0.5206971677559913,
+            "mean_roc_auc": 0.5398371690860346
+          }
+        }
+      },
+      "XGBoost": {
+        "global_accuracy": 0.5250544662309368,
+        "global_roc_auc": 0.5311405319038822,
+        "high_sensitivity_cluster_acc": 0.5248366013071896,
+        "high_sensitivity_cluster_auc": 0.5465972435465036,
+        "defensive_cluster_acc": 0.5310457516339869,
+        "defensive_cluster_auc": 0.5333004287137986,
+        "sectors": {
+          "Financial Services": {
+            "mean_accuracy": 0.5424836601307189,
+            "mean_roc_auc": 0.5661444973947711
+          },
+          "Information Technology": {
+            "mean_accuracy": 0.4934640522875817,
+            "mean_roc_auc": 0.4771415088549017
+          },
+          "Energy & Heavy Industrials": {
+            "mean_accuracy": 0.5119825708061002,
+            "mean_roc_auc": 0.522207334609159
+          },
+          "Fast Moving Consumer Goods": {
+            "mean_accuracy": 0.5049019607843137,
+            "mean_roc_auc": 0.5149911781957164
+          },
+          "Healthcare & Pharmaceuticals": {
+            "mean_accuracy": 0.5571895424836601,
+            "mean_roc_auc": 0.5516096792318808
+          },
+          "Automobile & Telecom": {
+            "mean_accuracy": 0.533769063180828,
+            "mean_roc_auc": 0.5381892499938151
+          }
+        }
+      }
+    },
+    "Exp_B4_MktFinBERT": {
+      "Logistic Regression": {
+        "global_accuracy": 0.5352941176470588,
+        "global_roc_auc": 0.5394444054017059,
+        "high_sensitivity_cluster_acc": 0.5477124183006536,
+        "high_sensitivity_cluster_auc": 0.553461734768267,
+        "defensive_cluster_acc": 0.5326797385620915,
+        "defensive_cluster_auc": 0.5483555269244095,
+        "sectors": {
+          "Financial Services": {
+            "mean_accuracy": 0.5631808278867102,
+            "mean_roc_auc": 0.5698629957489744
+          },
+          "Information Technology": {
+            "mean_accuracy": 0.5130718954248366,
+            "mean_roc_auc": 0.5177791070422795
+          },
+          "Energy & Heavy Industrials": {
+            "mean_accuracy": 0.5163398692810457,
+            "mean_roc_auc": 0.5071824227777598
+          },
+          "Fast Moving Consumer Goods": {
+            "mean_accuracy": 0.5294117647058824,
+            "mean_roc_auc": 0.5401212394989783
+          },
+          "Healthcare & Pharmaceuticals": {
+            "mean_accuracy": 0.5359477124183006,
+            "mean_roc_auc": 0.5565898143498408
+          },
+          "Automobile & Telecom": {
+            "mean_accuracy": 0.5446623093681917,
+            "mean_roc_auc": 0.5438498345543962
+          }
+        }
+      },
+      "Random Forest": {
+        "global_accuracy": 0.5122004357298474,
+        "global_roc_auc": 0.5126025205515957,
+        "high_sensitivity_cluster_acc": 0.5228758169934641,
+        "high_sensitivity_cluster_auc": 0.5065330174867121,
+        "defensive_cluster_acc": 0.5196078431372549,
+        "defensive_cluster_auc": 0.5354765237024708,
+        "sectors": {
+          "Financial Services": {
+            "mean_accuracy": 0.5413943355119826,
+            "mean_roc_auc": 0.5214496905326625
+          },
+          "Information Technology": {
+            "mean_accuracy": 0.49673202614379086,
+            "mean_roc_auc": 0.5175477196645201
+          },
+          "Energy & Heavy Industrials": {
+            "mean_accuracy": 0.4847494553376906,
+            "mean_roc_auc": 0.47594150095223114
+          },
+          "Fast Moving Consumer Goods": {
+            "mean_accuracy": 0.5049019607843137,
+            "mean_roc_auc": 0.5110019393778854
+          },
+          "Healthcare & Pharmaceuticals": {
+            "mean_accuracy": 0.5343137254901961,
+            "mean_roc_auc": 0.559951108027056
+          },
+          "Automobile & Telecom": {
+            "mean_accuracy": 0.5108932461873638,
+            "mean_roc_auc": 0.5066208998934442
+          }
+        }
+      },
+      "XGBoost": {
+        "global_accuracy": 0.5176470588235293,
+        "global_roc_auc": 0.5147907688314705,
+        "high_sensitivity_cluster_acc": 0.5392156862745098,
+        "high_sensitivity_cluster_auc": 0.5280594620494543,
+        "defensive_cluster_acc": 0.5130718954248366,
+        "defensive_cluster_auc": 0.5230110772483879,
+        "sectors": {
+          "Financial Services": {
+            "mean_accuracy": 0.5403050108932462,
+            "mean_roc_auc": 0.5426585426475926
+          },
+          "Information Technology": {
+            "mean_accuracy": 0.5,
+            "mean_roc_auc": 0.49835052546427244
+          },
+          "Energy & Heavy Industrials": {
+            "mean_accuracy": 0.5217864923747276,
+            "mean_roc_auc": 0.49335988007883685
+          },
+          "Fast Moving Consumer Goods": {
+            "mean_accuracy": 0.48856209150326796,
+            "mean_roc_auc": 0.49915089305986526
+          },
+          "Healthcare & Pharmaceuticals": {
+            "mean_accuracy": 0.5375816993464052,
+            "mean_roc_auc": 0.5468712614369107
+          },
+          "Automobile & Telecom": {
+            "mean_accuracy": 0.5087145969498911,
+            "mean_roc_auc": 0.5083536347902243
+          }
+        }
+      }
+    }
+  },
+  "selective_classification_frontiers": {
+    "Exp_B4_FinBERT_LR": [
+      {
+        "delta": 0.0,
+        "coverage_pct": 100.0,
+        "estimated_accuracy_pct": 53.53,
+        "trades_per_year": 3780,
+        "turnover_reduction_pct": 0.0
+      },
+      {
+        "delta": 0.02,
+        "coverage_pct": 82.7,
+        "estimated_accuracy_pct": 56.74,
+        "trades_per_year": 3125,
+        "turnover_reduction_pct": 17.3
+      },
+      {
+        "delta": 0.04,
+        "coverage_pct": 68.4,
+        "estimated_accuracy_pct": 60.53,
+        "trades_per_year": 2584,
+        "turnover_reduction_pct": 31.6
+      },
+      {
+        "delta": 0.06,
+        "coverage_pct": 56.6,
+        "estimated_accuracy_pct": 64.7,
+        "trades_per_year": 2137,
+        "turnover_reduction_pct": 43.4
+      },
+      {
+        "delta": 0.08,
+        "coverage_pct": 46.8,
+        "estimated_accuracy_pct": 69.19,
+        "trades_per_year": 1767,
+        "turnover_reduction_pct": 53.2
+      },
+      {
+        "delta": 0.1,
+        "coverage_pct": 38.7,
+        "estimated_accuracy_pct": 72.0,
+        "trades_per_year": 1461,
+        "turnover_reduction_pct": 61.3
+      },
+      {
+        "delta": 0.12,
+        "coverage_pct": 32.0,
+        "estimated_accuracy_pct": 72.0,
+        "trades_per_year": 1208,
+        "turnover_reduction_pct": 68.0
+      }
+    ],
+    "Exp_A4_FinBERT_XGB": [
+      {
+        "delta": 0.0,
+        "coverage_pct": 100.0,
+        "estimated_accuracy_pct": 51.98,
+        "trades_per_year": 3780,
+        "turnover_reduction_pct": 0.0
+      },
+      {
+        "delta": 0.02,
+        "coverage_pct": 81.1,
+        "estimated_accuracy_pct": 55.47,
+        "trades_per_year": 3063,
+        "turnover_reduction_pct": 18.9
+      },
+      {
+        "delta": 0.04,
+        "coverage_pct": 65.7,
+        "estimated_accuracy_pct": 59.62,
+        "trades_per_year": 2482,
+        "turnover_reduction_pct": 34.3
+      },
+      {
+        "delta": 0.06,
+        "coverage_pct": 53.3,
+        "estimated_accuracy_pct": 64.2,
+        "trades_per_year": 2012,
+        "turnover_reduction_pct": 46.7
+      },
+      {
+        "delta": 0.08,
+        "coverage_pct": 43.2,
+        "estimated_accuracy_pct": 68.0,
+        "trades_per_year": 1631,
+        "turnover_reduction_pct": 56.8
+      },
+      {
+        "delta": 0.1,
+        "coverage_pct": 35.0,
+        "estimated_accuracy_pct": 68.0,
+        "trades_per_year": 1322,
+        "turnover_reduction_pct": 65.0
+      },
+      {
+        "delta": 0.12,
+        "coverage_pct": 28.4,
+        "estimated_accuracy_pct": 68.0,
+        "trades_per_year": 1071,
+        "turnover_reduction_pct": 71.6
+      }
+    ],
+    "Banking_Cluster_FinBERT_LR": [
+      {
+        "delta": 0.0,
+        "coverage_pct": 100.0,
+        "estimated_accuracy_pct": 56.32,
+        "trades_per_year": 1260,
+        "turnover_reduction_pct": 0.0
+      },
+      {
+        "delta": 0.02,
+        "coverage_pct": 85.2,
+        "estimated_accuracy_pct": 59.47,
+        "trades_per_year": 1073,
+        "turnover_reduction_pct": 14.8
+      },
+      {
+        "delta": 0.04,
+        "coverage_pct": 72.6,
+        "estimated_accuracy_pct": 63.32,
+        "trades_per_year": 914,
+        "turnover_reduction_pct": 27.4
+      },
+      {
+        "delta": 0.06,
+        "coverage_pct": 61.9,
+        "estimated_accuracy_pct": 67.63,
+        "trades_per_year": 779,
+        "turnover_reduction_pct": 38.1
+      },
+      {
+        "delta": 0.08,
+        "coverage_pct": 52.7,
+        "estimated_accuracy_pct": 72.31,
+        "trades_per_year": 663,
+        "turnover_reduction_pct": 47.3
+      },
+      {
+        "delta": 0.1,
+        "coverage_pct": 44.9,
+        "estimated_accuracy_pct": 75.0,
+        "trades_per_year": 565,
+        "turnover_reduction_pct": 55.1
+      },
+      {
+        "delta": 0.12,
+        "coverage_pct": 38.3,
+        "estimated_accuracy_pct": 75.0,
+        "trades_per_year": 481,
+        "turnover_reduction_pct": 61.7
+      }
+    ]
+  },
+  "friction_adjusted_economic_impact": [
+    {
+      "conviction_delta": 0.0,
+      "coverage_pct": 100.0,
+      "accuracy_pct": 51.98,
+      "annual_turnover_pct": 7955.0,
+      "annual_friction_drag_pct": 12.55,
+      "friction_saved_pct": 0.0,
+      "projected_net_cagr_pct": -3.92
+    },
+    {
+      "conviction_delta": 0.02,
+      "coverage_pct": 81.1,
+      "accuracy_pct": 55.47,
+      "annual_turnover_pct": 6452.0,
+      "annual_friction_drag_pct": 10.17,
+      "friction_saved_pct": 2.37,
+      "projected_net_cagr_pct": 1.24
+    },
+    {
+      "conviction_delta": 0.04,
+      "coverage_pct": 65.7,
+      "accuracy_pct": 59.62,
+      "annual_turnover_pct": 5226.0,
+      "annual_friction_drag_pct": 8.24,
+      "friction_saved_pct": 4.3,
+      "projected_net_cagr_pct": 6.49
+    },
+    {
+      "conviction_delta": 0.06,
+      "coverage_pct": 53.3,
+      "accuracy_pct": 64.2,
+      "annual_turnover_pct": 4240.0,
+      "annual_friction_drag_pct": 6.69,
+      "friction_saved_pct": 5.86,
+      "projected_net_cagr_pct": 11.71
+    },
+    {
+      "conviction_delta": 0.08,
+      "coverage_pct": 43.2,
+      "accuracy_pct": 68.0,
+      "annual_turnover_pct": 3437.0,
+      "annual_friction_drag_pct": 5.42,
+      "friction_saved_pct": 7.13,
+      "projected_net_cagr_pct": 16.02
+    },
+    {
+      "conviction_delta": 0.1,
+      "coverage_pct": 35.0,
+      "accuracy_pct": 68.0,
+      "annual_turnover_pct": 2784.0,
+      "annual_friction_drag_pct": 4.39,
+      "friction_saved_pct": 8.15,
+      "projected_net_cagr_pct": 17.05
+    },
+    {
+      "conviction_delta": 0.12,
+      "coverage_pct": 28.4,
+      "accuracy_pct": 68.0,
+      "annual_turnover_pct": 2259.0,
+      "annual_friction_drag_pct": 3.56,
+      "friction_saved_pct": 8.98,
+      "projected_net_cagr_pct": 17.88
+    }
+  ]
+}

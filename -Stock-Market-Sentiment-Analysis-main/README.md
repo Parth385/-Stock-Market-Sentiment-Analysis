@@ -1,0 +1,315 @@
+# Beyond Sentiment
+### A Comparative and Temporal Analysis of Financial News Sentiment for Short-Term Indian Stock Market Prediction
+
+![Domain](https://img.shields.io/badge/Domain-Financial%20Machine%20Learning-blue)
+![Market](https://img.shields.io/badge/Market-Indian%20NSE-green)
+![Period](https://img.shields.io/badge/Period-2020--2026-orange)
+![Status](https://img.shields.io/badge/Research-Completed-success)
+
+---
+
+## 1. Project Overview
+
+**Beyond Sentiment** investigates whether financial news sentiment provides additional predictive information beyond traditional market indicators for short-term Indian stock market prediction.
+
+The research compares dictionary-based and transformer-based sentiment analysis approaches, studies temporal and sector-level sentiment patterns, and evaluates whether predictive improvements translate into economically meaningful trading performance after transaction costs.
+
+The study focuses on 15 selected NSE-listed companies over the period **January 2020 – March 2026**.
+
+### Research Objectives
+
+- Compare financial sentiment extraction using Loughran–McDonald, FinBERT and Financial RoBERTa.
+- Investigate direct company-level, sector-level and global news sentiment.
+- Study temporal sentiment aggregation and information decay.
+- Evaluate whether sentiment improves prediction beyond market-only features.
+- Analyse model behaviour across companies and market regimes.
+- Examine trading performance after transaction costs.
+
+---
+
+## 2. Dataset Selection and Sources
+
+The project integrates two primary datasets.
+
+### A. Financial News Dataset
+
+**Six-Year Indian Stock Market Dataset**
+
+- Source: Hugging Face
+- Dataset: [mveen3/Six-Year Indian Stock Market Dataset](https://huggingface.co/datasets/mveen3/Six_Year_Indian_Stock_Market_Dataset-News_and_Ticker)
+- Coverage: Approximately 668,000 financial news articles.
+- Period: 2020–2026.
+- Content: Financial news headlines, article content and associated company information.
+
+This dataset provides the textual information required for financial sentiment extraction.
+
+### B. Historical Indian Market Dataset
+
+**TejHQ Indian Markets**
+
+- Source: Hugging Face
+- Dataset: [tejhq/indian-markets](https://huggingface.co/datasets/tejhq/indian-markets)
+- Documentation: [TejHQ GitHub](https://github.com/tejhq/tej-bazaar)
+- Content: Historical OHLCV data and corporate-action information.
+
+Market information is used to construct price-based features, align observations with trading sessions and calculate prediction targets.
+
+### Research Universe
+
+The study uses a fixed cohort of 15 NSE-listed companies across multiple industries:
+
+**RELIANCE, TCS, INFY, HDFCBANK, ICICIBANK, SBIN, HINDUNILVR, ITC, LT, BHARTIARTL, SUNPHARMA, CIPLA, MARUTI, M&M and TATASTEEL.**
+
+The fixed company cohort allows consistent comparison across the research period. Its potential selection and survivorship bias is acknowledged as a limitation.
+
+---
+
+## 3. Data Engineering and Integration
+
+The raw datasets were processed through a multi-stage data engineering pipeline.
+
+### Processing Workflow
+
+1. **Data Collection:** Obtain financial news and historical market data.
+2. **News Cleaning:** Clean article records and map company mentions.
+3. **Market Processing:** Process OHLCV data and corporate actions.
+4. **Trading Calendar Alignment:** Align company observations with NSE trading sessions.
+5. **News Aggregation:** Aggregate article-level information into daily company-level features.
+6. **Sentiment Integration:** Merge sentiment scores with market features.
+7. **Target Construction:** Generate chronological prediction labels and returns.
+
+### Processed Dataset Statistics
+
+| Dataset Component | Records |
+|---|---:|
+| Article-company records | 155,537 |
+| Daily news aggregation records | 34,230 |
+| Historical market records | 23,130 |
+| Final integrated observations | 23,115 |
+
+### Final Dataset
+
+- **23,115** company-session observations.
+- **15** companies.
+- **1,541** supervised trading sessions.
+- **61** original integrated features.
+- **126** sentiment-enhanced features.
+
+The final supervised panel is structured as one observation per company per trading session.
+
+---
+
+## 4. Sentiment Analysis Methodology
+
+Three independent sentiment extraction approaches are implemented and compared.
+
+### 1. Loughran–McDonald (LM)
+
+A financial dictionary-based sentiment approach that identifies positive and negative financial vocabulary.
+
+- Uses article headlines and full article bodies.
+- Calculates financial sentiment polarity.
+- Provides a traditional dictionary-based baseline.
+
+### 2. ProsusAI FinBERT
+
+A transformer-based language model designed for financial sentiment classification.
+
+- Uses financial news headlines.
+- Classifies sentiment as positive, negative or neutral.
+- Generates probability-based sentiment features.
+
+### 3. Financial RoBERTa
+
+A transformer-based financial sentiment classifier used as an additional independent sentiment approach.
+
+- Uses financial news headlines.
+- Produces positive, negative and neutral class probabilities.
+- Allows comparison with FinBERT and dictionary-based sentiment.
+
+### Multi-Level Sentiment Aggregation
+
+Sentiment is analysed at three levels:
+
+- **Direct Sentiment:** News associated with an individual company.
+- **Sector Sentiment:** News aggregated across companies within the same sector.
+- **Global Sentiment:** Broader news sentiment across the selected research universe.
+
+Unique-article deduplication is applied to sector and global aggregation to avoid repeatedly counting the same news story across multiple company mentions.
+
+The pipeline also distinguishes between the absence of direct news and genuinely neutral news.
+
+---
+
+## 5. Temporal Alignment and Leakage Prevention
+
+A key methodological challenge is the absence of reliable intraday publication timestamps in the news dataset.
+
+To avoid using information that may not have been available at prediction time, the study applies a conservative alignment rule:
+
+**News published on calendar date D is assigned to the next NSE trading session strictly after D.**
+
+The primary prediction target is same-session open-to-close (O2C) return and direction.
+
+### Chronological Data Split
+
+| Dataset Split | Period | Purpose |
+|---|---|---|
+| Training | 2020–2023 | Model training |
+| Validation | 2024 | Parameter and threshold selection |
+| Testing | 2025–March 2026 | Final out-of-sample evaluation |
+
+Test-set observations are reserved for final evaluation and are not used for model or threshold selection.
+
+---
+
+## 6. Machine Learning Experiments
+
+The following algorithms are evaluated:
+
+- Logistic Regression
+- Random Forest
+- XGBoost
+
+### Experimental Configurations
+
+1. Market-only baseline models.
+2. Market features with news-volume controls.
+3. Market features with LM sentiment.
+4. Market features with FinBERT sentiment.
+5. Market features with RoBERTa sentiment.
+6. Combined sentiment configurations.
+
+The primary objective is to determine whether sentiment features contribute incremental predictive information beyond traditional market indicators.
+
+---
+
+## 7. Explainability and Backtesting
+
+### Model Explainability
+
+SHAP-based analysis is used to investigate model feature contributions.
+
+Additional analysis includes:
+
+- Company-level performance.
+- Bullish, bearish and neutral market regimes.
+- Prediction error analysis.
+- Sentiment contribution across feature groups.
+
+### Quantitative Backtesting
+
+Frozen Stage 4 model predictions are converted into intraday trading signals.
+
+The backtesting framework evaluates:
+
+- Long-only strategies.
+- Long/short strategies.
+- Market-only ML baselines.
+- Buy-and-hold and momentum references.
+- Transaction-cost sensitivity.
+
+Trading costs include brokerage, statutory charges, taxes and modeled slippage.
+
+**Execution limitation:** The primary executable backtest uses the strict pre-open setup. The opening-bell setup is retained as an exploratory benchmark because the available daily dataset does not contain timestamped pre-open indicative-price observations. Intraday liquidity and actual portfolio capacity cannot be verified using the current data.
+
+---
+
+## 8. Key Research Findings
+
+The completed experiments indicate:
+
+- Financial sentiment can improve selected classification metrics compared with market-only baselines.
+- Improvements are not uniformly statistically significant.
+- Combining multiple sentiment models does not consistently improve performance.
+- Predictive improvements do not necessarily translate into profitable trading after transaction costs.
+- High turnover and execution friction can eliminate relatively small predictive advantages.
+- Intraday cash liquidation reduces overnight market exposure, but this should not be confused with sentiment-driven alpha.
+
+**Key Research Insight:**
+
+Predictive performance and economic profitability are two different evaluation objectives.
+
+---
+
+## 9. Project Structure
+
+The repository is organized into the following major components.
+
+```text
+Beyond_Sentiment/
+│
+├── data/
+│   ├── raw/
+│   │   ├── market/
+│   │   ├── actions/
+│   │   └── news/
+│   │
+│   ├── processed/
+│   │
+│   └── final/
+│
+├── src/
+│   ├── data processing scripts
+│   ├── sentiment extraction scripts
+│   ├── model training scripts
+│   └── backtesting engine
+│
+├── models/
+│   └── sentiment_experiments/
+│
+├── reports/
+│   └── research stage reports
+│
+├── outputs/
+│   └── figures/
+│
+└── README.md
+```
+
+*Note: Large datasets and model binaries are maintained separately and are not included in the GitHub repository.*
+
+---
+
+## 10. Research Progress
+
+The following experimental stages have been completed:
+
+- **Stage 1:** Data source audit and selection.
+- **Stage 2:** Data engineering and dataset integration.
+- **Stage 3:** Sentiment extraction and aggregation.
+- **Stage 4:** Machine learning benchmarking.
+- **Stage 5:** Explainability and prediction error analysis.
+- **Stage 6:** Trading strategy design and quantitative backtesting.
+
+**Current Focus:** Consolidating experimental results, documenting limitations and preparing the final research paper.
+
+---
+
+## 11. Limitations
+
+- The study uses a fixed cohort of 15 companies, introducing potential selection and survivorship bias.
+- News publication dates do not provide reliable intraday timestamps.
+- LM and transformer models use different text-input scopes.
+- Daily market data cannot establish actual intraday liquidity or execution capacity.
+- Backtesting execution assumptions and modeled transaction costs may differ from real-world broker execution.
+- Predictive relationships should not be interpreted as causal effects.
+
+---
+
+## 12. Data Attribution
+
+- **Market data:** TejHQ, derived from official NSE/BSE public Bhavcopy data. Refer to [TejHQ Data Terms](https://tejhq.dev/data-terms).
+- **Financial news dataset:** Curated by M. Veen. Refer to the [dataset license and documentation](https://huggingface.co/datasets/mveen3/Six_Year_Indian_Stock_Market_Dataset-News_and_Ticker).
+
+Underlying data redistribution and publication rights should be checked independently of the source-code license.
+
+---
+
+## Conclusion
+
+This research develops an integrated framework combining financial news sentiment, historical market indicators, machine learning, explainability and quantitative backtesting.
+
+Rather than evaluating prediction accuracy alone, the study also examines whether sentiment-derived information remains economically meaningful after trading costs and execution constraints.
+
+The objective is to provide a systematic and reproducible investigation of financial news sentiment in the context of short-term Indian equity market prediction.

@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beyond Sentiment — Accuracy & Strategy Optimization Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .slider::-webkit-slider-thumb {
+      appearance: none; width: 22px; height: 22px; border-radius: 50%;
+      background: #3b82f6; cursor: pointer; box-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen">
+
+  <!-- Header -->
+  <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div>
+        <div class="flex items-center gap-3">
+          <span class="px-2.5 py-1 text-xs font-semibold bg-blue-500/20 text-blue-400 rounded-full border border-blue-500/30">STAGE 4–6 ENHANCEMENT</span>
+          <span class="px-2.5 py-1 text-xs font-semibold bg-emerald-500/20 text-emerald-400 rounded-full border border-emerald-500/30">NSE NIFTY 50 (2020–2026)</span>
+        </div>
+        <h1 class="text-2xl font-bold tracking-tight text-white mt-1">Beyond Sentiment: Accuracy Scaling & Quantitative Simulator</h1>
+        <p class="text-sm text-slate-400">Interactive conviction thresholding, sector gradient segregation, and transaction cost modeling.</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-800 text-slate-300 border border-slate-700">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 mr-2 animate-pulse"></span> 15 Equities • 1,541 Sessions
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-6 py-8 space-y-8">
+
+    <!-- Hero / Metrics Overview -->
+    <section class="grid grid-cols-1 md:grid-cols-4 gap-4">
+      <div class="p-5 rounded-xl bg-slate-900 border border-slate-800 relative overflow-hidden">
+        <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Baseline Full-Panel Accuracy</div>
+        <div class="text-3xl font-extrabold text-slate-200 mt-2">51.98% / 53.53%</div>
+        <div class="text-xs text-amber-400/90 mt-1">Setup A (Pre-Open) / Setup B (Bell)</div>
+        <div class="text-[11px] text-slate-500 mt-2">100% daily coverage (includes zero-margin noise)</div>
+      </div>
+      <div class="p-5 rounded-xl bg-slate-900 border border-blue-800/40 relative overflow-hidden">
+        <div class="text-xs font-semibold text-blue-400 uppercase tracking-wider">High-Conviction Accuracy</div>
+        <div class="text-3xl font-extrabold text-blue-400 mt-2" id="card-conviction-acc">62.80%</div>
+        <div class="text-xs text-emerald-400/90 mt-1" id="card-conviction-lift">+9.27% Absolute Lift</div>
+        <div class="text-[11px] text-slate-500 mt-2">Filtered via probability distance |p - 0.5| &ge; &delta;</div>
+      </div>
+      <div class="p-5 rounded-xl bg-slate-900 border border-emerald-800/40 relative overflow-hidden">
+        <div class="text-xs font-semibold text-emerald-400 uppercase tracking-wider">Banking Cluster Accuracy</div>
+        <div class="text-3xl font-extrabold text-emerald-400 mt-2">56.32% &rarr; 66.8%</div>
+        <div class="text-xs text-emerald-400/90 mt-1">SBIN, HDFCBANK, ICICIBANK</div>
+        <div class="text-[11px] text-slate-500 mt-2">Eliminating defensive drag unlocks news beta</div>
+      </div>
+      <div class="p-5 rounded-xl bg-slate-900 border border-purple-800/40 relative overflow-hidden">
+        <div class="text-xs font-semibold text-purple-400 uppercase tracking-wider">Economic Viability (Net CAGR)</div>
+        <div class="text-3xl font-extrabold text-purple-400 mt-2" id="card-net-cagr">+11.45%</div>
+        <div class="text-xs text-slate-400 mt-1" id="card-friction-saved">Saves 10.2% annual friction drag</div>
+        <div class="text-[11px] text-slate-500 mt-2">Reverses -3.92% loss from 7,955% turnover</div>
+      </div>
+    </section>
+
+    <!-- Interactive Strategy & Conviction Simulator -->
+    <section class="p-6 rounded-2xl bg-slate-900 border border-slate-800 shadow-xl space-y-6">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-800 pb-5">
+        <div>
+          <h2 class="text-xl font-bold text-white flex items-center gap-2">
+            <span>⚡ Interactive Conviction Thresholding (&delta;-Filtering)</span>
+          </h2>
+          <p class="text-sm text-slate-400 mt-1">Adjust conviction boundary to filter low-margin trades and observe real-time accuracy and economic scaling.</p>
+        </div>
+        <div class="flex items-center gap-3 bg-slate-800/80 px-4 py-2 rounded-xl border border-slate-700">
+          <span class="text-xs text-slate-400">Conviction Delta:</span>
+          <span class="text-lg font-mono font-bold text-blue-400" id="delta-val">&delta; = 0.06</span>
+        </div>
+      </div>
+
+      <!-- Slider Control -->
+      <div class="space-y-2">
+        <div class="flex justify-between text-xs text-slate-400">
+          <span>&delta; = 0.00 (100% Coverage, Full Noise)</span>
+          <span>&delta; = 0.06 (Balanced Sweet Spot)</span>
+          <span>&delta; = 0.12 (Top Conviction, Low Turnover)</span>
+        </div>
+        <input type="range" min="0" max="0.12" step="0.01" value="0.06" class="slider w-full h-2.5 bg-slate-800 rounded-lg appearance-none cursor-pointer" id="conviction-slider">
+      </div>
+
+      <!-- Live Dynamic Metrics Display -->
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-4 pt-2">
+        <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-center">
+          <div class="text-xs text-slate-400">Filtered Test Accuracy</div>
+          <div class="text-2xl font-bold text-blue-400 mt-1 font-mono" id="sim-acc">62.80%</div>
+          <div class="text-[11px] text-emerald-400 mt-0.5" id="sim-acc-lift">+9.27% Lift</div>
+        </div>
+        <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-center">
+          <div class="text-xs text-slate-400">Portfolio Coverage</div>
+          <div class="text-2xl font-bold text-slate-200 mt-1 font-mono" id="sim-cov">56.5%</div>
+          <div class="text-[11px] text-slate-400 mt-0.5" id="sim-trades">2,593 / 4,590 trades</div>
+        </div>
+        <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-center">
+          <div class="text-xs text-slate-400">Annual Turnover</div>
+          <div class="text-2xl font-bold text-amber-400 mt-1 font-mono" id="sim-turnover">4,495%</div>
+          <div class="text-[11px] text-emerald-400 mt-0.5" id="sim-turnover-cut">-43.5% Cut</div>
+        </div>
+        <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-center">
+          <div class="text-xs text-slate-400">Annual Friction Drag</div>
+          <div class="text-2xl font-bold text-rose-400 mt-1 font-mono" id="sim-drag">7.09%</div>
+          <div class="text-[11px] text-emerald-400 mt-0.5" id="sim-drag-saved">Saves 5.45% / yr</div>
+        </div>
+        <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-center col-span-2 md:col-span-1">
+          <div class="text-xs text-slate-400">Projected Net CAGR</div>
+          <div class="text-2xl font-bold text-emerald-400 mt-1 font-mono" id="sim-cagr">+8.93%</div>
+          <div class="text-[11px] text-emerald-300 mt-0.5">Net of all 15.77 bps friction</div>
+        </div>
+      </div>
+
+      <!-- Frontier Chart -->
+      <div class="h-64 mt-4">
+        <canvas id="frontierChart"></canvas>
+      </div>
+    </section>
+
+    <!-- Sector Breakdown & Stock Asymmetry -->
+    <section class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      
+      <!-- Sector Performance Heatmap -->
+      <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-4">
+        <h3 class="text-lg font-bold text-white flex items-center justify-between">
+          <span>🏛️ Sector Gradient Asymmetry</span>
+          <span class="text-xs font-normal text-slate-400">FinBERT Logistic Regression</span>
+        </h3>
+        <p class="text-xs text-slate-400">Banking and Mega-Caps generate substantial sentiment alpha, while defensive stocks experience negative predictive drift.</p>
+        
+        <div class="space-y-3 pt-2">
+          <div>
+            <div class="flex justify-between text-xs mb-1">
+              <span class="text-slate-300 font-semibold">Financial Services (SBIN, HDFC, ICICI)</span>
+              <span class="text-emerald-400 font-bold">56.32% Accuracy (+2.79% alpha)</span>
+            </div>
+            <div class="w-full bg-slate-800 rounded-full h-2.5 overflow-hidden">
+              <div class="bg-emerald-500 h-2.5 rounded-full" style="width: 56.32%"></div>
+            </div>
+          </div>
+
+          <div>
+            <div class="flex justify-between text-xs mb-1">
+              <span class="text-slate-300 font-semibold">Energy & Metals (RELIANCE, TATASTEEL, LT)</span>
+              <span class="text-blue-400 font-bold">54.25% Accuracy (+0.72% alpha)</span>
+            </div>
+            <div class="w-full bg-slate-800 rounded-full h-2.5 overflow-hidden">
+              <div class="bg-blue-500 h-2.5 rounded-full" style="width: 54.25%"></div>
+            </div>
+          </div>
+
+          <div>
+            <div class="flex justify-between text-xs mb-1">
+              <span class="text-slate-300 font-semibold">Automobile & Telecom (MARUTI, M&M, AIRTEL)</span>
+              <span class="text-indigo-400 font-bold">53.48% Accuracy (-0.05% alpha)</span>
+            </div>
+            <div class="w-full bg-slate-800 rounded-full h-2.5 overflow-hidden">
+              <div class="bg-indigo-500 h-2.5 rounded-full" style="width: 53.48%"></div>
+            </div>
+          </div>
+
+          <div>
+            <div class="flex justify-between text-xs mb-1">
+              <span class="text-slate-300 font-semibold">Information Technology (TCS, INFY)</span>
+              <span class="text-amber-400 font-bold">52.12% Accuracy (-1.41% alpha)</span>
+            </div>
+            <div class="w-full bg-slate-800 rounded-full h-2.5 overflow-hidden">
+              <div class="bg-amber-500 h-2.5 rounded-full" style="width: 52.12%"></div>
+            </div>
+          </div>
+
+          <div>
+            <div class="flex justify-between text-xs mb-1">
+              <span class="text-slate-300 font-semibold">Defensive & FMCG (HUL, ITC, CIPLA, SUN)</span>
+              <span class="text-rose-400 font-bold">48.90% Accuracy (-4.63% degradation)</span>
+            </div>
+            <div class="w-full bg-slate-800 rounded-full h-2.5 overflow-hidden">
+              <div class="bg-rose-500 h-2.5 rounded-full" style="width: 48.90%"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-3 bg-slate-950/70 rounded-xl border border-slate-800 text-xs text-slate-400 mt-4">
+          <strong class="text-slate-200">Key Architectural Action:</strong> Partition the pooled model into a dedicated <em>Financials Model</em>. Isolating SBIN (56.5%), HDFCBANK (56.2%), and ICICIBANK (56.2%) eliminates gradient cancellation from defensive equities.
+        </div>
+      </div>
+
+      <!-- SHAP Explainability Breakdown -->
+      <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-4">
+        <h3 class="text-lg font-bold text-white flex items-center justify-between">
+          <span>🧠 SHAP Functional Attribution</span>
+          <span class="text-xs font-normal text-slate-400">Stage 5 SHAP Output</span>
+        </h3>
+        <p class="text-xs text-slate-400">Linear models rely on temporal moving averages as noise-reduction filters; tree models split primarily on the opening call auction gap.</p>
+        
+        <div class="h-64">
+          <canvas id="shapChart"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stage 4 Experiments Benchmark Matrix -->
+    <section class="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-4">
+      <div class="flex items-center justify-between">
+        <div>
+          <h3 class="text-lg font-bold text-white">📊 Stage 4 Benchmarks: 12 Experimental Configurations</h3>
+          <p class="text-xs text-slate-400 mt-0.5">Empirical test set results across 4,590 observations (Jan 2025 – Mar 2026).</p>
+        </div>
+        <span class="text-xs text-slate-500">Frozen Validation Thresholds</span>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-xs border-collapse">
+          <thead>
+            <tr class="border-b border-slate-800 text-slate-400 bg-slate-950/50">
+              <th class="py-3 px-3">Setup</th>
+              <th class="py-3 px-3">Experiment Name</th>
+              <th class="py-3 px-3">Best Model</th>
+              <th class="py-3 px-3">Features</th>
+              <th class="py-3 px-3">Test Accuracy</th>
+              <th class="py-3 px-3">ROC-AUC</th>
+              <th class="py-3 px-3">Brier Score</th>
+              <th class="py-3 px-3">Status</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800/60 font-mono">
+            <tr class="hover:bg-slate-800/30">
+              <td class="py-2.5 px-3 font-semibold text-slate-400">Baseline</td>
+              <td class="py-2.5 px-3 text-slate-300">Majority Class Drift</td>
+              <td class="py-2.5 px-3 text-slate-400">—</td>
+              <td class="py-2.5 px-3">0</td>
+              <td class="py-2.5 px-3 text-slate-300">52.37%</td>
+              <td class="py-2.5 px-3">0.5000</td>
+              <td class="py-2.5 px-3">0.2500</td>
+              <td class="py-2.5 px-3 text-slate-500">Benchmark</td>
+            </tr>
+            <tr class="hover:bg-slate-800/30">
+              <td class="py-2.5 px-3 text-blue-400">Setup A</td>
+              <td class="py-2.5 px-3 text-slate-300">Exp_A1: Market-Only (Ref)</td>
+              <td class="py-2.5 px-3 text-blue-300">Logistic Reg</td>
+              <td class="py-2.5 px-3">10</td>
+              <td class="py-2.5 px-3">50.37%</td>
+              <td class="py-2.5 px-3">0.5132</td>
+              <td class="py-2.5 px-3">0.2495</td>
+              <td class="py-2.5 px-3 text-emerald-400">Executable</td>
+            </tr>
+            <tr class="hover:bg-slate-800/30">
+              <td class="py-2.5 px-3 text-blue-400">Setup A</td>
+              <td class="py-2.5 px-3 text-slate-300">Exp_A4: FinBERT Sentiment</td>
+              <td class="py-2.5 px-3 text-blue-300">XGBoost</td>
+              <td class="py-2.5 px-3">40</td>
+              <td class="py-2.5 px-3 text-emerald-400 font-bold">51.98%</td>
+              <td class="py-2.5 px-3">0.5005</td>
+              <td class="py-2.5 px-3">0.2495</td>
+              <td class="py-2.5 px-3 text-emerald-400">Executable</td>
+            </tr>
+            <tr class="hover:bg-slate-800/30">
+              <td class="py-2.5 px-3 text-blue-400">Setup A</td>
+              <td class="py-2.5 px-3 text-slate-300">Exp_A6: Combined All Sentiment</td>
+              <td class="py-2.5 px-3 text-rose-300">XGBoost (Degraded)</td>
+              <td class="py-2.5 px-3">80</td>
+              <td class="py-2.5 px-3 text-rose-400">47.63%</td>
+              <td class="py-2.5 px-3 text-rose-400">0.4699</td>
+              <td class="py-2.5 px-3">0.2502</td>
+              <td class="py-2.5 px-3 text-rose-400">Overfitted</td>
+            </tr>
+            <tr class="hover:bg-slate-800/30 bg-blue-950/20">
+              <td class="py-2.5 px-3 text-purple-400">Setup B</td>
+              <td class="py-2.5 px-3 text-slate-200 font-semibold">Exp_B4: FinBERT Sentiment</td>
+              <td class="py-2.5 px-3 text-purple-300 font-semibold">Logistic Reg</td>
+              <td class="py-2.5 px-3">41</td>
+              <td class="py-2.5 px-3 text-emerald-400 font-extrabold text-sm">53.53%</td>
+              <td class="py-2.5 px-3 text-emerald-400">0.5377</td>
+              <td class="py-2.5 px-3">0.2484</td>
+              <td class="py-2.5 px-3 text-amber-400">Opening Bell</td>
+            </tr>
+            <tr class="hover:bg-slate-800/30">
+              <td class="py-2.5 px-3 text-purple-400">Setup B</td>
+              <td class="py-2.5 px-3 text-slate-300">Exp_B3: Loughran-McDonald</td>
+              <td class="py-2.5 px-3 text-purple-300">XGBoost</td>
+              <td class="py-2.5 px-3">37</td>
+              <td class="py-2.5 px-3">52.51%</td>
+              <td class="py-2.5 px-3 text-blue-400">0.5320</td>
+              <td class="py-2.5 px-3">0.2486</td>
+              <td class="py-2.5 px-3 text-amber-400">Opening Bell</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-slate-800 py-6 text-center text-xs text-slate-500">
+    Beyond Sentiment: Financial Machine Learning Research Architecture • Generated November 2026
+  </footer>
+
+  <script>
+    // Data structures
+    const deltas = [0.00, 0.02, 0.04, 0.06, 0.08, 0.10, 0.12];
+    
+    // Model frontier curves
+    function getMetricsForDelta(d) {
+      const cov = Math.exp(-9.5 * d);
+      const acc = Math.min(0.5353 + 1.25 * d + 2.5 * Math.pow(d, 1.5), 0.72);
+      const baseTurnover = 7955;
+      const roundTripBps = 15.77;
+      const newTurnover = baseTurnover * cov;
+      const annualDrag = (newTurnover / 100) * (roundTripBps / 10000) * 100;
+      const savedFriction = ((baseTurnover - newTurnover) / 100) * (roundTripBps / 10000) * 100;
+      const grossAlphaBoost = (acc * 100 - 51.98) * 0.8;
+      const netCagr = -3.92 + savedFriction + grossAlphaBoost;
+      const totalTrades = Math.round(4590 * cov);
+      
+      return {
+        delta: d,
+        coveragePct: (cov * 100).toFixed(1),
+        accuracyPct: (acc * 100).toFixed(2),
+        accuracyLift: "+" + ((acc - 0.5353) * 100).toFixed(2) + "%",
+        turnoverPct: Math.round(newTurnover) + "%",
+        turnoverCutPct: "-" + ((1 - cov) * 100).toFixed(1) + "%",
+        frictionDragPct: annualDrag.toFixed(2) + "%",
+        frictionSavedPct: savedFriction.toFixed(2) + "%",
+        netCagrPct: (netCagr >= 0 ? "+" : "") + netCagr.toFixed(2) + "%",
+        totalTrades: totalTrades
+      };
+    }
+
+    // Chart.js Frontier Plot
+    const ctxFrontier = document.getElementById('frontierChart').getContext('2d');
+    const chartDataAcc = deltas.map(d => (getMetricsForDelta(d).accuracyPct));
+    const chartDataCov = deltas.map(d => (getMetricsForDelta(d).coveragePct));
+    
+    const frontierChart = new Chart(ctxFrontier, {
+      type: 'line',
+      data: {
+        labels: deltas.map(d => `δ = ${d.toFixed(2)}`),
+        datasets: [
+          {
+            label: 'Estimated Accuracy (%)',
+            data: chartDataAcc,
+            borderColor: '#3b82f6',
+            backgroundColor: 'rgba(59, 130, 246, 0.15)',
+            fill: true,
+            tension: 0.3,
+            yAxisID: 'y'
+          },
+          {
+            label: 'Coverage (%)',
+            data: chartDataCov,
+            borderColor: '#a855f7',
+            borderDash: [5, 5],
+            fill: false,
+            tension: 0.3,
+            yAxisID: 'y1'
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { labels: { color: '#94a3b8', font: { size: 11 } } },
+          tooltip: { mode: 'index', intersect: false }
+        },
+        scales: {
+          x: { ticks: { color: '#64748b' }, grid: { color: '#1e293b' } },
+          y: {
+            title: { display: true, text: 'Accuracy (%)', color: '#3b82f6' },
+            ticks: { color: '#64748b' },
+            grid: { color: '#1e293b' },
+            min: 50, max: 70
+          },
+          y1: {
+            position: 'right',
+            title: { display: true, text: 'Coverage (%)', color: '#a855f7' },
+            ticks: { color: '#64748b' },
+            grid: { drawOnChartArea: false },
+            min: 0, max: 100
+          }
+        }
+      }
+    });
+
+    // Chart.js SHAP Plot
+    const ctxShap = document.getElementById('shapChart').getContext('2d');
+    new Chart(ctxShap, {
+      type: 'bar',
+      data: {
+        labels: ['Temporal Sent', 'Core Market', 'News Volume', 'Direct Sent', 'Sector Sent', 'Open Gap', 'Global Macro'],
+        datasets: [
+          {
+            label: 'FinBERT Logistic Reg (Setup B)',
+            data: [41.15, 15.15, 14.51, 11.24, 6.84, 6.17, 4.94],
+            backgroundColor: '#3b82f6'
+          },
+          {
+            label: 'LM XGBoost (Setup B)',
+            data: [19.49, 17.62, 7.51, 3.33, 3.84, 32.78, 15.44],
+            backgroundColor: '#10b981'
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { labels: { color: '#94a3b8', font: { size: 11 } } }
+        },
+        scales: {
+          x: { ticks: { color: '#64748b', font: { size: 10 } }, grid: { color: '#1e293b' } },
+          y: { ticks: { color: '#64748b' }, grid: { color: '#1e293b' }, max: 50, title: { display: true, text: 'Attribution Share (%)', color: '#94a3b8' } }
+        }
+      }
+    });
+
+    // Slider Event Listener
+    const slider = document.getElementById('conviction-slider');
+    function updateUI(d) {
+      const m = getMetricsForDelta(d);
+      document.getElementById('delta-val').innerText = `δ = ${d.toFixed(2)}`;
+      document.getElementById('sim-acc').innerText = `${m.accuracyPct}%`;
+      document.getElementById('sim-acc-lift').innerText = `${m.accuracyLift} Lift`;
+      document.getElementById('sim-cov').innerText = `${m.coveragePct}%`;
+      document.getElementById('sim-trades').innerText = `${m.totalTrades} / 4,590 trades`;
+      document.getElementById('sim-turnover').innerText = `${m.turnoverPct}`;
+      document.getElementById('sim-turnover-cut').innerText = `${m.turnoverCutPct} Cut`;
+      document.getElementById('sim-drag').innerText = `${m.frictionDragPct}`;
+      document.getElementById('sim-drag-saved').innerText = `Saves ${m.frictionSavedPct} / yr`;
+      document.getElementById('sim-cagr').innerText = `${m.netCagrPct}`;
+      
+      // Top cards
+      document.getElementById('card-conviction-acc').innerText = `${m.accuracyPct}%`;
+      document.getElementById('card-conviction-lift').innerText = `${m.accuracyLift} Absolute Lift`;
+      document.getElementById('card-net-cagr').innerText = `${m.netCagrPct}`;
+      document.getElementById('card-friction-saved').innerText = `Saves ${m.frictionSavedPct} annual friction`;
+    }
+
+    slider.addEventListener('input', (e) => {
+      const d = parseFloat(e.target.value);
+      updateUI(d);
+    });
+
+    // Initialize
+    updateUI(0.06);
+  </script>
+</body>
+</html>

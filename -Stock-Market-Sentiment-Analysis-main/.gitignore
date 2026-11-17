@@ -1,0 +1,19 @@
+# Large datasets
+data/raw/
+data/processed/
+data/final/
+
+# Large model files
+models/**/*.joblib
+models/**/*.pkl
+models/**/*.pt
+models/**/*.pth
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/

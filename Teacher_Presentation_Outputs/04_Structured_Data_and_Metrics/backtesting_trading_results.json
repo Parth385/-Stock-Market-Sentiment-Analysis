@@ -1,0 +1,1350 @@
+{
+  "status": "COMPLETED",
+  "timestamp": "2026-11-03",
+  "strategies": {
+    "PreOpen_Mkt_LR": {
+      "metadata": {
+        "id": "PreOpen_Mkt_LR",
+        "name": "Setup A: Market-Only (Logistic Reg)",
+        "setup": "Setup A",
+        "operational": "EXECUTABLE",
+        "prob_col": "Exp_A1_MktOnly_logreg_prob",
+        "model": "Logistic Regression",
+        "features": "Market-Only Pre-Open Technicals"
+      },
+      "optimal_params": {
+        "theta_long": 0.54,
+        "theta_short": 0.42,
+        "val_sharpe": 0.9571911246899835
+      },
+      "train_metrics": {
+        "cumulative_return_pct": 47.791186882822245,
+        "cagr_pct": 10.46556736701858,
+        "annualized_volatility_pct": 5.295721060812583,
+        "sharpe_ratio": 0.6785204062102421,
+        "sortino_ratio": 1.3193553273467111,
+        "max_drawdown_pct": 3.6070373566180924,
+        "calmar_ratio": 2.901430268754119,
+        "win_rate_pct": 57.01754385964912,
+        "profit_factor": 1.6653526376436598,
+        "gain_to_pain_ratio": 1.2554196806852203,
+        "annual_turnover_pct": 2028.2305358948433,
+        "time_in_market_pct": 11.526794742163801,
+        "total_trading_days": 989,
+        "active_trading_days": 114
+      },
+      "val_metrics": {
+        "cumulative_return_pct": 9.800368577156004,
+        "cagr_pct": 10.051035800492315,
+        "annualized_volatility_pct": 3.2719194594176195,
+        "sharpe_ratio": 0.9571911246899835,
+        "sortino_ratio": 2.5254204394706523,
+        "max_drawdown_pct": 1.1050259240986333,
+        "calmar_ratio": 9.095746607656212,
+        "win_rate_pct": 58.536585365853654,
+        "profit_factor": 2.146583377543286,
+        "gain_to_pain_ratio": 1.5204965590931607,
+        "annual_turnover_pct": 1720.9756097560976,
+        "time_in_market_pct": 16.666666666666664,
+        "total_trading_days": 246,
+        "active_trading_days": 41
+      },
+      "test_metrics": {
+        "cumulative_return_pct": 3.4537282835694016,
+        "cagr_pct": 2.8356944783374916,
+        "annualized_volatility_pct": 1.915199393746567,
+        "sharpe_ratio": -1.9242472144133556,
+        "sortino_ratio": -2.2881117753532334,
+        "max_drawdown_pct": 1.6940856905312422,
+        "calmar_ratio": 1.6738790098913217,
+        "win_rate_pct": 42.64705882352941,
+        "profit_factor": 0.6544049788001665,
+        "gain_to_pain_ratio": 0.8800618680416032,
+        "annual_turnover_pct": 2240.0,
+        "time_in_market_pct": 22.22222222222222,
+        "total_trading_days": 306,
+        "active_trading_days": 68
+      },
+      "test_archetypes": {
+        "dynamic_long_short": {
+          "cumulative_return_pct": 3.4537282835694016,
+          "cagr_pct": 2.8356944783374916,
+          "annualized_volatility_pct": 1.915199393746567,
+          "sharpe_ratio": -1.9242472144133556,
+          "sortino_ratio": -2.2881117753532334,
+          "max_drawdown_pct": 1.6940856905312422,
+          "calmar_ratio": 1.6738790098913217,
+          "win_rate_pct": 42.64705882352941,
+          "profit_factor": 0.6544049788001665,
+          "gain_to_pain_ratio": 0.8800618680416032,
+          "annual_turnover_pct": 2240.0,
+          "time_in_market_pct": 22.22222222222222,
+          "total_trading_days": 306,
+          "active_trading_days": 68
+        },
+        "long_only": {
+          "cumulative_return_pct": 5.336445669550782,
+          "cagr_pct": 4.374447745656518,
+          "annualized_volatility_pct": 1.384691645219878,
+          "sharpe_ratio": -1.5950038611975934,
+          "sortino_ratio": -1.7392102339499145,
+          "max_drawdown_pct": 1.694085690531297,
+          "calmar_ratio": 2.582188002712312,
+          "win_rate_pct": 36.84210526315789,
+          "profit_factor": 0.44042119327409013,
+          "gain_to_pain_ratio": 0.7550077598984403,
+          "annual_turnover_pct": 625.8823529411767,
+          "time_in_market_pct": 6.209150326797386,
+          "total_trading_days": 306,
+          "active_trading_days": 19
+        },
+        "rank_based_top3": {
+          "cumulative_return_pct": -27.793518184297593,
+          "cagr_pct": -23.522562319288564,
+          "annualized_volatility_pct": 8.207454653535734,
+          "sharpe_ratio": -4.016788566650112,
+          "sortino_ratio": -4.887221625782598,
+          "max_drawdown_pct": 28.714606496615968,
+          "calmar_ratio": -0.8191845610721049,
+          "win_rate_pct": 37.58169934640523,
+          "profit_factor": 0.5775170740325067,
+          "gain_to_pain_ratio": 0.9591805316539894,
+          "annual_turnover_pct": 50399.999999999985,
+          "time_in_market_pct": 100.0,
+          "total_trading_days": 306,
+          "active_trading_days": 306
+        }
+      }
+    },
+    "PreOpen_Sent_LR": {
+      "metadata": {
+        "id": "PreOpen_Sent_LR",
+        "name": "Setup A: FinBERT Sentiment (Logistic Reg)",
+        "setup": "Setup A",
+        "operational": "EXECUTABLE",
+        "prob_col": "Exp_A4_MktFinBERT_logreg_prob",
+        "model": "Logistic Regression",
+        "features": "Market + FinBERT Sentiment"
+      },
+      "optimal_params": {
+        "theta_long": 0.54,
+        "theta_short": 0.42,
+        "val_sharpe": -0.08603025404521555
+      },
+      "train_metrics": {
+        "cumulative_return_pct": 31.8235355210875,
+        "cagr_pct": 7.2937797049744235,
+        "annualized_volatility_pct": 8.717486636686807,
+        "sharpe_ratio": 0.10532144829153564,
+        "sortino_ratio": 0.15779139772514053,
+        "max_drawdown_pct": 10.056290411262113,
+        "calmar_ratio": 0.7252952536857992,
+        "win_rate_pct": 54.61538461538461,
+        "profit_factor": 1.1537115115759038,
+        "gain_to_pain_ratio": 0.9587180166616666,
+        "annual_turnover_pct": 8230.131445904954,
+        "time_in_market_pct": 39.43377148634985,
+        "total_trading_days": 989,
+        "active_trading_days": 390
+      },
+      "val_metrics": {
+        "cumulative_return_pct": 5.900012967402413,
+        "cagr_pct": 6.048183314296396,
+        "annualized_volatility_pct": 5.540556747701573,
+        "sharpe_ratio": -0.08603025404521555,
+        "sortino_ratio": -0.17653009756402052,
+        "max_drawdown_pct": 4.109227623891246,
+        "calmar_ratio": 1.4718540484669111,
+        "win_rate_pct": 47.19101123595505,
+        "profit_factor": 1.1395336710041217,
+        "gain_to_pain_ratio": 1.2751924413617552,
+        "annual_turnover_pct": 5961.951219512194,
+        "time_in_market_pct": 36.17886178861789,
+        "total_trading_days": 246,
+        "active_trading_days": 89
+      },
+      "test_metrics": {
+        "cumulative_return_pct": -4.734337881625006,
+        "cagr_pct": -3.9154638637609374,
+        "annualized_volatility_pct": 4.143228875619129,
+        "sharpe_ratio": -2.5120701239127823,
+        "sortino_ratio": -2.9657682041160003,
+        "max_drawdown_pct": 7.120086304906888,
+        "calmar_ratio": -0.5499180341483433,
+        "win_rate_pct": 38.19444444444444,
+        "profit_factor": 0.6192426516512991,
+        "gain_to_pain_ratio": 1.0020471999448293,
+        "annual_turnover_pct": 7955.294117647059,
+        "time_in_market_pct": 47.05882352941176,
+        "total_trading_days": 306,
+        "active_trading_days": 144
+      },
+      "test_archetypes": {
+        "dynamic_long_short": {
+          "cumulative_return_pct": -4.734337881625006,
+          "cagr_pct": -3.9154638637609374,
+          "annualized_volatility_pct": 4.143228875619129,
+          "sharpe_ratio": -2.5120701239127823,
+          "sortino_ratio": -2.9657682041160003,
+          "max_drawdown_pct": 7.120086304906888,
+          "calmar_ratio": -0.5499180341483433,
+          "win_rate_pct": 38.19444444444444,
+          "profit_factor": 0.6192426516512991,
+          "gain_to_pain_ratio": 1.0020471999448293,
+          "annual_turnover_pct": 7955.294117647059,
+          "time_in_market_pct": 47.05882352941176,
+          "total_trading_days": 306,
+          "active_trading_days": 144
+        },
+        "long_only": {
+          "cumulative_return_pct": 4.924520974034885,
+          "cagr_pct": 4.0381975608208664,
+          "annualized_volatility_pct": 1.7180054336319768,
+          "sharpe_ratio": -1.4704067970726142,
+          "sortino_ratio": -1.7291731072508605,
+          "max_drawdown_pct": 2.318292520976199,
+          "calmar_ratio": 1.7418843930534014,
+          "win_rate_pct": 38.88888888888889,
+          "profit_factor": 0.6224654682579251,
+          "gain_to_pain_ratio": 0.9781600215481681,
+          "annual_turnover_pct": 1383.5294117647059,
+          "time_in_market_pct": 11.76470588235294,
+          "total_trading_days": 306,
+          "active_trading_days": 36
+        },
+        "rank_based_top3": {
+          "cumulative_return_pct": -35.5403712570211,
+          "cagr_pct": -30.346508028599217,
+          "annualized_volatility_pct": 7.443838064572462,
+          "sharpe_ratio": -5.690798236603263,
+          "sortino_ratio": -6.25760887960613,
+          "max_drawdown_pct": 35.61955420488733,
+          "calmar_ratio": -0.8519620389981017,
+          "win_rate_pct": 35.294117647058826,
+          "profit_factor": 0.4522872749787411,
+          "gain_to_pain_ratio": 0.8291933374610253,
+          "annual_turnover_pct": 50399.999999999985,
+          "time_in_market_pct": 100.0,
+          "total_trading_days": 306,
+          "active_trading_days": 306
+        }
+      }
+    },
+    "PreOpen_Sent_XGB": {
+      "metadata": {
+        "id": "PreOpen_Sent_XGB",
+        "name": "Setup A: FinBERT Sentiment (XGBoost)",
+        "setup": "Setup A",
+        "operational": "EXECUTABLE",
+        "prob_col": "Exp_A4_MktFinBERT_xgboost_prob",
+        "model": "XGBoost",
+        "features": "Market + FinBERT Sentiment"
+      },
+      "optimal_params": {
+        "theta_long": 0.48,
+        "theta_short": 0.46,
+        "val_sharpe": 0.6434428139233278
+      },
+      "train_metrics": {
+        "cumulative_return_pct": 97.98558628055905,
+        "cagr_pct": 19.00989566683695,
+        "annualized_volatility_pct": 7.577953061601636,
+        "sharpe_ratio": 1.4757007091784764,
+        "sortino_ratio": 17.91728519062096,
+        "max_drawdown_pct": 0.8867093983854034,
+        "calmar_ratio": 21.43869874555497,
+        "win_rate_pct": 89.65517241379311,
+        "profit_factor": 23.621843565449222,
+        "gain_to_pain_ratio": 2.72559733447491,
+        "annual_turnover_pct": 1166.9969666329625,
+        "time_in_market_pct": 2.932254802831143,
+        "total_trading_days": 989,
+        "active_trading_days": 29
+      },
+      "val_metrics": {
+        "cumulative_return_pct": 7.568232451163959,
+        "cagr_pct": 7.7598091834018,
+        "annualized_volatility_pct": 1.5327386036496138,
+        "sharpe_ratio": 0.6434428139233278,
+        "sortino_ratio": 1.2160205328169238,
+        "max_drawdown_pct": 0.6722329525740407,
+        "calmar_ratio": 11.543333532949836,
+        "win_rate_pct": 55.55555555555556,
+        "profit_factor": 1.9965705971715764,
+        "gain_to_pain_ratio": 1.597256477737261,
+        "annual_turnover_pct": 1434.1463414634145,
+        "time_in_market_pct": 3.6585365853658534,
+        "total_trading_days": 246,
+        "active_trading_days": 9
+      },
+      "test_metrics": {
+        "cumulative_return_pct": 4.947552469896821,
+        "cagr_pct": 4.057004090926086,
+        "annualized_volatility_pct": 2.1117513227161497,
+        "sharpe_ratio": -1.1841183536567033,
+        "sortino_ratio": -1.417279444876645,
+        "max_drawdown_pct": 1.299486539460618,
+        "calmar_ratio": 3.12200547503173,
+        "win_rate_pct": 35.714285714285715,
+        "profit_factor": 0.4749441326021213,
+        "gain_to_pain_ratio": 0.8548994386838183,
+        "annual_turnover_pct": 1581.176470588235,
+        "time_in_market_pct": 4.57516339869281,
+        "total_trading_days": 306,
+        "active_trading_days": 14
+      },
+      "test_archetypes": {
+        "dynamic_long_short": {
+          "cumulative_return_pct": 4.947552469896821,
+          "cagr_pct": 4.057004090926086,
+          "annualized_volatility_pct": 2.1117513227161497,
+          "sharpe_ratio": -1.1841183536567033,
+          "sortino_ratio": -1.417279444876645,
+          "max_drawdown_pct": 1.299486539460618,
+          "calmar_ratio": 3.12200547503173,
+          "win_rate_pct": 35.714285714285715,
+          "profit_factor": 0.4749441326021213,
+          "gain_to_pain_ratio": 0.8548994386838183,
+          "annual_turnover_pct": 1581.176470588235,
+          "time_in_market_pct": 4.57516339869281,
+          "total_trading_days": 306,
+          "active_trading_days": 14
+        },
+        "long_only": {
+          "cumulative_return_pct": 8.211601119805545,
+          "cagr_pct": 6.7150080033345105,
+          "annualized_volatility_pct": 0.0,
+          "sharpe_ratio": 0.0,
+          "sortino_ratio": 0.0,
+          "max_drawdown_pct": 0.0,
+          "calmar_ratio": 0.0,
+          "win_rate_pct": 0.0,
+          "profit_factor": 0.0,
+          "gain_to_pain_ratio": 0.0,
+          "annual_turnover_pct": 0.0,
+          "time_in_market_pct": 0.0,
+          "total_trading_days": 306,
+          "active_trading_days": 0
+        },
+        "rank_based_top3": {
+          "cumulative_return_pct": -32.935052403764246,
+          "cagr_pct": -28.036212090612487,
+          "annualized_volatility_pct": 7.789365341601538,
+          "sharpe_ratio": -5.016733900157957,
+          "sortino_ratio": -5.901397358757998,
+          "max_drawdown_pct": 34.37738647586114,
+          "calmar_ratio": -0.8155422783607692,
+          "win_rate_pct": 35.294117647058826,
+          "profit_factor": 0.49304151550885045,
+          "gain_to_pain_ratio": 0.9039094450995592,
+          "annual_turnover_pct": 50400.0,
+          "time_in_market_pct": 100.0,
+          "total_trading_days": 306,
+          "active_trading_days": 306
+        }
+      }
+    },
+    "PreOpen_LM_XGB": {
+      "metadata": {
+        "id": "PreOpen_LM_XGB",
+        "name": "Setup A: LM Sentiment (XGBoost)",
+        "setup": "Setup A",
+        "operational": "EXECUTABLE",
+        "prob_col": "Exp_A3_MktLM_xgboost_prob",
+        "model": "XGBoost",
+        "features": "Market + LM Sentiment"
+      },
+      "optimal_params": {
+        "theta_long": 0.5,
+        "theta_short": 0.42,
+        "val_sharpe": 0.0
+      },
+      "train_metrics": {
+        "cumulative_return_pct": 29.0547197196396,
+        "cagr_pct": 6.715008003334688,
+        "annualized_volatility_pct": 0.0,
+        "sharpe_ratio": 0.0,
+        "sortino_ratio": 0.0,
+        "max_drawdown_pct": 0.0,
+        "calmar_ratio": 0.0,
+        "win_rate_pct": 0.0,
+        "profit_factor": 0.0,
+        "gain_to_pain_ratio": 0.0,
+        "annual_turnover_pct": 0.0,
+        "time_in_market_pct": 0.0,
+        "total_trading_days": 989,
+        "active_trading_days": 0
+      },
+      "val_metrics": {
+        "cumulative_return_pct": 6.55000281931013,
+        "cagr_pct": 6.715008003334488,
+        "annualized_volatility_pct": 1.7246264995961282e-16,
+        "sharpe_ratio": 0.0,
+        "sortino_ratio": 0.0,
+        "max_drawdown_pct": 0.0,
+        "calmar_ratio": 0.0,
+        "win_rate_pct": 0.0,
+        "profit_factor": 0.0,
+        "gain_to_pain_ratio": 0.0,
+        "annual_turnover_pct": 0.0,
+        "time_in_market_pct": 0.0,
+        "total_trading_days": 246,
+        "active_trading_days": 0
+      },
+      "test_metrics": {
+        "cumulative_return_pct": 8.211601119805545,
+        "cagr_pct": 6.7150080033345105,
+        "annualized_volatility_pct": 0.0,
+        "sharpe_ratio": 0.0,
+        "sortino_ratio": 0.0,
+        "max_drawdown_pct": 0.0,
+        "calmar_ratio": 0.0,
+        "win_rate_pct": 0.0,
+        "profit_factor": 0.0,
+        "gain_to_pain_ratio": 0.0,
+        "annual_turnover_pct": 0.0,
+        "time_in_market_pct": 0.0,
+        "total_trading_days": 306,
+        "active_trading_days": 0
+      },
+      "test_archetypes": {
+        "dynamic_long_short": {
+          "cumulative_return_pct": 8.211601119805545,
+          "cagr_pct": 6.7150080033345105,
+          "annualized_volatility_pct": 0.0,
+          "sharpe_ratio": 0.0,
+          "sortino_ratio": 0.0,
+          "max_drawdown_pct": 0.0,
+          "calmar_ratio": 0.0,
+          "win_rate_pct": 0.0,
+          "profit_factor": 0.0,
+          "gain_to_pain_ratio": 0.0,
+          "annual_turnover_pct": 0.0,
+          "time_in_market_pct": 0.0,
+          "total_trading_days": 306,
+          "active_trading_days": 0
+        },
+        "long_only": {
+          "cumulative_return_pct": 8.211601119805545,
+          "cagr_pct": 6.7150080033345105,
+          "annualized_volatility_pct": 0.0,
+          "sharpe_ratio": 0.0,
+          "sortino_ratio": 0.0,
+          "max_drawdown_pct": 0.0,
+          "calmar_ratio": 0.0,
+          "win_rate_pct": 0.0,
+          "profit_factor": 0.0,
+          "gain_to_pain_ratio": 0.0,
+          "annual_turnover_pct": 0.0,
+          "time_in_market_pct": 0.0,
+          "total_trading_days": 306,
+          "active_trading_days": 0
+        },
+        "rank_based_top3": {
+          "cumulative_return_pct": -36.4593753673423,
+          "cagr_pct": -31.165351187557476,
+          "annualized_volatility_pct": 7.506193538953846,
+          "sharpe_ratio": -5.800198803558622,
+          "sortino_ratio": -6.296661020787736,
+          "max_drawdown_pct": 35.89656791008326,
+          "calmar_ratio": -0.8681986329618772,
+          "win_rate_pct": 38.23529411764706,
+          "profit_factor": 0.4332565677698173,
+          "gain_to_pain_ratio": 0.6998759940897049,
+          "annual_turnover_pct": 50399.999999999985,
+          "time_in_market_pct": 100.0,
+          "total_trading_days": 306,
+          "active_trading_days": 306
+        }
+      }
+    },
+    "SetupB_Mkt_LR": {
+      "metadata": {
+        "id": "SetupB_Mkt_LR",
+        "name": "Setup B: Market-Only (Logistic Reg)",
+        "setup": "Setup B",
+        "operational": "BENCHMARK_ONLY",
+        "prob_col": "Exp_B1_MktOnly_logreg_prob",
+        "model": "Logistic Regression",
+        "features": "Market + Open Gap %"
+      },
+      "optimal_params": {
+        "theta_long": 0.56,
+        "theta_short": 0.44,
+        "val_sharpe": 0.4422677969842711
+      },
+      "train_metrics": {
+        "cumulative_return_pct": 65.25622071815522,
+        "cagr_pct": 13.654655338358324,
+        "annualized_volatility_pct": 11.633376805707158,
+        "sharpe_ratio": 0.598985809883984,
+        "sortino_ratio": 1.0063542010073407,
+        "max_drawdown_pct": 16.423407265416873,
+        "calmar_ratio": 0.8314142807084393,
+        "win_rate_pct": 53.3457249070632,
+        "profit_factor": 1.3001926677471878,
+        "gain_to_pain_ratio": 1.1371022982736732,
+        "annual_turnover_pct": 13795.025278058649,
+        "time_in_market_pct": 54.39838220424671,
+        "total_trading_days": 989,
+        "active_trading_days": 538
+      },
+      "val_metrics": {
+        "cumulative_return_pct": 8.796839774395849,
+        "cagr_pct": 9.020798999603485,
+        "annualized_volatility_pct": 5.131251238975607,
+        "sharpe_ratio": 0.4422677969842711,
+        "sortino_ratio": 0.6424116849949766,
+        "max_drawdown_pct": 3.59588825911615,
+        "calmar_ratio": 2.508642746819043,
+        "win_rate_pct": 55.3030303030303,
+        "profit_factor": 1.2816006086701062,
+        "gain_to_pain_ratio": 1.03581419056899,
+        "annual_turnover_pct": 10325.853658536585,
+        "time_in_market_pct": 53.65853658536586,
+        "total_trading_days": 246,
+        "active_trading_days": 132
+      },
+      "test_metrics": {
+        "cumulative_return_pct": 12.692811461228981,
+        "cagr_pct": 10.341290366266787,
+        "annualized_volatility_pct": 6.529333728241022,
+        "sharpe_ratio": 0.5443867054163362,
+        "sortino_ratio": 0.8886405106542478,
+        "max_drawdown_pct": 3.1223826000140833,
+        "calmar_ratio": 3.3119869314606554,
+        "win_rate_pct": 49.03225806451613,
+        "profit_factor": 1.3544675702974311,
+        "gain_to_pain_ratio": 1.4079333954407505,
+        "annual_turnover_pct": 8284.70588235294,
+        "time_in_market_pct": 50.65359477124183,
+        "total_trading_days": 306,
+        "active_trading_days": 155
+      },
+      "test_archetypes": {
+        "dynamic_long_short": {
+          "cumulative_return_pct": 12.692811461228981,
+          "cagr_pct": 10.341290366266787,
+          "annualized_volatility_pct": 6.529333728241022,
+          "sharpe_ratio": 0.5443867054163362,
+          "sortino_ratio": 0.8886405106542478,
+          "max_drawdown_pct": 3.1223826000140833,
+          "calmar_ratio": 3.3119869314606554,
+          "win_rate_pct": 49.03225806451613,
+          "profit_factor": 1.3544675702974311,
+          "gain_to_pain_ratio": 1.4079333954407505,
+          "annual_turnover_pct": 8284.70588235294,
+          "time_in_market_pct": 50.65359477124183,
+          "total_trading_days": 306,
+          "active_trading_days": 155
+        },
+        "long_only": {
+          "cumulative_return_pct": 13.907324965989876,
+          "cagr_pct": 11.319680048331549,
+          "annualized_volatility_pct": 3.8801302207550736,
+          "sharpe_ratio": 1.1082150594410844,
+          "sortino_ratio": 3.056534833969715,
+          "max_drawdown_pct": 1.383893541962122,
+          "calmar_ratio": 8.179588750939756,
+          "win_rate_pct": 50.0,
+          "profit_factor": 2.400553652223143,
+          "gain_to_pain_ratio": 2.400553652223143,
+          "annual_turnover_pct": 1284.7058823529414,
+          "time_in_market_pct": 7.18954248366013,
+          "total_trading_days": 306,
+          "active_trading_days": 22
+        },
+        "rank_based_top3": {
+          "cumulative_return_pct": -10.089064745445919,
+          "cagr_pct": -8.385704175052066,
+          "annualized_volatility_pct": 8.434907561425153,
+          "sharpe_ratio": -1.766704979573509,
+          "sortino_ratio": -2.2880975174480502,
+          "max_drawdown_pct": 10.62724817035532,
+          "calmar_ratio": -0.7890757833663812,
+          "win_rate_pct": 47.385620915032675,
+          "profit_factor": 0.8485921417385687,
+          "gain_to_pain_ratio": 0.942229895309721,
+          "annual_turnover_pct": 50399.999999999985,
+          "time_in_market_pct": 100.0,
+          "total_trading_days": 306,
+          "active_trading_days": 306
+        }
+      }
+    },
+    "SetupB_FinBERT_LR": {
+      "metadata": {
+        "id": "SetupB_FinBERT_LR",
+        "name": "Setup B: FinBERT Sentiment (Logistic Reg)",
+        "setup": "Setup B",
+        "operational": "BENCHMARK_ONLY",
+        "prob_col": "Exp_B4_MktFinBERT_logreg_prob",
+        "model": "Logistic Regression",
+        "features": "Market + FinBERT + Open Gap %"
+      },
+      "optimal_params": {
+        "theta_long": 0.56,
+        "theta_short": 0.44,
+        "val_sharpe": -0.5067138764581172
+      },
+      "train_metrics": {
+        "cumulative_return_pct": 72.43955853948991,
+        "cagr_pct": 14.893577546000492,
+        "annualized_volatility_pct": 12.774406598008786,
+        "sharpe_ratio": 0.6412453690048102,
+        "sortino_ratio": 1.0284802542060707,
+        "max_drawdown_pct": 9.73080539052843,
+        "calmar_ratio": 1.5305595938129946,
+        "win_rate_pct": 55.72207084468664,
+        "profit_factor": 1.274943751187218,
+        "gain_to_pain_ratio": 1.0130971128015789,
+        "annual_turnover_pct": 22575.530839231546,
+        "time_in_market_pct": 74.21638018200201,
+        "total_trading_days": 989,
+        "active_trading_days": 734
+      },
+      "val_metrics": {
+        "cumulative_return_pct": 1.1497616655353093,
+        "cagr_pct": 1.177969164665038,
+        "annualized_volatility_pct": 9.615233525170295,
+        "sharpe_ratio": -0.5067138764581172,
+        "sortino_ratio": -0.7493108046251744,
+        "max_drawdown_pct": 6.108630033426254,
+        "calmar_ratio": 0.19283688130059007,
+        "win_rate_pct": 52.604166666666664,
+        "profit_factor": 1.0048645346852825,
+        "gain_to_pain_ratio": 0.9053729965976308,
+        "annual_turnover_pct": 19504.390243902442,
+        "time_in_market_pct": 78.04878048780488,
+        "total_trading_days": 246,
+        "active_trading_days": 192
+      },
+      "test_metrics": {
+        "cumulative_return_pct": -0.05612081596403362,
+        "cagr_pct": -0.04621943165987741,
+        "annualized_volatility_pct": 7.702676162172846,
+        "sharpe_ratio": -0.8115628630770368,
+        "sortino_ratio": -1.184639916993798,
+        "max_drawdown_pct": 9.73764054381287,
+        "calmar_ratio": -0.004746471329673844,
+        "win_rate_pct": 44.72573839662447,
+        "profit_factor": 0.9681441445759034,
+        "gain_to_pain_ratio": 1.1964800277305976,
+        "annual_turnover_pct": 20242.352941176472,
+        "time_in_market_pct": 77.45098039215686,
+        "total_trading_days": 306,
+        "active_trading_days": 237
+      },
+      "test_archetypes": {
+        "dynamic_long_short": {
+          "cumulative_return_pct": -0.05612081596403362,
+          "cagr_pct": -0.04621943165987741,
+          "annualized_volatility_pct": 7.702676162172846,
+          "sharpe_ratio": -0.8115628630770368,
+          "sortino_ratio": -1.184639916993798,
+          "max_drawdown_pct": 9.73764054381287,
+          "calmar_ratio": -0.004746471329673844,
+          "win_rate_pct": 44.72573839662447,
+          "profit_factor": 0.9681441445759034,
+          "gain_to_pain_ratio": 1.1964800277305976,
+          "annual_turnover_pct": 20242.352941176472,
+          "time_in_market_pct": 77.45098039215686,
+          "total_trading_days": 306,
+          "active_trading_days": 237
+        },
+        "long_only": {
+          "cumulative_return_pct": 11.5094824513019,
+          "cagr_pct": 9.386231086471742,
+          "annualized_volatility_pct": 3.921898124055224,
+          "sharpe_ratio": 0.64992848402394,
+          "sortino_ratio": 1.417304900213146,
+          "max_drawdown_pct": 1.606617045190593,
+          "calmar_ratio": 5.842232979271207,
+          "win_rate_pct": 46.875,
+          "profit_factor": 1.588221355180836,
+          "gain_to_pain_ratio": 1.7999842025382808,
+          "annual_turnover_pct": 1548.2352941176473,
+          "time_in_market_pct": 10.457516339869281,
+          "total_trading_days": 306,
+          "active_trading_days": 32
+        },
+        "rank_based_top3": {
+          "cumulative_return_pct": -22.486892733971477,
+          "cagr_pct": -18.923091645206902,
+          "annualized_volatility_pct": 7.86233043776358,
+          "sharpe_ratio": -3.454459089553542,
+          "sortino_ratio": -4.14494374727516,
+          "max_drawdown_pct": 22.876976372602318,
+          "calmar_ratio": -0.8271675127430466,
+          "win_rate_pct": 42.48366013071895,
+          "profit_factor": 0.6498355144616164,
+          "gain_to_pain_ratio": 0.8797773118864959,
+          "annual_turnover_pct": 50400.0,
+          "time_in_market_pct": 100.0,
+          "total_trading_days": 306,
+          "active_trading_days": 306
+        }
+      }
+    },
+    "SetupB_LM_XGB": {
+      "metadata": {
+        "id": "SetupB_LM_XGB",
+        "name": "Setup B: LM Sentiment (XGBoost)",
+        "setup": "Setup B",
+        "operational": "BENCHMARK_ONLY",
+        "prob_col": "Exp_B3_MktLM_xgboost_prob",
+        "model": "XGBoost",
+        "features": "Market + LM + Open Gap %"
+      },
+      "optimal_params": {
+        "theta_long": 0.56,
+        "theta_short": 0.42,
+        "val_sharpe": -0.4441293495975145
+      },
+      "train_metrics": {
+        "cumulative_return_pct": 581.6873834248117,
+        "cagr_pct": 63.079692273903355,
+        "annualized_volatility_pct": 9.994038021930468,
+        "sharpe_ratio": 4.296496809939706,
+        "sortino_ratio": 18.224697079978085,
+        "max_drawdown_pct": 1.6681773659540626,
+        "calmar_ratio": 37.813540431192024,
+        "win_rate_pct": 78.53535353535354,
+        "profit_factor": 7.06852591113224,
+        "gain_to_pain_ratio": 1.9319122265152424,
+        "annual_turnover_pct": 8739.737108190091,
+        "time_in_market_pct": 40.04044489383215,
+        "total_trading_days": 989,
+        "active_trading_days": 396
+      },
+      "val_metrics": {
+        "cumulative_return_pct": 4.402572834550433,
+        "cagr_pct": 4.512340116277791,
+        "annualized_volatility_pct": 4.472793402720661,
+        "sharpe_ratio": -0.4441293495975145,
+        "sortino_ratio": -0.6078336976915465,
+        "max_drawdown_pct": 3.242959150440666,
+        "calmar_ratio": 1.391426751602664,
+        "win_rate_pct": 51.64835164835166,
+        "profit_factor": 1.0275678562527233,
+        "gain_to_pain_ratio": 0.9619784186195707,
+        "annual_turnover_pct": 5900.487804878049,
+        "time_in_market_pct": 36.99186991869919,
+        "total_trading_days": 246,
+        "active_trading_days": 91
+      },
+      "test_metrics": {
+        "cumulative_return_pct": 12.365887177285995,
+        "cagr_pct": 10.077609012363364,
+        "annualized_volatility_pct": 4.94736128435616,
+        "sharpe_ratio": 0.6519640685915973,
+        "sortino_ratio": 0.9537736610071786,
+        "max_drawdown_pct": 2.6850996794811985,
+        "calmar_ratio": 3.7531601114750828,
+        "win_rate_pct": 56.97674418604651,
+        "profit_factor": 1.4493050457668188,
+        "gain_to_pain_ratio": 1.0943731978239244,
+        "annual_turnover_pct": 4891.764705882354,
+        "time_in_market_pct": 28.104575163398692,
+        "total_trading_days": 306,
+        "active_trading_days": 86
+      },
+      "test_archetypes": {
+        "dynamic_long_short": {
+          "cumulative_return_pct": 12.365887177285995,
+          "cagr_pct": 10.077609012363364,
+          "annualized_volatility_pct": 4.94736128435616,
+          "sharpe_ratio": 0.6519640685915973,
+          "sortino_ratio": 0.9537736610071786,
+          "max_drawdown_pct": 2.6850996794811985,
+          "calmar_ratio": 3.7531601114750828,
+          "win_rate_pct": 56.97674418604651,
+          "profit_factor": 1.4493050457668188,
+          "gain_to_pain_ratio": 1.0943731978239244,
+          "annual_turnover_pct": 4891.764705882354,
+          "time_in_market_pct": 28.104575163398692,
+          "total_trading_days": 306,
+          "active_trading_days": 86
+        },
+        "long_only": {
+          "cumulative_return_pct": 10.208691304152229,
+          "cagr_pct": 8.334302186007637,
+          "annualized_volatility_pct": 1.515007263249114,
+          "sharpe_ratio": 1.0018526319849406,
+          "sortino_ratio": 2.5851265062445736,
+          "max_drawdown_pct": 0.563672857142861,
+          "calmar_ratio": 14.785707845242824,
+          "win_rate_pct": 62.5,
+          "profit_factor": 3.548707628784497,
+          "gain_to_pain_ratio": 2.129224577270698,
+          "annual_turnover_pct": 329.4117647058824,
+          "time_in_market_pct": 2.6143790849673203,
+          "total_trading_days": 306,
+          "active_trading_days": 8
+        },
+        "rank_based_top3": {
+          "cumulative_return_pct": -27.14364770274812,
+          "cagr_pct": -22.95616752002756,
+          "annualized_volatility_pct": 8.280267348958693,
+          "sharpe_ratio": -3.891624886964487,
+          "sortino_ratio": -4.50656732925929,
+          "max_drawdown_pct": 28.46885671730573,
+          "calmar_ratio": -0.806360710160619,
+          "win_rate_pct": 39.869281045751634,
+          "profit_factor": 0.599975604519511,
+          "gain_to_pain_ratio": 0.9048812396031969,
+          "annual_turnover_pct": 50399.999999999985,
+          "time_in_market_pct": 100.0,
+          "total_trading_days": 306,
+          "active_trading_days": 306
+        }
+      }
+    },
+    "SetupB_FinBERT_RF": {
+      "metadata": {
+        "id": "SetupB_FinBERT_RF",
+        "name": "Setup B: FinBERT Sentiment (Random Forest)",
+        "setup": "Setup B",
+        "operational": "BENCHMARK_ONLY",
+        "prob_col": "Exp_B4_MktFinBERT_random_forest_prob",
+        "model": "Random Forest",
+        "features": "Market + FinBERT + Open Gap %"
+      },
+      "optimal_params": {
+        "theta_long": 0.56,
+        "theta_short": 0.46,
+        "val_sharpe": -1.1307084452555576
+      },
+      "train_metrics": {
+        "cumulative_return_pct": 1378.2178811923534,
+        "cagr_pct": 98.63357958483134,
+        "annualized_volatility_pct": 14.633046965582688,
+        "sharpe_ratio": 4.323921126610433,
+        "sortino_ratio": 10.203072347594079,
+        "max_drawdown_pct": 5.694319234077443,
+        "calmar_ratio": 17.32139971966488,
+        "win_rate_pct": 63.94557823129252,
+        "profit_factor": 2.866213983858175,
+        "gain_to_pain_ratio": 1.6160568206859924,
+        "annual_turnover_pct": 36232.96258847321,
+        "time_in_market_pct": 89.18099089989889,
+        "total_trading_days": 989,
+        "active_trading_days": 882
+      },
+      "val_metrics": {
+        "cumulative_return_pct": -4.682587908168278,
+        "cagr_pct": -4.79401546637066,
+        "annualized_volatility_pct": 9.679965037508047,
+        "sharpe_ratio": -1.1307084452555576,
+        "sortino_ratio": -1.4818710897291714,
+        "max_drawdown_pct": 9.586088457897677,
+        "calmar_ratio": -0.5001013173857186,
+        "win_rate_pct": 49.549549549549546,
+        "profit_factor": 0.9067229937450526,
+        "gain_to_pain_ratio": 0.9232088663585989,
+        "annual_turnover_pct": 34399.024390243896,
+        "time_in_market_pct": 90.2439024390244,
+        "total_trading_days": 246,
+        "active_trading_days": 222
+      },
+      "test_metrics": {
+        "cumulative_return_pct": -8.036183288443066,
+        "cagr_pct": -6.666507151723211,
+        "annualized_volatility_pct": 9.263188955690554,
+        "sharpe_ratio": -1.4002061759176354,
+        "sortino_ratio": -1.8753275100988098,
+        "max_drawdown_pct": 16.15603947267776,
+        "calmar_ratio": -0.4126325120087293,
+        "win_rate_pct": 45.173745173745175,
+        "profit_factor": 0.8600059621541007,
+        "gain_to_pain_ratio": 1.043767919879336,
+        "annual_turnover_pct": 30767.058823529413,
+        "time_in_market_pct": 84.640522875817,
+        "total_trading_days": 306,
+        "active_trading_days": 259
+      },
+      "test_archetypes": {
+        "dynamic_long_short": {
+          "cumulative_return_pct": -8.036183288443066,
+          "cagr_pct": -6.666507151723211,
+          "annualized_volatility_pct": 9.263188955690554,
+          "sharpe_ratio": -1.4002061759176354,
+          "sortino_ratio": -1.8753275100988098,
+          "max_drawdown_pct": 16.15603947267776,
+          "calmar_ratio": -0.4126325120087293,
+          "win_rate_pct": 45.173745173745175,
+          "profit_factor": 0.8600059621541007,
+          "gain_to_pain_ratio": 1.043767919879336,
+          "annual_turnover_pct": 30767.058823529413,
+          "time_in_market_pct": 84.640522875817,
+          "total_trading_days": 306,
+          "active_trading_days": 259
+        },
+        "long_only": {
+          "cumulative_return_pct": 8.211601119805545,
+          "cagr_pct": 6.7150080033345105,
+          "annualized_volatility_pct": 0.0,
+          "sharpe_ratio": 0.0,
+          "sortino_ratio": 0.0,
+          "max_drawdown_pct": 0.0,
+          "calmar_ratio": 0.0,
+          "win_rate_pct": 0.0,
+          "profit_factor": 0.0,
+          "gain_to_pain_ratio": 0.0,
+          "annual_turnover_pct": 0.0,
+          "time_in_market_pct": 0.0,
+          "total_trading_days": 306,
+          "active_trading_days": 0
+        },
+        "rank_based_top3": {
+          "cumulative_return_pct": -17.92856397679109,
+          "cagr_pct": -15.016499678156103,
+          "annualized_volatility_pct": 8.045678130510723,
+          "sharpe_ratio": -2.78946625846469,
+          "sortino_ratio": -3.4083392526218015,
+          "max_drawdown_pct": 20.038678264673464,
+          "calmar_ratio": -0.7493757562158654,
+          "win_rate_pct": 46.07843137254902,
+          "profit_factor": 0.7257476300279009,
+          "gain_to_pain_ratio": 0.8492791415220116,
+          "annual_turnover_pct": 50399.999999999985,
+          "time_in_market_pct": 100.0,
+          "total_trading_days": 306,
+          "active_trading_days": 306
+        }
+      }
+    }
+  },
+  "reference_baselines": {
+    "buy_and_hold_15": {
+      "cumulative_return_pct": -11.580282672690478,
+      "cagr_pct": -9.638874845012602,
+      "annualized_volatility_pct": 10.163712545684529,
+      "sharpe_ratio": -1.5858593705864075,
+      "sortino_ratio": -2.052409289990699,
+      "max_drawdown_pct": 13.344112602611396,
+      "calmar_ratio": -0.7223316478254468,
+      "win_rate_pct": 0.0,
+      "profit_factor": 0.0,
+      "gain_to_pain_ratio": 0.0,
+      "annual_turnover_pct": 0.0,
+      "time_in_market_pct": 0.0,
+      "total_trading_days": 306,
+      "active_trading_days": 0
+    },
+    "intraday_momentum": {
+      "cumulative_return_pct": -43.01309197329146,
+      "cagr_pct": -37.067699652638474,
+      "annualized_volatility_pct": 5.653369819927777,
+      "sharpe_ratio": -9.305765955005066,
+      "sortino_ratio": -8.644530610997336,
+      "max_drawdown_pct": 43.053601594815454,
+      "calmar_ratio": -0.8609662903812022,
+      "win_rate_pct": 30.392156862745097,
+      "profit_factor": 0.26492179672140354,
+      "gain_to_pain_ratio": 0.6067563731361177,
+      "annual_turnover_pct": 48538.823529411755,
+      "time_in_market_pct": 100.0,
+      "total_trading_days": 306,
+      "active_trading_days": 306
+    },
+    "risk_free_cash_6.5pct": {
+      "cumulative_return_pct": 8.211601119805545,
+      "cagr_pct": 6.7150080033345105,
+      "annualized_volatility_pct": 0.0,
+      "sharpe_ratio": 0.0,
+      "sortino_ratio": 0.0,
+      "max_drawdown_pct": 0.0,
+      "calmar_ratio": 0.0,
+      "win_rate_pct": 0.0,
+      "profit_factor": 0.0,
+      "gain_to_pain_ratio": 0.0,
+      "annual_turnover_pct": 0.0,
+      "time_in_market_pct": 0.0,
+      "total_trading_days": 306,
+      "active_trading_days": 0
+    }
+  },
+  "company_attribution_PreOpen_Sent_LR": {
+    "BHARTIARTL": {
+      "n_trades": 15,
+      "win_rate_pct": 40.0,
+      "gross_pnl": 0.0026069663647872643,
+      "friction_cost": 0.004440475000000001,
+      "net_pnl": -0.001833508635212735
+    },
+    "CIPLA": {
+      "n_trades": 9,
+      "win_rate_pct": 33.33333333333333,
+      "gross_pnl": -0.002060387094594808,
+      "friction_cost": 0.00278515,
+      "net_pnl": -0.004845537094594808
+    },
+    "HDFCBANK": {
+      "n_trades": 6,
+      "win_rate_pct": 83.33333333333334,
+      "gross_pnl": 0.0049770955232924085,
+      "friction_cost": 0.0017735625000000002,
+      "net_pnl": 0.0032035330232924077
+    },
+    "HINDUNILVR": {
+      "n_trades": 15,
+      "win_rate_pct": 40.0,
+      "gross_pnl": 0.00120447560932058,
+      "friction_cost": 0.004611262500000001,
+      "net_pnl": -0.003406786890679422
+    },
+    "ICICIBANK": {
+      "n_trades": 9,
+      "win_rate_pct": 66.66666666666666,
+      "gross_pnl": 0.0016012399202900286,
+      "friction_cost": 0.00278515,
+      "net_pnl": -0.0011839100797099715
+    },
+    "INFY": {
+      "n_trades": 14,
+      "win_rate_pct": 42.857142857142854,
+      "gross_pnl": -0.0011617467006179794,
+      "friction_cost": 0.004361650000000001,
+      "net_pnl": -0.00552339670061798
+    },
+    "ITC": {
+      "n_trades": 8,
+      "win_rate_pct": 37.5,
+      "gross_pnl": -0.005706598562845982,
+      "friction_cost": 0.0025224,
+      "net_pnl": -0.008228998562845981
+    },
+    "LT": {
+      "n_trades": 14,
+      "win_rate_pct": 21.428571428571427,
+      "gross_pnl": -0.008427430527925247,
+      "friction_cost": 0.004414200000000001,
+      "net_pnl": -0.012841630527925248
+    },
+    "M&M": {
+      "n_trades": 14,
+      "win_rate_pct": 57.14285714285714,
+      "gross_pnl": 0.0031810001162966444,
+      "friction_cost": 0.004177725000000001,
+      "net_pnl": -0.0009967248837033584
+    },
+    "MARUTI": {
+      "n_trades": 87,
+      "win_rate_pct": 36.7816091954023,
+      "gross_pnl": -0.02897915356732394,
+      "friction_cost": 0.027378550000000012,
+      "net_pnl": -0.056357703567323954
+    },
+    "RELIANCE": {
+      "n_trades": 16,
+      "win_rate_pct": 62.5,
+      "gross_pnl": 0.011534286501023271,
+      "friction_cost": 0.0048083250000000004,
+      "net_pnl": 0.00672596150102327
+    },
+    "SBIN": {
+      "n_trades": 10,
+      "win_rate_pct": 60.0,
+      "gross_pnl": 0.004665815212274909,
+      "friction_cost": 0.0030347625000000005,
+      "net_pnl": 0.001631052712274909
+    },
+    "SUNPHARMA": {
+      "n_trades": 11,
+      "win_rate_pct": 45.45454545454545,
+      "gross_pnl": -0.0019963743756555206,
+      "friction_cost": 0.0032318250000000007,
+      "net_pnl": -0.005228199375655522
+    },
+    "TATASTEEL": {
+      "n_trades": 14,
+      "win_rate_pct": 28.57142857142857,
+      "gross_pnl": -0.02427446580990809,
+      "friction_cost": 0.004361650000000001,
+      "net_pnl": -0.028636115809908092
+    },
+    "TCS": {
+      "n_trades": 5,
+      "win_rate_pct": 60.0,
+      "gross_pnl": 0.005054714243073735,
+      "friction_cost": 0.0014582625000000003,
+      "net_pnl": 0.003596451743073735
+    }
+  },
+  "regime_breakdown_PreOpen_Sent_LR": {
+    "Volatility_HIGH_VOL": {
+      "cumulative_return_pct": -0.49216260371333087,
+      "cagr_pct": -1.4692330116460317,
+      "annualized_volatility_pct": 5.216299371141524,
+      "sharpe_ratio": -1.5039681159340321,
+      "sortino_ratio": -1.838620852457359,
+      "max_drawdown_pct": 3.6435044906220218,
+      "calmar_ratio": -0.4032472075793169,
+      "win_rate_pct": 42.857142857142854,
+      "profit_factor": 0.7523491140215529,
+      "gain_to_pain_ratio": 1.003132152028737,
+      "annual_turnover_pct": 10140.0,
+      "time_in_market_pct": 41.66666666666667,
+      "total_trading_days": 84,
+      "active_trading_days": 35
+    },
+    "Volatility_LOW_VOL": {
+      "cumulative_return_pct": -4.263156942118352,
+      "cagr_pct": -4.825144879880138,
+      "annualized_volatility_pct": 3.6685687693125453,
+      "sharpe_ratio": -3.1014384154398273,
+      "sortino_ratio": -3.5824051142541253,
+      "max_drawdown_pct": 4.699346285203824,
+      "calmar_ratio": -1.0267693817483505,
+      "win_rate_pct": 36.69724770642202,
+      "profit_factor": 0.5635465940971257,
+      "gain_to_pain_ratio": 0.972117874817542,
+      "annual_turnover_pct": 7128.648648648648,
+      "time_in_market_pct": 49.0990990990991,
+      "total_trading_days": 222,
+      "active_trading_days": 109
+    },
+    "Trend_Bearish (< -1% SMA)": {
+      "cumulative_return_pct": -4.734337881625006,
+      "cagr_pct": -3.9154638637609374,
+      "annualized_volatility_pct": 4.143228875619129,
+      "sharpe_ratio": -2.5120701239127823,
+      "sortino_ratio": -2.9657682041160003,
+      "max_drawdown_pct": 7.120086304906888,
+      "calmar_ratio": -0.5499180341483433,
+      "win_rate_pct": 38.19444444444444,
+      "profit_factor": 0.6192426516512991,
+      "gain_to_pain_ratio": 1.0020471999448293,
+      "annual_turnover_pct": 7955.294117647059,
+      "time_in_market_pct": 47.05882352941176,
+      "total_trading_days": 306,
+      "active_trading_days": 144
+    }
+  },
+  "stress_period_events": [
+    {
+      "date": "2025-05-07",
+      "gross_return_pct": -1.7437439743489709,
+      "friction_cost_pct": 0.12612,
+      "net_return_pct": -1.8647052441902408,
+      "n_long": 0,
+      "n_short": 4,
+      "market_regime": "HIGH_VOL"
+    },
+    {
+      "date": "2025-09-08",
+      "gross_return_pct": -1.1010847366562901,
+      "friction_cost_pct": 0.06306,
+      "net_return_pct": -1.1486685461800998,
+      "n_long": 0,
+      "n_short": 2,
+      "market_regime": "LOW_VOL"
+    },
+    {
+      "date": "2026-01-02",
+      "gross_return_pct": -1.0295938887175318,
+      "friction_cost_pct": 0.09459000000000002,
+      "net_return_pct": -1.1138664284000712,
+      "n_long": 1,
+      "n_short": 2,
+      "market_regime": "LOW_VOL"
+    },
+    {
+      "date": "2026-03-17",
+      "gross_return_pct": -0.792552264244731,
+      "friction_cost_pct": 0.06306,
+      "net_return_pct": -0.8401360737685406,
+      "n_long": 0,
+      "n_short": 2,
+      "market_regime": "LOW_VOL"
+    },
+    {
+      "date": "2026-03-09",
+      "gross_return_pct": -0.7127272727272718,
+      "friction_cost_pct": 0.03153,
+      "net_return_pct": -0.7236223520923512,
+      "n_long": 0,
+      "n_short": 1,
+      "market_regime": "LOW_VOL"
+    }
+  ],
+  "cost_sensitivity": {
+    "PreOpen_Sent_LR": [
+      {
+        "friction_bps": 0.0,
+        "sharpe_ratio": -1.0091664121862007,
+        "cagr_pct": 2.304859441275564,
+        "cumulative_return_pct": 2.8056281062011745
+      },
+      {
+        "friction_bps": 5.0,
+        "sharpe_ratio": -1.4922324173145616,
+        "cagr_pct": 0.2901298051577905,
+        "cumulative_return_pct": 0.3524099083718202
+      },
+      {
+        "friction_bps": 10.0,
+        "sharpe_ratio": -1.970324093832196,
+        "cagr_pct": -1.6853851736268743,
+        "cumulative_return_pct": -2.0428271242018847
+      },
+      {
+        "friction_bps": 15.765,
+        "sharpe_ratio": -2.5120701239127823,
+        "cagr_pct": -3.9154638637609374,
+        "cumulative_return_pct": -4.734337881625006
+      },
+      {
+        "friction_bps": 20.0,
+        "sharpe_ratio": -2.901563629929036,
+        "cagr_pct": -5.52177419598916,
+        "cumulative_return_pct": -6.664755160147784
+      },
+      {
+        "friction_bps": 25.0,
+        "sharpe_ratio": -3.350217397565095,
+        "cagr_pct": -7.3841141766160305,
+        "cumulative_return_pct": -8.894066957507818
+      },
+      {
+        "friction_bps": 30.0,
+        "sharpe_ratio": -3.7850054083665947,
+        "cagr_pct": -9.210171907800046,
+        "cumulative_return_pct": -11.070640605965387
+      }
+    ],
+    "PreOpen_Mkt_LR": [
+      {
+        "friction_bps": 0.0,
+        "sharpe_ratio": -1.021707303752414,
+        "cagr_pct": 4.668028443572014,
+        "cumulative_return_pct": 5.696330565416896
+      },
+      {
+        "friction_bps": 5.0,
+        "sharpe_ratio": -1.3133909362075045,
+        "cagr_pct": 4.083443395435249,
+        "cumulative_return_pct": 4.979932983362367
+      },
+      {
+        "friction_bps": 10.0,
+        "sharpe_ratio": -1.6003669879000308,
+        "cagr_pct": 3.5020653499096444,
+        "cumulative_return_pct": 4.268320131771031
+      },
+      {
+        "friction_bps": 15.765,
+        "sharpe_ratio": -1.9242472144133556,
+        "cagr_pct": 2.8356944783374916,
+        "cumulative_return_pct": 3.4537282835694016
+      },
+      {
+        "friction_bps": 20.0,
+        "sharpe_ratio": -2.156718047146422,
+        "cagr_pct": 2.3488612568833833,
+        "cumulative_return_pct": 2.859322892837013
+      },
+      {
+        "friction_bps": 25.0,
+        "sharpe_ratio": -2.4245941784079745,
+        "cagr_pct": 1.7770009323637037,
+        "cumulative_return_pct": 2.1618761507070205
+      },
+      {
+        "friction_bps": 30.0,
+        "sharpe_ratio": -2.6847778950466763,
+        "cagr_pct": 1.2082790554708955,
+        "cumulative_return_pct": 1.4690894268685195
+      }
+    ],
+    "SetupB_FinBERT_LR": [
+      {
+        "friction_bps": 0.0,
+        "sharpe_ratio": 1.2415453135583052,
+        "cagr_pct": 17.229679843128064,
+        "cumulative_return_pct": 21.291773382377443
+      },
+      {
+        "friction_bps": 5.0,
+        "sharpe_ratio": 0.5977194843418354,
+        "cagr_pct": 11.451631408312245,
+        "cumulative_return_pct": 14.071296928592814
+      },
+      {
+        "friction_bps": 10.0,
+        "sharpe_ratio": -0.05384072990990209,
+        "cagr_pct": 5.956477325691112,
+        "cumulative_return_pct": 7.278323467362791
+      },
+      {
+        "friction_bps": 15.765,
+        "sharpe_ratio": -0.8115628630770368,
+        "cagr_pct": -0.04621943165987741,
+        "cumulative_return_pct": -0.05612081596403362
+      },
+      {
+        "friction_bps": 20.0,
+        "sharpe_ratio": -1.3704738609924356,
+        "cagr_pct": -4.23951484434758,
+        "cumulative_return_pct": -5.124333762759347
+      },
+      {
+        "friction_bps": 25.0,
+        "sharpe_ratio": -2.0304404197507857,
+        "cagr_pct": -8.965906882889552,
+        "cumulative_return_pct": -10.780027479155251
+      },
+      {
+        "friction_bps": 30.0,
+        "sharpe_ratio": -2.6880246325094954,
+        "cagr_pct": -13.460574724925578,
+        "cumulative_return_pct": -16.100404846070816
+      }
+    ],
+    "SetupB_Mkt_LR": [
+      {
+        "friction_bps": 0.0,
+        "sharpe_ratio": 1.5134295271662503,
+        "cagr_pct": 17.773625234877354,
+        "cumulative_return_pct": 21.975504814233716
+      },
+      {
+        "friction_bps": 5.0,
+        "sharpe_ratio": 1.211202604087921,
+        "cagr_pct": 15.364318685994505,
+        "cumulative_return_pct": 18.952217486007218
+      },
+      {
+        "friction_bps": 10.0,
+        "sharpe_ratio": 0.904031672988131,
+        "cagr_pct": 13.003766040955501,
+        "cumulative_return_pct": 16.003200382634763
+      },
+      {
+        "friction_bps": 15.765,
+        "sharpe_ratio": 0.5443867054163362,
+        "cagr_pct": 10.341290366266787,
+        "cumulative_return_pct": 12.692811461228981
+      },
+      {
+        "friction_bps": 20.0,
+        "sharpe_ratio": 0.2769203116529758,
+        "cagr_pct": 8.425038367125648,
+        "cumulative_return_pct": 10.320787325961668
+      },
+      {
+        "friction_bps": 25.0,
+        "sharpe_ratio": -0.041874447365453156,
+        "cagr_pct": 6.204969211845368,
+        "cumulative_return_pct": 7.583904652779738
+      },
+      {
+        "friction_bps": 30.0,
+        "sharpe_ratio": -0.36332989946563227,
+        "cagr_pct": 4.029864958140772,
+        "cumulative_return_pct": 4.9143167024569
+      }
+    ]
+  }
+}
